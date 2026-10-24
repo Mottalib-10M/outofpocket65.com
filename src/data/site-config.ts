@@ -1,5 +1,5 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://us-medicare-costs.example";
+export const SITE_URL = "https://outofpocket65.com";
 export const SITE_NAMES: Record<string, string> = {"en": "Out of Pocket 65", "es": "Lo que Paga a los 65"};
 export const LANG_TAGS: Record<string, string> = {"en": "en-US", "es": "es-US"};
 export const OG_LOCALES: Record<string, string> = {"en": "en_US", "es": "es_US"};
@@ -16,7 +16,7 @@ export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners reads 
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"en": ["Original Medicare Part A and Part B cost sharing", "Medicare physician fee schedule and geographic price areas", "Hospital outpatient and ambulatory surgical center payment rates", "Durable medical equipment rental rules", "Medigap standardized plan benefits", "Medicare coverage rules for preventive and screening services"], "es": ["Costos compartidos de las Partes A y B de Medicare Original", "Baremo de médicos de Medicare y zonas geográficas de precios", "Tarifas de hospitales ambulatorios y centros de cirugía ambulatoria", "Reglas de alquiler de equipo médico duradero", "Beneficios de los planes Medigap estandarizados", "Reglas de cobertura de Medicare para servicios preventivos y de detección"]};
-export const CONTACT_EMAIL = "contact@us-medicare-costs.example";
+export const CONTACT_EMAIL = "contact@outofpocket65.com";
 export const THEME_COLOR = '#1E5B8C';
 export const LOGO_SYMBOL = '20%';
 export const BING_VERIFY_CODE = '';
