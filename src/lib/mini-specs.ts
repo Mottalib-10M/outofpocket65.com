@@ -36,7 +36,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
   }),
   /** 20 % of an approved amount, with or without assignment. */
   twenty: (lang) => ({
-    title: X(lang, 'Your 20 % of a Part B bill', 'Su 20 % de una factura de la Parte B'), cta: X(lang, 'Price a service in your area', 'Calcular un servicio en su zona'), ctaPage: 'home',
+    title: X(lang, 'Your 20% of a Part B bill', 'Su 20 % de una factura de la Parte B'), cta: X(lang, 'Price a service in your area', 'Calcular un servicio en su zona'), ctaPage: 'home',
     inputs: [
       { id: 'amt', label: X(lang, 'Medicare-approved amount', 'Monto aprobado por Medicare'), def: 500, unit: '$', max: 1000000 },
       { id: 'asg', label: X(lang, 'Doctor accepts assignment', 'El médico acepta la asignación'), def: 1, options: yn(lang) },
@@ -47,7 +47,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
       const excess = v.asg ? 0 : v.amt * (PARAMS.limitingCharge.limitingChargeFactorOfFee - PARAMS.limitingCharge.nonParticipatingFactor);
       const d = v.ded ? 0 : Math.min(PART_B.deductible, approved);
       const pay = d + (approved - d) * PART_B.coinsurance + excess;
-      return { head: [X(lang, 'You pay', 'Usted paga'), usd(pay, lang)], rows: [[X(lang, 'Approved amount', 'Monto aprobado'), usd(approved, lang)], [X(lang, 'Deductible', 'Deducible'), usd(d, lang)], [X(lang, '20 % coinsurance', 'Coseguro del 20 %'), usd((approved - d) * PART_B.coinsurance, lang)], [X(lang, 'Limiting charge above it', 'Cargo límite por encima'), usd(excess, lang)]] };
+      return { head: [X(lang, 'You pay', 'Usted paga'), usd(pay, lang)], rows: [[X(lang, 'Approved amount', 'Monto aprobado'), usd(approved, lang)], [X(lang, 'Deductible', 'Deducible'), usd(d, lang)], [X(lang, '20% coinsurance', 'Coseguro del 20 %'), usd((approved - d) * PART_B.coinsurance, lang)], [X(lang, 'Limiting charge above it', 'Cargo límite por encima'), usd(excess, lang)]] };
     },
   }),
   /** Physical therapy visits against the KX threshold. */
@@ -59,7 +59,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
       const one = estimate({ act: 'physical-therapy-session', count: 1, deductibleRemaining: 0 }).approvedTotal;
       const total = ev + one * v.n + v.other; const kx = PARAMS.therapyKxThreshold.ptSlpCombined;
       const before = Math.max(0, Math.floor((kx - ev - v.other) / one));
-      return { head: [X(lang, 'Billed toward the threshold', 'Facturado hacia el umbral'), usd(total, lang)], rows: [[X(lang, '2026 KX threshold (PT + speech)', 'Umbral KX 2026 (fisioterapia + habla)'), usd(kx, lang)], [X(lang, 'Sessions before it is reached', 'Sesiones antes de alcanzarlo'), String(before)], [X(lang, 'Your 20 % (deductible met)', 'Su 20 % (deducible pagado)'), usd(total * PART_B.coinsurance, lang)]], note: X(lang, 'Above the threshold Medicare keeps paying when the therapist documents medical need: it is not a cap.', 'Por encima del umbral Medicare sigue pagando si el terapeuta documenta la necesidad médica: no es un tope.') };
+      return { head: [X(lang, 'Billed toward the threshold', 'Facturado hacia el umbral'), usd(total, lang)], rows: [[X(lang, '2026 KX threshold (PT + speech)', 'Umbral KX 2026 (fisioterapia + habla)'), usd(kx, lang)], [X(lang, 'Sessions before it is reached', 'Sesiones antes de alcanzarlo'), String(before)], [X(lang, 'Your 20% (deductible met)', 'Su 20 % (deducible pagado)'), usd(total * PART_B.coinsurance, lang)]], note: X(lang, 'Above the threshold Medicare keeps paying when the therapist documents medical need: it is not a cap.', 'Por encima del umbral Medicare sigue pagando si el terapeuta documenta la necesidad médica: no es un tope.') };
     },
   }),
   /** Capped rental month by month. */
@@ -69,7 +69,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     run: (v) => {
       const a = ['cpap', 'wheelchair-manual', 'wheelchair-lightweight', 'wheelchair-power'][v.eq];
       const e = estimate({ act: a, state: STATES[v.st], count: 13, deductibleRemaining: 0 });
-      return { head: [X(lang, 'Your 20 % over 13 months', 'Su 20 % en 13 meses'), usd(e.youPay, lang)], rows: [[X(lang, 'Months 1 to 3, each', 'Meses 1 a 3, cada uno'), usd(Number(e.extra.monthlyFee), lang)], [X(lang, 'Months 4 to 13, each', 'Meses 4 a 13, cada uno'), usd(Number(e.extra.monthly4to13), lang)], [X(lang, 'Approved over 13 months', 'Aprobado en 13 meses'), usd(e.approvedTotal, lang)]], note: X(lang, 'Deductible assumed met. Ownership passes to you after the 13th paid month.', 'Deducible supuesto pagado. El equipo pasa a ser suyo tras el mes 13 pagado.') };
+      return { head: [X(lang, 'Your 20% over 13 months', 'Su 20 % en 13 meses'), usd(e.youPay, lang)], rows: [[X(lang, 'Months 1 to 3, each', 'Meses 1 a 3, cada uno'), usd(Number(e.extra.monthlyFee), lang)], [X(lang, 'Months 4 to 13, each', 'Meses 4 a 13, cada uno'), usd(Number(e.extra.monthly4to13), lang)], [X(lang, 'Approved over 13 months', 'Aprobado en 13 meses'), usd(e.approvedTotal, lang)]], note: X(lang, 'Deductible assumed met. Ownership passes to you after the 13th paid month.', 'Deducible supuesto pagado. El equipo pasa a ser suyo tras el mes 13 pagado.') };
     },
   }),
   /** Skilled nursing days. */
@@ -107,7 +107,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     run: (v) => {
       const n = Math.round(v.w * 52 / 12);
       const e = estimate({ act: 'dialysis', count: n, deductibleRemaining: 0 });
-      return { head: [X(lang, 'Your 20 % a month', 'Su 20 % al mes'), usd(e.youPay, lang)], rows: [[X(lang, 'Treatments a month', 'Tratamientos al mes'), String(n)], [X(lang, 'Approved a month', 'Aprobado al mes'), usd(e.approvedTotal, lang)], [X(lang, 'Your 20 % over 12 months', 'Su 20 % en 12 meses'), usd(e.youPay * 12, lang)]], note: X(lang, `Base rate ${usd(PARAMS.esrd.basePerTreatment, lang)} per treatment before case-mix adjustments.`, `Tarifa base de ${usd(PARAMS.esrd.basePerTreatment, lang)} por tratamiento antes de ajustes.`) };
+      return { head: [X(lang, 'Your 20% a month', 'Su 20 % al mes'), usd(e.youPay, lang)], rows: [[X(lang, 'Treatments a month', 'Tratamientos al mes'), String(n)], [X(lang, 'Approved a month', 'Aprobado al mes'), usd(e.approvedTotal, lang)], [X(lang, 'Your 20% over 12 months', 'Su 20 % en 12 meses'), usd(e.youPay * 12, lang)]], note: X(lang, `Base rate ${usd(PARAMS.esrd.basePerTreatment, lang)} per treatment before case-mix adjustments.`, `Tarifa base de ${usd(PARAMS.esrd.basePerTreatment, lang)} por tratamiento antes de ajustes.`) };
     },
   }),
   hospiceRx: (lang) => ({
@@ -124,7 +124,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     run: (v) => {
       const cap = v.imp ? 20 : 12; const cov = Math.min(cap, v.n);
       const e = estimate({ act: 'acupuncture', count: cov, deductibleRemaining: 0 });
-      return { head: [X(lang, 'You pay', 'Usted paga'), usd(e.youPay + (v.n - cov) * v.pr, lang)], rows: [[X(lang, 'Covered sessions', 'Sesiones cubiertas'), String(cov)], [X(lang, 'Your 20 % on them', 'Su 20 % por ellas'), usd(e.youPay, lang)], [X(lang, 'Sessions at your own cost', 'Sesiones a su cargo'), String(v.n - cov)]] };
+      return { head: [X(lang, 'You pay', 'Usted paga'), usd(e.youPay + (v.n - cov) * v.pr, lang)], rows: [[X(lang, 'Covered sessions', 'Sesiones cubiertas'), String(cov)], [X(lang, 'Your 20% on them', 'Su 20 % por ellas'), usd(e.youPay, lang)], [X(lang, 'Sessions at your own cost', 'Sesiones a su cargo'), String(v.n - cov)]] };
     },
   }),
   hearing: (lang) => ({
@@ -132,7 +132,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'p', label: X(lang, 'Price quoted for the pair', 'Precio del par'), def: 0, unit: '$', max: 100000 }, { id: 'al', label: X(lang, 'Advantage hearing allowance', 'Asignación auditiva Advantage'), def: 0, unit: '$', max: 100000 }],
     run: (v) => {
       const test = estimate({ act: 'hearing-exam', deductibleRemaining: 0 });
-      return { head: [X(lang, 'Hearing aids: you pay', 'Audífonos: usted paga'), usd(Math.max(0, v.p - v.al), lang)], rows: [[X(lang, 'Original Medicare pays for the aids', 'Medicare Original paga por los audífonos'), usd(0, lang)], [X(lang, 'Diagnostic hearing test, approved', 'Prueba diagnóstica, aprobado'), usd(test.approvedTotal, lang)], [X(lang, 'Your 20 % of the test', 'Su 20 % de la prueba'), usd(test.youPay, lang)]] };
+      return { head: [X(lang, 'Hearing aids: you pay', 'Audífonos: usted paga'), usd(Math.max(0, v.p - v.al), lang)], rows: [[X(lang, 'Original Medicare pays for the aids', 'Medicare Original paga por los audífonos'), usd(0, lang)], [X(lang, 'Diagnostic hearing test, approved', 'Prueba diagnóstica, aprobado'), usd(test.approvedTotal, lang)], [X(lang, 'Your 20% of the test', 'Su 20 % de la prueba'), usd(test.youPay, lang)]] };
     },
   }),
   dental: (lang) => ({
@@ -140,7 +140,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'p', label: X(lang, 'Dental bill', 'Factura dental'), def: 0, unit: '$', max: 100000 }, { id: 'lk', label: X(lang, 'Needed before a covered treatment', 'Necesaria antes de un tratamiento cubierto'), def: 0, options: yn(lang) }, { id: 'al', label: X(lang, 'Advantage dental allowance', 'Asignación dental Advantage'), def: 0, unit: '$', max: 100000 }],
     run: (v) => {
       const pay = v.lk ? Math.min(PART_B.deductible, v.p) + Math.max(0, v.p - PART_B.deductible) * PART_B.coinsurance : Math.max(0, v.p - v.al);
-      return { head: [X(lang, 'You pay', 'Usted paga'), usd(pay, lang)], rows: [[X(lang, 'Rule applied', 'Regla aplicada'), v.lk ? X(lang, 'Part B, 20 % after deductible', 'Parte B, 20 % tras el deducible') : X(lang, 'Not covered, minus allowance', 'No cubierto, menos la asignación')], [X(lang, 'Part B deductible 2026', 'Deducible de la Parte B 2026'), usd(PART_B.deductible, lang)]], note: X(lang, 'Linked care means, for example, an exam before a heart valve replacement or before radiation for head and neck cancer.', 'Atención vinculada significa, por ejemplo, un examen antes de un reemplazo de válvula cardíaca o de radioterapia de cabeza y cuello.') };
+      return { head: [X(lang, 'You pay', 'Usted paga'), usd(pay, lang)], rows: [[X(lang, 'Rule applied', 'Regla aplicada'), v.lk ? X(lang, 'Part B, 20% after deductible', 'Parte B, 20 % tras el deducible') : X(lang, 'Not covered, minus allowance', 'No cubierto, menos la asignación')], [X(lang, 'Part B deductible 2026', 'Deducible de la Parte B 2026'), usd(PART_B.deductible, lang)]], note: X(lang, 'Linked care means, for example, an exam before a heart valve replacement or before radiation for head and neck cancer.', 'Atención vinculada significa, por ejemplo, un examen antes de un reemplazo de válvula cardíaca o de radioterapia de cabeza y cuello.') };
     },
   }),
   glasses: (lang) => ({
@@ -158,7 +158,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     run: (v) => {
       const a = ['ambulance-emergency', 'ambulance-als', 'ambulance-nonemergency'][v.ty];
       const e = estimate({ act: a, locality: defaultLocality('FL'), miles: v.mi, area: v.r ? 'rural' : 'urban', deductibleRemaining: 0 });
-      return { head: [X(lang, 'Your 20 %', 'Su 20 %'), usd(e.youPay, lang)], rows: [[X(lang, 'Base rate', 'Tarifa base'), usd(e.lines[0].approved, lang)], [X(lang, 'Mileage', 'Millas'), usd(e.lines[1].approved, lang)], [X(lang, 'Approved', 'Aprobado'), usd(e.approvedTotal, lang)]], note: X(lang, 'Rest of Florida rates, deductible met; the main tool has every price area.', 'Tarifas del resto de Florida, deducible pagado; la herramienta principal tiene todas las zonas.') };
+      return { head: [X(lang, 'Your 20%', 'Su 20 %'), usd(e.youPay, lang)], rows: [[X(lang, 'Base rate', 'Tarifa base'), usd(e.lines[0].approved, lang)], [X(lang, 'Mileage', 'Millas'), usd(e.lines[1].approved, lang)], [X(lang, 'Approved', 'Aprobado'), usd(e.approvedTotal, lang)]], note: X(lang, 'Rest of Florida rates, deductible met; the main tool has every price area.', 'Tarifas del resto de Florida, deducible pagado; la herramienta principal tiene todas las zonas.') };
     },
   }),
   mriPlace: (lang) => ({
@@ -217,7 +217,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'n', label: X(lang, 'Visits in the episode', 'Visitas en el episodio'), def: 12, max: 500 }, { id: 'eq', label: X(lang, 'Equipment approved amount', 'Monto aprobado del equipo'), def: 0, unit: '$', max: 100000 }, { id: 'ded', label: X(lang, 'Deductible left', 'Deducible restante'), def: 0, unit: '$', max: PART_B.deductible }],
     run: (v) => {
       const d = Math.min(v.ded, v.eq); const eq = d + (v.eq - d) * PART_B.coinsurance;
-      return { head: [X(lang, 'You pay', 'Usted paga'), usd(eq, lang)], rows: [[X(lang, 'Nurse and therapist visits', 'Visitas de enfermería y terapia'), usd(0, lang)], [X(lang, 'Equipment (20 %)', 'Equipo (20 %)'), usd(eq, lang)]] };
+      return { head: [X(lang, 'You pay', 'Usted paga'), usd(eq, lang)], rows: [[X(lang, 'Nurse and therapist visits', 'Visitas de enfermería y terapia'), usd(0, lang)], [X(lang, 'Equipment (20%)', 'Equipo (20 %)'), usd(eq, lang)]] };
     },
   }),
   chiro: (lang) => ({
@@ -225,7 +225,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'n', label: X(lang, 'Adjustments', 'Ajustes'), def: 8, max: 200 }, { id: 'x', label: X(lang, 'X-rays and other services billed', 'Radiografías y otros servicios'), def: 0, unit: '$', max: 100000 }],
     run: (v) => {
       const e = estimate({ act: 'chiropractic-adjustment', count: v.n, deductibleRemaining: 0 });
-      return { head: [X(lang, 'You pay', 'Usted paga'), usd(e.youPay + v.x, lang)], rows: [[X(lang, 'Adjustments, approved', 'Ajustes, aprobado'), usd(e.approvedTotal, lang)], [X(lang, 'Your 20 %', 'Su 20 %'), usd(e.youPay, lang)], [X(lang, 'Not covered, full price', 'No cubierto, precio completo'), usd(v.x, lang)]] };
+      return { head: [X(lang, 'You pay', 'Usted paga'), usd(e.youPay + v.x, lang)], rows: [[X(lang, 'Adjustments, approved', 'Ajustes, aprobado'), usd(e.approvedTotal, lang)], [X(lang, 'Your 20%', 'Su 20 %'), usd(e.youPay, lang)], [X(lang, 'Not covered, full price', 'No cubierto, precio completo'), usd(v.x, lang)]] };
     },
   }),
   knee: (lang) => ({
@@ -252,7 +252,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'n', label: X(lang, 'Nail care visits', 'Visitas de cuidado de uñas'), def: 6, max: 52 }, { id: 'q', label: X(lang, 'Qualifying condition', 'Afección que lo justifica'), def: 1, options: yn(lang) }],
     run: (v) => {
       const one = estimate({ act: 'podiatry-nail-care', deductibleRemaining: 0 });
-      return { head: [X(lang, 'Your 20 % for the year', 'Su 20 % en el año'), v.q ? usd(one.youPay * v.n, lang) : X(lang, 'Not covered', 'No cubierto')], rows: [[X(lang, 'Approved per visit', 'Aprobado por visita'), usd(one.approvedTotal, lang)], [X(lang, 'Your 20 % per visit', 'Su 20 % por visita'), usd(one.youPay, lang)]], note: X(lang, 'Routine nail care is covered only in very limited circumstances; otherwise you pay all of it.', 'El cuidado de uñas de rutina solo se cubre en circunstancias muy limitadas; si no, lo paga todo usted.') };
+      return { head: [X(lang, 'Your 20% for the year', 'Su 20 % en el año'), v.q ? usd(one.youPay * v.n, lang) : X(lang, 'Not covered', 'No cubierto')], rows: [[X(lang, 'Approved per visit', 'Aprobado por visita'), usd(one.approvedTotal, lang)], [X(lang, 'Your 20% per visit', 'Su 20 % por visita'), usd(one.youPay, lang)]], note: X(lang, 'Routine nail care is covered only in very limited circumstances; otherwise you pay all of it.', 'El cuidado de uñas de rutina solo se cubre en circunstancias muy limitadas; si no, lo paga todo usted.') };
     },
   }),
   wheelchair: (lang) => ({
@@ -260,7 +260,7 @@ const SPECS: Record<string, (lang: Lang) => MiniSpec> = {
     inputs: [{ id: 'st', label: X(lang, 'State', 'Estado'), def: stateIdx('TX'), options: stateOpts(lang) }],
     run: (v) => {
       const st = STATES[v.st]; const f = (a: string) => estimate({ act: a, state: st, count: 13, deductibleRemaining: 0 }).youPay;
-      return { head: [X(lang, 'Power chair, your 20 %', 'Silla eléctrica, su 20 %'), usd(f('wheelchair-power'), lang)], rows: [[X(lang, 'Standard manual (13 months)', 'Manual estándar (13 meses)'), usd(f('wheelchair-manual'), lang)], [X(lang, 'Lightweight manual (13 months)', 'Manual ligera (13 meses)'), usd(f('wheelchair-lightweight'), lang)], [X(lang, 'Scooter (purchase)', 'Escúter (compra)'), usd(f('scooter'), lang)]], note: X(lang, 'Deductible met; non-rural fee schedule.', 'Deducible pagado; baremo no rural.') };
+      return { head: [X(lang, 'Power chair, your 20%', 'Silla eléctrica, su 20 %'), usd(f('wheelchair-power'), lang)], rows: [[X(lang, 'Standard manual (13 months)', 'Manual estándar (13 meses)'), usd(f('wheelchair-manual'), lang)], [X(lang, 'Lightweight manual (13 months)', 'Manual ligera (13 meses)'), usd(f('wheelchair-lightweight'), lang)], [X(lang, 'Scooter (purchase)', 'Escúter (compra)'), usd(f('scooter'), lang)]], note: X(lang, 'Deductible met; non-rural fee schedule.', 'Deducible pagado; baremo no rural.') };
     },
   }),
   covid: (lang) => ({

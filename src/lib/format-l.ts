@@ -14,7 +14,7 @@ export const money = (v: number, lang: L) => {
   const s = nf(lang, { style: 'currency', currency: 'USD', minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 }).format(v);
   return lang === 'es' ? s.replace(/^US\$/, '$').replace(/\s?US\$$/, ' $') : s;
 };
-export const pct = (v: number, lang: L, d = 0) => nf(lang, { style: 'percent', minimumFractionDigits: d, maximumFractionDigits: d }).format(v).replace(/(\d)\s?%/, '$1 %');
+export const pct = (v: number, lang: L, d = 0) => nf(lang, { style: 'percent', minimumFractionDigits: d, maximumFractionDigits: d }).format(v).replace(/(\d)\s%/, '$1\u00a0%'); // Intl fait foi : « 20% » en anglais (2026-10-24)
 /** "2026-10-22" → "October 22, 2026" / "22 de octubre de 2026" (UTC, never shifts a day). */
 export const dateL = (iso: string, lang: L) => new Date(`${iso}T00:00:00Z`).toLocaleDateString(TAG[lang], { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 /** Calculator results: whole dollars, never cents on screen (RECETTE §4.1). */
