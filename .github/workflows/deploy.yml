@@ -1,16 +1,32 @@
 name: Deploy
+
+# Publie le site sur GitHub Pages (source « GitHub Actions ») à chaque push sur main et après
+# chaque relance trimestrielle de update-data (un push fait avec GITHUB_TOKEN ne relance pas les workflows).
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows: ["Mise à jour des barèmes CMS"]
+    types: [completed]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -18,15 +34,16 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - run: npm test
       - run: npm run build
-      - name: Publier sur la branche gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd dist
-          git init -q
-          git checkout -q -b gh-pages
-          git add -A
-          git -c user.email=actions@github.com -c user.name="GitHub Actions" \
-              commit -q -m "Site construit depuis ${GITHUB_SHA::7}"
-          git push -q --force \
-              "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
