@@ -1,0 +1,48 @@
+---
+/** Editorial and corrections policy (both languages, noindex). */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route, type Locale } from '../../i18n/routes';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const title = es ? `Política editorial de ${SITE_NAMES[lang]}: fuentes y correcciones` : `Editorial policy of ${SITE_NAMES[lang]}: sources and fixes`;
+const description = es ? 'Qué archivos de CMS y páginas de medicare.gov usamos, qué fuentes rechazamos, cada cuánto se releen las tarifas y cómo se corrige un error en los costos publicados.' : 'Which CMS files and medicare.gov pages we use, which sources we refuse, how often the rates are read again and how an error in a published cost is corrected.';
+---
+<PageLayout title={title} description={description} lang={lang} noindex={true} breadcrumbs={[{ label: es ? 'Política editorial' : 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+  {es ? (<Fragment>
+    <h1>Política editorial y de correcciones</h1>
+    <p>Las personas usan estas páginas para saber cuánto pagarán por un servicio médico. Un deducible antiguo o una tarifa equivocada puede hacerles aplazar un cuidado o pagar de más, así que cada cifra remite al archivo oficial del que sale.</p>
+    <h2>Responsable</h2><p>{AUTHOR_NAME}, <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Lo que leemos</h2>
+    <ul>
+      <li>los baremos trimestrales de CMS: médicos (archivo RVU), hospitales ambulatorios (addendum B), centros de cirugía (addendum AA), equipo médico (DMEPOS) y ambulancias;</li>
+      <li>la hoja informativa anual de CMS con los deducibles, primas y copagos de las Partes A y B;</li>
+      <li>las páginas de cobertura de medicare.gov, una por servicio, y el cuadro de beneficios de Medigap;</li>
+      <li>el Código de Regulaciones Federales (42 CFR) cuando una regla de pago está fijada allí.</li>
+    </ul>
+    <h2>Fuentes que rechazamos</h2><p>Aseguradoras, agentes, comparadores de planes, blogs y otros sitios nunca aportan una cifra aquí. Una regla que no encontramos en una página oficial no se publica.</p>
+    <h2>Ciclo de revisión</h2><p>Los baremos de CMS se vuelven a leer cada trimestre, cuando CMS publica su nueva versión; los montos anuales, cuando sale la hoja informativa de noviembre. Cada página muestra la fecha de la última revisión.</p>
+    <h2>Correcciones</h2>
+    <ol><li>Volvemos a abrir el archivo o la página oficial.</li><li>Corregimos el dato y añadimos una prueba para el caso.</li><li>Las páginas se vuelven a generar con la nueva fecha.</li></ol>
+    <h2>Independencia</h2><p>Ninguna aseguradora, agente, hospital ni agencia paga o revisa lo que se publica aquí, y el sitio no tiene enlaces de afiliación. Vea también la <a href={route('method', lang)}>página de método</a>. Versión: {LAST_UPDATED}.</p>
+  </Fragment>) : (<Fragment>
+    <h1>Editorial and corrections policy</h1>
+    <p>People use these pages to know what they will pay for a medical service. An old deductible or a wrong rate can make them put off care or overpay, so every figure points back to the official file it comes from.</p>
+    <h2>Who is responsible</h2><p>{AUTHOR_NAME}, <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>What we read</h2>
+    <ul>
+      <li>the quarterly CMS fee schedules: physicians (RVU file), hospital outpatient (Addendum B), surgery centers (Addendum AA), medical equipment (DMEPOS) and ambulances;</li>
+      <li>the yearly CMS fact sheet with the Part A and Part B deductibles, premiums and copayments;</li>
+      <li>the medicare.gov coverage pages, one per service, and the Medigap benefits chart;</li>
+      <li>the Code of Federal Regulations (42 CFR) when a payment rule is set there.</li>
+    </ul>
+    <h2>Sources we refuse</h2><p>Insurers, agents, plan comparison sites, blogs and other websites never provide a figure here. A rule we cannot find on an official page is not published.</p>
+    <h2>Review cycle</h2><p>The CMS fee schedules are read again every quarter, when CMS publishes the new release; the yearly amounts when the November fact sheet comes out. Every page shows the date of its last review.</p>
+    <h2>Corrections</h2>
+    <ol><li>We open the official file or page again.</li><li>We correct the data and add a test for the case.</li><li>The pages rebuild with the new date.</li></ol>
+    <h2>Independence</h2><p>No insurer, agent, hospital or agency pays for or reviews what is published here, and the site carries no affiliate link. See also the <a href={route('method', lang)}>method page</a>. Version: {LAST_UPDATED}.</p>
+  </Fragment>)}
+  </div>
+</PageLayout>

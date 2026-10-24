@@ -1,0 +1,23 @@
+{
+ "year": 2027,
+ "valid_from": "2027-01-01",
+ "valid_to": "2027-12-31",
+ "retrieved_at": "2026-10-24",
+ "status": "à paraître",
+ "expected": "CMS publie les montants Part A et Part B 2027 dans une fiche « 2027 Medicare Parts A & B Premiums and Deductibles », attendue mi-novembre 2026 (la fiche 2026 est parue le 14 novembre 2025). Le Physician Fee Schedule final CY 2027 et les addenda OPPS/ASC de janvier 2027 paraissent début novembre 2026 et fin décembre 2026.",
+ "partB": { "deductible": null, "premiumStandard": null, "coinsurance": 0.2 },
+ "partA": { "inpatientDeductible": null, "hospitalDaily61to90": null, "lifetimeReserveDaily": null, "snfDaily21to100": null },
+ "crcScreeningConversion": {
+  "patientShare": 0.1,
+  "deductibleApplies": false,
+  "source": "42 CFR 410.152(l)(5)(i)(C): Part B pays 90 percent for 2027 through 2029 (déjà fixé par la réglementation, publiable)",
+  "source_url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-410/subpart-B/section-410.152"
+ },
+ "projections": {
+  "note": "Le rapport 2026 des Trustees projette une prime Part B 2027 et une franchise ; ce sont des projections, pas des montants officiels. Elles ne s'affichent qu'étiquetées « projection des Trustees, non officielle », avec le lien vers le rapport, jamais dans le calcul par défaut.",
+  "partBPremium": null,
+  "partBDeductible": null,
+  "source_url": null,
+  "status": "à relever sur le rapport des Trustees 2026 en phase 2 (non lu en phase 1)"
+ }
+}

@@ -1,0 +1,57 @@
+---
+/** About page (both languages): publisher, purpose, funding, independence. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES } from '../../data/site-config';
+import { route, type Locale } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { t } from '../../i18n/ui';
+import { PAGES } from '../../lib/guides';
+import { helpers } from '../../lib/helpers';
+import { ACTS } from '../../lib/estimate';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const h = helpers(lang);
+const n = PAGES.length + 1;
+const nSrc = Object.keys(h.P.sources).length;
+const name = SITE_NAMES[lang];
+const title = es ? `${name}: quién publica estos costos de Medicare` : `${name}: Who Publishes These Medicare Cost Figures`;
+const description = es
+  ? 'Quién publica Lo que Paga a los 65, por qué sus costos de Medicare son gratis, de qué archivos de CMS sale cada cifra y lo que el sitio nunca vende ni le pide.'
+  : 'Who publishes Out of Pocket 65, why its Medicare cost estimates are free, which CMS files each figure comes from, and what the site never sells or asks of you.';
+const h1 = es ? 'Quién publica este sitio' : 'Who publishes this site';
+const ui = t(lang);
+const body = es ? `
+<p>${name} es una publicación de Radif Partners, una empresa que crea herramientas gratuitas a partir de datos públicos. Este sitio es para las personas con Medicare, para quienes van a cumplir 65 años y para los familiares que les ayudan con las facturas: les dice, antes de una cita o de una operación, cuánto les quedará a su cargo.</p>
+<h2>Por qué existe</h2>
+<p>A la pregunta «¿Medicare lo cubre?» se suele responder con un sí o un no, o con «el 80 %». Para la persona que paga, la pregunta útil es otra: ¿cuántos dólares? La respuesta depende del servicio, del lugar donde se hace (consultorio, centro de cirugía u hospital), de la zona de precios, del deducible que ya pagó en el año y de su cobertura. CMS publica todas esas tarifas, pero en archivos de decenas de miles de líneas pensados para los médicos y los hospitales. Este sitio hace la cuenta con esos archivos para ${ACTS.length} servicios y la explica página por página.</p>
+<h2>De dónde salen las cifras</h2>
+<p>Las tarifas salen de los baremos públicos de CMS de octubre de 2026: médicos, hospitales ambulatorios, centros de cirugía, equipo médico y ambulancias. Los deducibles, copagos y beneficios de Medigap salen de la hoja informativa de CMS de 2026 y de medicare.gov, y las reglas de cobertura de la página de medicare.gov de cada servicio. Nuestro archivo de parámetros cita ${nSrc} páginas oficiales. La ${h.a('method', 'página de método')} da cada fórmula.</p>
+<h2>Lo que no somos</h2>
+<p>No somos Medicare, CMS ni una agencia del gobierno, y el sitio no está afiliado a ellos ni usa su logotipo. No somos una aseguradora ni un agente: no vendemos planes Medicare Advantage, pólizas Medigap ni planes de medicamentos, y no le ponemos en contacto con nadie que los venda. No damos consejos médicos: los precios no le dicen si un servicio le conviene.</p>
+<h2>Cómo se financia</h2>
+<p>El sitio es gratuito y no pide cuenta, correo, código postal ni teléfono. No cobra comisiones y no tiene enlaces de afiliación. Si algún día muestra publicidad, nunca estará encima de la calculadora, y no podrá usar sus datos, porque lo que escribe en la calculadora no sale de su navegador.</p>
+<h2>Avísenos si algo está mal</h2>
+<p>Escriba a <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a> indicando el servicio, el estado y la cifra. La ${h.a('editorial', 'política editorial')} explica cómo se corrige un error. El sitio tiene ${n} páginas en español y otras tantas en inglés.</p>
+` : `
+<p>${name} is published by Radif Partners, a company that builds free tools on public data. This site is for people on Medicare, people about to turn 65 and the relatives who help them with the bills: before an appointment or an operation, it tells them how much will be left for them to pay.</p>
+<h2>Why it exists</h2>
+<p>The question "does Medicare cover it?" is usually answered with a yes or no, or with "80 %". For the person who pays, the useful question is different: how many dollars? The answer depends on the service, on where it is done (office, surgery center or hospital), on the price area, on the deductible already paid this year and on the coverage. CMS publishes all those rates, but in files of tens of thousands of lines meant for doctors and hospitals. This site runs the arithmetic on those files for ${ACTS.length} services and explains it page by page.</p>
+<h2>Where the figures come from</h2>
+<p>The rates come from the public CMS fee schedules of October 2026: physicians, hospital outpatient departments, surgery centers, medical equipment and ambulances. Deductibles, copayments and Medigap benefits come from the CMS 2026 fact sheet and medicare.gov, and coverage rules from the medicare.gov page of each service. Our parameter file cites ${nSrc} official pages. The ${h.a('method', 'method page')} gives every formula.</p>
+<h2>What we are not</h2>
+<p>We are not Medicare, CMS or a government agency; the site is not affiliated with them and uses no logo of theirs. We are not an insurer or an agent: we sell no Medicare Advantage plan, Medigap policy or drug plan, and we put you in touch with no one who does. We give no medical advice: prices do not tell you whether a service is right for you.</p>
+<h2>How the site is paid for</h2>
+<p>It is free and asks for no account, email, ZIP code or phone number. It takes no commission and carries no affiliate link. If it ever shows advertising, it will never sit above the estimator and cannot use your data, because what you type in the estimator never leaves your browser.</p>
+<h2>Tell us when something is wrong</h2>
+<p>Write to <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a> with the service, the state and the figure. The ${h.a('editorial', 'editorial policy')} explains how a correction is made. The site has ${n} pages in English and as many in Spanish.</p>
+`;
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: h1, path: route('about', lang) }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><p class="kicker">{es ? 'Quiénes somos' : 'About'}</p><h1 class="mt-0 text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <Fragment set:html={body} />
+    <p class="text-sm text-navy-600">{es ? 'Revisado el' : 'Last reviewed on'} <time datetime={LAST_UPDATED}>{h.date(LAST_UPDATED)}</time>.</p>
+  </div>
+</PageLayout>

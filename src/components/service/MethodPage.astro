@@ -1,0 +1,97 @@
+---
+/** Method page (both languages): every formula of the estimator, its files and its limits. Figures from the data. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { LAST_UPDATED } from '../../data/site-config';
+import { route, type Locale } from '../../i18n/routes';
+import { breadcrumbSchema, articleSchema } from '../../lib/seo';
+import { t } from '../../i18n/ui';
+import { helpers } from '../../lib/helpers';
+import { ACTS } from '../../lib/estimate';
+import PFS from '../../data/cms/pfs.json';
+import OPPS from '../../data/cms/opps.json';
+import DME from '../../data/cms/dmepos.json';
+import AMB from '../../data/cms/ambulance.json';
+import { pfsAmount, type Rvu } from '../../lib/engine/medicare';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const h = helpers(lang);
+const { m, mx, pc, num, P, PA, PB, E } = h;
+const nLoc = h.LOCALITIES.length;
+const nStates = h.STATES.length;
+const nAmb = Object.keys(AMB.localities).length;
+const nDme = Object.keys(DME.codes).length;
+const nOpps = Object.keys(OPPS.acts).length;
+const kinds = (k: string) => ACTS.filter((a) => a.kind === k).length;
+const ov = E('office-visit'); const ovOff = ov.approvedTotal;
+const ovFac = pfsAmount((PFS.acts as Record<string, { global: Rvu }>)['office-visit'].global, h.CF, true);
+const mriO = E('mri-lumbar', { setting: 'office' }); const mriH = E('mri-lumbar', { setting: 'hopd' });
+const np = E('office-visit', { assignment: false });
+const cpap = E('cpap', { count: 13 });
+const amb = E('ambulance-emergency', { miles: 25 });
+const dial = E('dialysis', { count: 1 });
+const date = h.date(PFS.retrieved_at);
+const title = es ? 'Método de cálculo: cómo se estiman los costos de Medicare' : 'Medicare Cost Method: How Each Out-of-Pocket Figure Is Built';
+const description = es
+  ? 'Cómo se calcula cada costo: baremo de médicos por zona, tarifas de hospital y centro de cirugía, equipo, ambulancia, deducible, 20 %, Medigap y los límites.'
+  : 'How each cost is computed: physician fee schedule by area, hospital and surgery center rates, equipment, ambulance, deductible, 20 %, Medigap, and the limits.';
+const h1 = es ? 'Cómo se calculan los costos' : 'How the costs are calculated';
+const body = es ? `
+<p>La calculadora y todas las páginas leen los mismos archivos: cinco tablas extraídas de los archivos públicos de CMS de octubre de 2026, un archivo de parámetros de 2026 (deducibles, coseguros, Medigap) y un archivo de reglas de cobertura escrito a partir de medicare.gov. Ninguna cifra se escribe a mano en una página. Los archivos de CMS se leyeron el ${date}; cubren ${ACTS.length} servicios, ${nLoc} localidades de precios del baremo de médicos, ${nStates} estados y territorios para el equipo médico y ${nAmb} localidades de ambulancia.</p>
+<h2>1. El monto aprobado de un médico</h2>
+<p>El ${h.src('pfs', 'baremo de médicos (Physician Fee Schedule)')} da a cada servicio tres unidades de valor relativo (RVU): trabajo del médico, gastos de práctica y seguro de responsabilidad. El monto aprobado es [(RVU de trabajo × GPCI de trabajo) + (RVU de gastos × GPCI de gastos) + (RVU de seguro × GPCI de seguro)] × factor de conversión. El factor de 2026 es de ${mx(h.CF)} dólares. Los GPCI son los índices geográficos de la localidad: elegir un estado y una zona en la calculadora cambia esos tres índices; sin zona, se usan los valores nacionales (1,000). Los gastos de práctica tienen dos valores: el de consultorio, más alto, y el de «instalación», cuando el servicio se hace en un hospital o un centro de cirugía que cobra su propia tarifa. La misma consulta vale ${m(ovOff)} en un consultorio y ${m(ovFac)} cuando el médico la factura en un hospital.</p>
+<p>Para las imágenes (resonancia, mamografía diagnóstica), en un centro de imágenes se suman la parte del radiólogo y la parte técnica; la parte técnica no puede superar el monto que se pagaría en un hospital ambulatorio, como exige la ley. En un hospital, el médico solo factura su parte profesional y el hospital cobra el resto.</p>
+<h2>2. El hospital ambulatorio y el centro de cirugía</h2>
+<p>Cuando el servicio se hace en un departamento ambulatorio de hospital, la calculadora añade la línea del hospital con el pago nacional y el copago nacional sin ajustar del ${h.src('opps', 'addendum B del sistema de pago ambulatorio')} (${num(nOpps)} servicios leídos). El copago de una línea no puede superar el deducible de la Parte A del año, ${m(PA.inpatientDeductible)}. En un centro de cirugía ambulatoria, la línea del centro es el pago nacional del ${h.src('asc', 'addendum AA')}, y usted paga el 20 %. Estas tarifas son nacionales: el ajuste por el índice salarial del hospital, no se modela. Por eso la línea de su hospital real puede diferir algunos dólares.</p>
+<h2>3. Su parte: deducible, 20 %, cargo adicional</h2>
+<p>Las líneas se recorren en orden. El deducible de la Parte B que le queda por pagar (${m(PB.deductible)} como máximo en 2026) se descuenta primero; después se aplica el 20 % al resto de cada línea, o el copago del hospital en su lugar. Los servicios preventivos de la lista de medicare.gov cuestan 0 $ y no tocan el deducible. Una colonoscopia de detección que se convierte en extirpación de pólipos se paga al ${pc(P.crcScreeningConversion.patientShare)} sin deducible en 2026, según el ${h.src('cfr410_152', '42 CFR 410.152')}. Si el médico no acepta la asignación, Medicare aprueba el ${pc(P.limitingCharge.nonParticipatingFactor)} de la tarifa y el médico puede cobrar hasta el 109,25 % de la tarifa (el cargo límite, un 15 % por encima del monto aprobado reducido): para la consulta de ejemplo, ${m(np.excessPart)} más. El ${h.src('assignment', 'texto de medicare.gov sobre la asignación')} explica esta regla.</p>
+<h2>4. Equipo médico, ambulancia, diálisis</h2>
+<p><strong>Equipo médico duradero.</strong> El ${h.src('dmepos', 'baremo DME26-D')} da una tarifa por estado, rural y no rural, para ${num(nDme)} códigos HCPCS que usamos. El equipo de alquiler con tope (CPAP, silla de ruedas manual) se paga a la tarifa completa los meses 1 a 3 y al ${pc(P.dmeRental.months4to13FactorStandard)} de ella los meses 4 a 13; después de ${P.dmeRental.cappedMonths} meses el equipo es suyo (${h.src('cfr414_229', '42 CFR 414.229')}). La silla de ruedas eléctrica sigue la misma regla con un ${pc(P.dmeRental.months4to13FactorPowerWheelchair)} los meses 4 a 13. Un CPAP alquilado 13 meses en Florida tiene un monto aprobado de ${m(cpap.approvedTotal)} y le deja ${m(cpap.youPay)}.</p>
+<p><strong>Ambulancia.</strong> El ${h.src('afs', 'baremo de ambulancias')} da, para cada localidad, una tarifa base urbana, rural y super rural, y una tarifa por milla; en zona rural las millas 1 a 17 tienen una tarifa más alta. Un traslado de emergencia con soporte vital básico de 25 millas en el resto de Florida le deja ${m(amb.youPay)} con el deducible pagado.</p>
+<p><strong>Diálisis.</strong> Usamos la tarifa base nacional por sesión del ${h.src('esrd', 'sistema de pago de la enfermedad renal terminal')}, ${mx(P.esrd.basePerTreatment)} en 2026, sin los ajustes por paciente y por centro que CMS aplica después. Una sesión le deja ${m(dial.youPay)}.</p>
+<h2>5. Parte A, Medigap y Medicare Advantage</h2>
+<p>Para una hospitalización, la calculadora aplica la tabla de la Parte A por período de beneficios: deducible de ${m(PA.inpatientDeductible)} (días 1 a 60), ${m(PA.hospitalDaily61to90)} por día del 61 al 90, ${m(PA.lifetimeReserveDaily)} por día de reserva; para un centro de enfermería, ${m(PA.snfDaily21to100)} por día del 21 al 100. Con Medigap, cada partida se multiplica por la parte que la letra elegida paga según el ${h.src('medigap', 'cuadro de medicare.gov')}: 100 %, 75 %, 50 % o nada. Con Medicare Advantage, la calculadora no inventa ningún copago: usa el copago y el coseguro que usted escribe y los limita a lo que le queda bajo el tope anual de su plan.</p>
+<h2>6. Lo que el cálculo no incluye</h2>
+<ul>
+<li>La prima mensual de la Parte B (${mx(P.partB.premiumStandard)} estándar en 2026) y sus recargos por ingresos: no dependen del servicio.</li>
+<li>Los honorarios de anestesia, de patología o de laboratorio que pueden acompañar una cirugía o una colonoscopia, y los medicamentos administrados durante el procedimiento.</li>
+<li>Las reducciones por procedimientos múltiples en la misma sesión y los pagos excepcionales (outliers).</li>
+<li>Los medicamentos de la Parte D, salvo la vacuna contra la culebrilla, a 0 $ con un plan de la Parte D.</li>
+<li>Los precios de los servicios no cubiertos: para audífonos o atención dental, usted escribe el precio que le dieron.</li>
+</ul>
+<h2>7. Códigos, licencias y actualizaciones</h2>
+<p>Los archivos de CMS son obras del gobierno federal (17 U.S.C. § 105). Los códigos de procedimiento CPT y sus descripciones pertenecen a la American Medical Association: no se publican en este sitio. Cada servicio tiene un nombre escrito por nosotros, y la correspondencia con su código se guarda en una tabla local que no se publica. Solo se muestran códigos HCPCS de nivel II, que mantiene CMS (por ejemplo A0429 para la ambulancia básica o E0601 para el CPAP). Los archivos de CMS se vuelven a leer cada trimestre; el baremo de equipo y el de ambulancias se comprueban automáticamente. Las pruebas del motor, que se ejecutan en cada compilación, verifican casos conocidos: deducible, tope del copago de hospital, alquiler con tope, cargo límite, días de la Parte A.</p>
+<p>Los montos de 2027 de la Parte A y de la Parte B se añadirán cuando CMS los publique, a mediados de noviembre de 2026; hasta entonces no se proyectan. Versión del método: ${LAST_UPDATED}. ¿Una cifra le parece errónea? Escríbanos desde la página de ${h.a('contact', 'contacto')}.</p>
+` : `
+<p>The estimator and every page read the same files: five tables taken from the public CMS files of October 2026, a 2026 parameter file (deductibles, coinsurance, Medigap) and a coverage rule file written from medicare.gov. No figure is typed into a page. The CMS files were read on ${date}; they cover ${ACTS.length} services, ${nLoc} physician fee schedule localities, ${nStates} states and territories for medical equipment and ${nAmb} ambulance localities.</p>
+<h2>1. A doctor's approved amount</h2>
+<p>The ${h.src('pfs', 'physician fee schedule')} gives each service three relative value units (RVUs): physician work, practice expense and malpractice insurance. The approved amount is [(work RVU × work GPCI) + (practice expense RVU × practice expense GPCI) + (malpractice RVU × malpractice GPCI)] × conversion factor. The 2026 factor is ${mx(h.CF)} dollars. GPCIs are the locality's geographic indexes: picking a state and an area in the estimator changes those three indexes; with no area, the national values (1.000) apply. Practice expense has two values: the office one, higher, and the "facility" one, used when the service is done in a hospital or surgery center that bills its own rate. The same visit is worth ${m(ovOff)} in an office and ${m(ovFac)} when the doctor bills it in a hospital.</p>
+<p>For imaging (MRI, diagnostic mammogram), at an imaging center the radiologist's part and the technical part are added; the technical part cannot exceed what would be paid in a hospital outpatient department, as the law requires. In a hospital, the doctor bills only the professional part and the hospital charges the rest.</p>
+<h2>2. Hospital outpatient department and surgery center</h2>
+<p>When the service is done in a hospital outpatient department, the estimator adds the hospital line with the national payment and the national unadjusted copayment of the ${h.src('opps', 'outpatient payment system Addendum B')} (${num(nOpps)} services read). One line's copayment cannot exceed the year's Part A deductible, ${m(PA.inpatientDeductible)}. In an ambulatory surgery center, the center's line is the national payment of ${h.src('asc', 'Addendum AA')}, and you pay 20 %. These rates are national: the hospital wage index adjustment, is not modelled. That is why your real hospital's line may differ by a few dollars.</p>
+<h2>3. Your share: deductible, 20 %, excess charge</h2>
+<p>The lines are taken in order. The Part B deductible you still owe (${m(PB.deductible)} at most in 2026) comes off first; then 20 % applies to the rest of each line, or the hospital copayment instead. The preventive services on medicare.gov's list cost $0 and leave the deductible untouched. A screening colonoscopy that turns into polyp removal is paid at ${pc(P.crcScreeningConversion.patientShare)} with no deductible in 2026, under ${h.src('cfr410_152', '42 CFR 410.152')}. When the doctor does not accept assignment, Medicare approves ${pc(P.limitingCharge.nonParticipatingFactor)} of the fee and the doctor may bill up to 109.25 % of the fee (the limiting charge, 15 % above the reduced approved amount): for the sample visit, ${m(np.excessPart)} more. The ${h.src('assignment', 'medicare.gov page on assignment')} explains the rule.</p>
+<h2>4. Medical equipment, ambulance, dialysis</h2>
+<p><strong>Durable medical equipment.</strong> The ${h.src('dmepos', 'DME26-D fee schedule')} gives a rate per state, rural and non-rural, for the ${num(nDme)} HCPCS codes we use. Capped rental equipment (CPAP, manual wheelchair) is paid at the full fee in months 1 to 3 and at ${pc(P.dmeRental.months4to13FactorStandard)} of it in months 4 to 13; after ${P.dmeRental.cappedMonths} months the equipment is yours (${h.src('cfr414_229', '42 CFR 414.229')}). A power wheelchair follows the same rule with ${pc(P.dmeRental.months4to13FactorPowerWheelchair)} in months 4 to 13. A CPAP rented for 13 months in Florida has an approved amount of ${m(cpap.approvedTotal)} and leaves you ${m(cpap.youPay)}.</p>
+<p><strong>Ambulance.</strong> The ${h.src('afs', 'ambulance fee schedule')} gives, for each locality, an urban, rural and super rural base rate and a rate per mile; in rural areas miles 1 to 17 have a higher rate. A 25-mile basic life support emergency ride in the rest of Florida leaves you ${m(amb.youPay)} with the deductible met.</p>
+<p><strong>Dialysis.</strong> We use the national base rate per treatment of the ${h.src('esrd', 'end-stage renal disease payment system')}, ${mx(P.esrd.basePerTreatment)} in 2026, without the patient and facility adjustments CMS applies afterwards. One treatment leaves you ${m(dial.youPay)}.</p>
+<h2>5. Part A, Medigap and Medicare Advantage</h2>
+<p>For a hospital stay the estimator applies the Part A table per benefit period: a ${m(PA.inpatientDeductible)} deductible (days 1 to 60), ${m(PA.hospitalDaily61to90)} a day for days 61 to 90, ${m(PA.lifetimeReserveDaily)} a reserve day; for a skilled nursing facility, ${m(PA.snfDaily21to100)} a day for days 21 to 100. With Medigap, each item is multiplied by the share the chosen letter pays according to the ${h.src('medigap', 'medicare.gov chart')}: 100 %, 75 %, 50 % or nothing. With Medicare Advantage, the estimator makes up no copay: it uses the copay and coinsurance you type and limits them to what is left under your plan's yearly cap.</p>
+<h2>6. What the calculation leaves out</h2>
+<ul>
+<li>The monthly Part B premium (${mx(P.partB.premiumStandard)} standard in 2026) and its income-related surcharges: they do not depend on the service.</li>
+<li>Anesthesia, pathology or lab fees that may come with a surgery or a colonoscopy, and drugs given during the procedure.</li>
+<li>Multiple procedure reductions within one session and outlier payments.</li>
+<li>Part D drugs, except the shingles vaccine, at $0 with a Part D plan.</li>
+<li>Prices of services that are not covered: for hearing aids or dental care, you type the price you were quoted.</li>
+</ul>
+<h2>7. Codes, licences and updates</h2>
+<p>CMS files are works of the federal government (17 U.S.C. § 105). CPT procedure codes and their descriptions belong to the American Medical Association: they are not published on this site. Each service has a name we wrote ourselves, and the link to its code is kept in a local table that is not published. Only HCPCS level II codes, maintained by CMS, are shown (for example A0429 for a basic ambulance or E0601 for a CPAP). The CMS files are read again every quarter; the equipment and ambulance schedules are checked automatically. The engine tests, run on every build, check known cases: deductible, hospital copayment cap, capped rental, limiting charge, Part A days.</p>
+<p>The 2027 Part A and Part B amounts will be added when CMS publishes them, in mid-November 2026; until then they are not projected. Method version: ${LAST_UPDATED}. A figure looks wrong? Write to us from the ${h.a('contact', 'contact page')}.</p>
+`;
+const ui = t(lang);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[articleSchema({ title: h1, description, path: route('method', lang), lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: h1, path: route('method', lang) }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><p class="kicker">{es ? 'Método' : 'Method'}</p><h1 class="mt-0 text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  <div class="prose prose-slate max-w-none" set:html={body} />
+</PageLayout>

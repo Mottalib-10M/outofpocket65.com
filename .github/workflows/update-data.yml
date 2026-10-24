@@ -1,0 +1,35 @@
+name: Mise à jour des barèmes CMS
+# Trimestriel : CMS publie les fichiers DMEPOS et ambulance en début de trimestre.
+# Sans scripts/cpt-map.local.mjs (hors git), seule la partie HCPCS niveau II est régénérée ;
+# PFS / OPPS / ASC se relancent en local (node scripts/update-data.mjs).
+on:
+  schedule:
+    - cron: "0 7 8 1,4,7,10 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --legacy-peer-deps
+      - name: Télécharger et régénérer
+        run: node scripts/update-data.mjs
+      - name: Contrôles
+        run: npm test && npm run build
+      - name: Commit si les données ont changé
+        run: |
+          if git diff --quiet src/data; then echo "Aucun changement"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data
+          git commit -m "Barèmes CMS mis à jour ($(date +%Y-%m-%d))"
+          git push

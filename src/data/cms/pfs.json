@@ -1,0 +1,1413 @@
+{
+ "source": "CMS, Physician Fee Schedule relative value file RVU26D (October 2026 release, updated 08/26/2026)",
+ "source_url": "https://www.cms.gov/files/zip/rvu26d-updated-08-26-2026.zip",
+ "retrieved_at": "2026-10-24",
+ "valid_from": "2026-10-01",
+ "valid_to": "2026-12-31",
+ "conversionFactor": 33.4009,
+ "acts": {
+  "hearing-exam": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.6,
+    "peNF": 0.46,
+    "peF": 0.16,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 35.74,
+   "nationalFacility": 25.72
+  },
+  "cataract-surgery": {
+   "status": "A",
+   "globalDays": "090",
+   "global": {
+    "work": 7.17,
+    "peNF": 6.14,
+    "peF": 6.14,
+    "mp": 0.54,
+    "naNF": true,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 462.6,
+   "nationalFacility": 462.6
+  },
+  "physical-therapy-eval": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.54,
+    "peNF": 1.38,
+    "peF": 1.38,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 97.86,
+   "nationalFacility": 97.86
+  },
+  "physical-therapy-session": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.45,
+    "peNF": 0.41,
+    "peF": 0.41,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 29.06,
+   "nationalFacility": 29.06
+  },
+  "chiropractic-adjustment": {
+   "status": "A",
+   "globalDays": "000",
+   "global": {
+    "work": 0.69,
+    "peNF": 0.45,
+    "peF": 0.14,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 38.41,
+   "nationalFacility": 28.06
+  },
+  "colonoscopy-screening": {
+   "status": "A",
+   "globalDays": "000",
+   "global": {
+    "work": 3.18,
+    "peNF": 7.73,
+    "peF": 1.34,
+    "mp": 0.42,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 378.43,
+   "nationalFacility": 165
+  },
+  "colonoscopy-polyp": {
+   "status": "A",
+   "globalDays": "000",
+   "global": {
+    "work": 4.46,
+    "peNF": 10,
+    "peF": 1.72,
+    "mp": 0.51,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 500.01,
+   "nationalFacility": 223.45
+  },
+  "colonoscopy-diagnostic": {
+   "status": "A",
+   "globalDays": "000",
+   "global": {
+    "work": 3.18,
+    "peNF": 7.73,
+    "peF": 1.34,
+    "mp": 0.41,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 378.1,
+   "nationalFacility": 164.67
+  },
+  "knee-replacement": {
+   "status": "A",
+   "globalDays": "090",
+   "global": {
+    "work": 19.11,
+    "peNF": 11.58,
+    "peF": 11.58,
+    "mp": 4.02,
+    "naNF": true,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 1159.35,
+   "nationalFacility": 1159.35
+  },
+  "mri-brain": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.44,
+    "peNF": 4.31,
+    "peF": 4.31,
+    "mp": 0.1,
+    "naNF": false,
+    "oppsPeNF": 7.77,
+    "oppsMp": 0.12
+   },
+   "prof": {
+    "work": 1.44,
+    "peNF": 0.51,
+    "peF": 0.51,
+    "mp": 0.08,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "tech": {
+    "work": 0,
+    "peNF": 3.8,
+    "peF": 3.8,
+    "mp": 0.02,
+    "naNF": false,
+    "oppsPeNF": 7.26,
+    "oppsMp": 0.04
+   },
+   "nationalNonFacility": 195.4,
+   "nationalFacility": 195.4
+  },
+  "mri-lumbar": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.44,
+    "peNF": 4.2,
+    "peF": 4.2,
+    "mp": 0.1,
+    "naNF": false,
+    "oppsPeNF": 7.79,
+    "oppsMp": 0.12
+   },
+   "prof": {
+    "work": 1.44,
+    "peNF": 0.53,
+    "peF": 0.53,
+    "mp": 0.08,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "tech": {
+    "work": 0,
+    "peNF": 3.67,
+    "peF": 3.67,
+    "mp": 0.02,
+    "naNF": false,
+    "oppsPeNF": 7.26,
+    "oppsMp": 0.04
+   },
+   "nationalNonFacility": 191.72,
+   "nationalFacility": 191.72
+  },
+  "mri-knee": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.32,
+    "peNF": 4.71,
+    "peF": 4.71,
+    "mp": 0.09,
+    "naNF": false,
+    "oppsPeNF": 7.75,
+    "oppsMp": 0.1
+   },
+   "prof": {
+    "work": 1.32,
+    "peNF": 0.49,
+    "peF": 0.49,
+    "mp": 0.07,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "tech": {
+    "work": 0,
+    "peNF": 4.22,
+    "peF": 4.22,
+    "mp": 0.02,
+    "naNF": false,
+    "oppsPeNF": 7.26,
+    "oppsMp": 0.03
+   },
+   "nationalNonFacility": 204.41,
+   "nationalFacility": 204.41
+  },
+  "acupuncture": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.61,
+    "peNF": 0.79,
+    "peF": 0.17,
+    "mp": 0.04,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 48.1,
+   "nationalFacility": 27.39
+  },
+  "mammogram-screening": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.74,
+    "peNF": 2.99,
+    "peF": 2.99,
+    "mp": 0.05,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "prof": {
+    "work": 0.74,
+    "peNF": 0.27,
+    "peF": 0.27,
+    "mp": 0.04,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "tech": {
+    "work": 0,
+    "peNF": 2.72,
+    "peF": 2.72,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 126.26,
+   "nationalFacility": 126.26
+  },
+  "mammogram-diagnostic": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.98,
+    "peNF": 3.64,
+    "peF": 3.64,
+    "mp": 0.08,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "prof": {
+    "work": 0.98,
+    "peNF": 0.35,
+    "peF": 0.35,
+    "mp": 0.06,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "tech": {
+    "work": 0,
+    "peNF": 3.29,
+    "peF": 3.29,
+    "mp": 0.02,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 156.98,
+   "nationalFacility": 156.98
+  },
+  "eye-exam-medical": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.42,
+    "peNF": 2.35,
+    "peF": 0.4,
+    "mp": 0.04,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 127.26,
+   "nationalFacility": 62.13
+  },
+  "glaucoma-screening": {
+   "status": "T",
+   "globalDays": "XXX",
+   "global": {
+    "work": 0.44,
+    "peNF": 1.47,
+    "peF": 1.47,
+    "mp": 0.02,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 64.46,
+   "nationalFacility": 64.46
+  },
+  "podiatry-nail-care": {
+   "status": "R",
+   "globalDays": "000",
+   "global": {
+    "work": 0.17,
+    "peNF": 0.53,
+    "peF": 0.02,
+    "mp": 0.01,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 23.71,
+   "nationalFacility": 6.68
+  },
+  "podiatry-visit": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.3,
+    "peNF": 1.46,
+    "peF": 0.33,
+    "mp": 0.09,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 95.19,
+   "nationalFacility": 57.45
+  },
+  "office-visit": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.3,
+    "peNF": 1.46,
+    "peF": 0.33,
+    "mp": 0.09,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 95.19,
+   "nationalFacility": 57.45
+  },
+  "wellness-visit": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 1.92,
+    "peNF": 2.07,
+    "peF": 2.07,
+    "mp": 0.13,
+    "naNF": false,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 137.61,
+   "nationalFacility": 137.61
+  },
+  "er-visit": {
+   "status": "A",
+   "globalDays": "XXX",
+   "global": {
+    "work": 2.74,
+    "peNF": 0.45,
+    "peF": 0.45,
+    "mp": 0.35,
+    "naNF": true,
+    "oppsPeNF": 0,
+    "oppsMp": 0
+   },
+   "nationalNonFacility": 118.24,
+   "nationalFacility": 118.24
+  }
+ },
+ "localities": [
+  {
+   "mac": "10112",
+   "state": "AL",
+   "locality": "00",
+   "name": "ALABAMA",
+   "work": 1,
+   "pe": 0.875,
+   "mp": 0.566
+  },
+  {
+   "mac": "02102",
+   "state": "AK",
+   "locality": "01",
+   "name": "ALASKA",
+   "work": 1.5,
+   "pe": 1.065,
+   "mp": 0.551
+  },
+  {
+   "mac": "03102",
+   "state": "AZ",
+   "locality": "00",
+   "name": "ARIZONA",
+   "work": 1,
+   "pe": 0.969,
+   "mp": 0.856
+  },
+  {
+   "mac": "07102",
+   "state": "AR",
+   "locality": "13",
+   "name": "ARKANSAS",
+   "work": 1,
+   "pe": 0.859,
+   "mp": 0.515
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "54",
+   "name": "BAKERSFIELD",
+   "work": 1.019,
+   "pe": 1.096,
+   "mp": 0.609
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "55",
+   "name": "CHICO",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "71",
+   "name": "EL CENTRO",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.541
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "56",
+   "name": "FRESNO",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "57",
+   "name": "HANFORD-CORCORAN",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "18",
+   "name": "LOS ANGELES-LONG BEACH-ANAHEIM (LOS ANGELES/ORANGE CNTY)",
+   "work": 1.041,
+   "pe": 1.183,
+   "mp": 0.664
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "58",
+   "name": "MADERA",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "59",
+   "name": "MERCED",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "60",
+   "name": "MODESTO",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "51",
+   "name": "NAPA",
+   "work": 1.063,
+   "pe": 1.318,
+   "mp": 0.508
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "17",
+   "name": "OXNARD-THOUSAND OAKS-VENTURA",
+   "work": 1.028,
+   "pe": 1.182,
+   "mp": 0.623
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "61",
+   "name": "REDDING",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "62",
+   "name": "RIVERSIDE-SAN BERNARDINO-ONTARIO",
+   "work": 1.018,
+   "pe": 1.096,
+   "mp": 0.853
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "63",
+   "name": "SACRAMENTO-ROSEVILLE-FOLSOM",
+   "work": 1.036,
+   "pe": 1.163,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "64",
+   "name": "SALINAS",
+   "work": 1.031,
+   "pe": 1.159,
+   "mp": 0.536
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "72",
+   "name": "SAN DIEGO-CHULA VISTA-CARLSBAD",
+   "work": 1.03,
+   "pe": 1.196,
+   "mp": 0.542
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "05",
+   "name": "SAN FRANCISCO-OAKLAND-BERKELEY (SAN FRANCISCO/SAN MATEO/ALAMEDA/CONTRA COSTA CNTY)",
+   "work": 1.095,
+   "pe": 1.41,
+   "mp": 0.425
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "52",
+   "name": "SAN FRANCISCO-OAKLAND-BERKELEY (MARIN CNTY)",
+   "work": 1.095,
+   "pe": 1.41,
+   "mp": 0.459
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "65",
+   "name": "SAN JOSE-SUNNYVALE-SANTA CLARA (SAN BENITO CNTY)",
+   "work": 1.11,
+   "pe": 1.442,
+   "mp": 0.536
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "73",
+   "name": "SAN LUIS OBISPO-PASO ROBLES",
+   "work": 1.017,
+   "pe": 1.139,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "09",
+   "name": "SAN JOSE-SUNNYVALE-SANTA CLARA (SANTA CLARA CNTY)",
+   "work": 1.11,
+   "pe": 1.442,
+   "mp": 0.397
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "66",
+   "name": "SANTA CRUZ-WATSONVILLE",
+   "work": 1.021,
+   "pe": 1.215,
+   "mp": 0.536
+  },
+  {
+   "mac": "01182",
+   "state": "CA",
+   "locality": "74",
+   "name": "SANTA MARIA-SANTA BARBARA",
+   "work": 1.028,
+   "pe": 1.166,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "67",
+   "name": "SANTA ROSA-PETALUMA",
+   "work": 1.03,
+   "pe": 1.228,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "68",
+   "name": "STOCKTON",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "53",
+   "name": "VALLEJO",
+   "work": 1.063,
+   "pe": 1.318,
+   "mp": 0.459
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "69",
+   "name": "VISALIA",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "70",
+   "name": "YUBA CITY",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "01112",
+   "state": "CA",
+   "locality": "75",
+   "name": "REST OF CALIFORNIA",
+   "work": 1.017,
+   "pe": 1.096,
+   "mp": 0.536
+  },
+  {
+   "mac": "04112",
+   "state": "CO",
+   "locality": "01",
+   "name": "COLORADO",
+   "work": 1.012,
+   "pe": 1.064,
+   "mp": 0.781
+  },
+  {
+   "mac": "13102",
+   "state": "CT",
+   "locality": "00",
+   "name": "CONNECTICUT",
+   "work": 1.02,
+   "pe": 1.077,
+   "mp": 1.21
+  },
+  {
+   "mac": "12202",
+   "state": "DC",
+   "locality": "01",
+   "name": "DC + MD/VA SUBURBS",
+   "work": 1.054,
+   "pe": 1.178,
+   "mp": 1.113
+  },
+  {
+   "mac": "12102",
+   "state": "DE",
+   "locality": "01",
+   "name": "DELAWARE",
+   "work": 1.005,
+   "pe": 0.988,
+   "mp": 0.899
+  },
+  {
+   "mac": "09102",
+   "state": "FL",
+   "locality": "03",
+   "name": "FORT LAUDERDALE",
+   "work": 1,
+   "pe": 1.013,
+   "mp": 1.808
+  },
+  {
+   "mac": "09102",
+   "state": "FL",
+   "locality": "04",
+   "name": "MIAMI",
+   "work": 1,
+   "pe": 1.041,
+   "mp": 2.529
+  },
+  {
+   "mac": "09102",
+   "state": "FL",
+   "locality": "99",
+   "name": "REST OF FLORIDA",
+   "work": 1,
+   "pe": 0.956,
+   "mp": 1.503
+  },
+  {
+   "mac": "10212",
+   "state": "GA",
+   "locality": "01",
+   "name": "ATLANTA",
+   "work": 1.003,
+   "pe": 1.016,
+   "mp": 1.201
+  },
+  {
+   "mac": "10212",
+   "state": "GA",
+   "locality": "99",
+   "name": "REST OF GEORGIA",
+   "work": 1,
+   "pe": 0.892,
+   "mp": 1.192
+  },
+  {
+   "mac": "01212",
+   "state": "HI",
+   "locality": "01",
+   "name": "HAWAII, GUAM",
+   "work": 1,
+   "pe": 1.137,
+   "mp": 0.579
+  },
+  {
+   "mac": "02202",
+   "state": "ID",
+   "locality": "00",
+   "name": "IDAHO",
+   "work": 1,
+   "pe": 0.92,
+   "mp": 0.473
+  },
+  {
+   "mac": "06102",
+   "state": "IL",
+   "locality": "16",
+   "name": "CHICAGO",
+   "work": 1.007,
+   "pe": 1.005,
+   "mp": 2.295
+  },
+  {
+   "mac": "06102",
+   "state": "IL",
+   "locality": "12",
+   "name": "EAST ST. LOUIS",
+   "work": 1,
+   "pe": 0.92,
+   "mp": 2.014
+  },
+  {
+   "mac": "06102",
+   "state": "IL",
+   "locality": "15",
+   "name": "SUBURBAN CHICAGO",
+   "work": 1.007,
+   "pe": 1.027,
+   "mp": 1.772
+  },
+  {
+   "mac": "06102",
+   "state": "IL",
+   "locality": "99",
+   "name": "REST OF ILLINOIS",
+   "work": 1,
+   "pe": 0.913,
+   "mp": 1.563
+  },
+  {
+   "mac": "08102",
+   "state": "IN",
+   "locality": "00",
+   "name": "INDIANA",
+   "work": 1,
+   "pe": 0.927,
+   "mp": 0.486
+  },
+  {
+   "mac": "05102",
+   "state": "IA",
+   "locality": "00",
+   "name": "IOWA",
+   "work": 1,
+   "pe": 0.915,
+   "mp": 0.397
+  },
+  {
+   "mac": "05202",
+   "state": "KS",
+   "locality": "00",
+   "name": "KANSAS",
+   "work": 1,
+   "pe": 0.904,
+   "mp": 0.504
+  },
+  {
+   "mac": "15102",
+   "state": "KY",
+   "locality": "00",
+   "name": "KENTUCKY",
+   "work": 1,
+   "pe": 0.889,
+   "mp": 0.915
+  },
+  {
+   "mac": "07202",
+   "state": "LA",
+   "locality": "01",
+   "name": "NEW ORLEANS",
+   "work": 1,
+   "pe": 0.941,
+   "mp": 1.136
+  },
+  {
+   "mac": "07202",
+   "state": "LA",
+   "locality": "99",
+   "name": "REST OF LOUISIANA",
+   "work": 1,
+   "pe": 0.885,
+   "mp": 0.958
+  },
+  {
+   "mac": "14112",
+   "state": "ME",
+   "locality": "03",
+   "name": "SOUTHERN MAINE",
+   "work": 1,
+   "pe": 0.991,
+   "mp": 0.631
+  },
+  {
+   "mac": "14112",
+   "state": "ME",
+   "locality": "99",
+   "name": "REST OF MAINE",
+   "work": 1,
+   "pe": 0.92,
+   "mp": 0.622
+  },
+  {
+   "mac": "12302",
+   "state": "MD",
+   "locality": "01",
+   "name": "BALTIMORE/SURR. CNTYS",
+   "work": 1.016,
+   "pe": 1.073,
+   "mp": 1.237
+  },
+  {
+   "mac": "12302",
+   "state": "MD",
+   "locality": "99",
+   "name": "REST OF MARYLAND",
+   "work": 1.01,
+   "pe": 1.012,
+   "mp": 0.918
+  },
+  {
+   "mac": "14212",
+   "state": "MA",
+   "locality": "01",
+   "name": "METROPOLITAN BOSTON",
+   "work": 1.041,
+   "pe": 1.194,
+   "mp": 0.89
+  },
+  {
+   "mac": "14212",
+   "state": "MA",
+   "locality": "99",
+   "name": "REST OF MASSACHUSETTS",
+   "work": 1.016,
+   "pe": 1.053,
+   "mp": 0.797
+  },
+  {
+   "mac": "08202",
+   "state": "MI",
+   "locality": "01",
+   "name": "DETROIT",
+   "work": 1,
+   "pe": 0.965,
+   "mp": 1.686
+  },
+  {
+   "mac": "08202",
+   "state": "MI",
+   "locality": "99",
+   "name": "REST OF MICHIGAN",
+   "work": 1,
+   "pe": 0.913,
+   "mp": 1.129
+  },
+  {
+   "mac": "06202",
+   "state": "MN",
+   "locality": "00",
+   "name": "MINNESOTA",
+   "work": 1,
+   "pe": 1.029,
+   "mp": 0.296
+  },
+  {
+   "mac": "07302",
+   "state": "MS",
+   "locality": "00",
+   "name": "MISSISSIPPI",
+   "work": 1,
+   "pe": 0.861,
+   "mp": 0.739
+  },
+  {
+   "mac": "05302",
+   "state": "MO",
+   "locality": "02",
+   "name": "METROPOLITAN KANSAS CITY",
+   "work": 1,
+   "pe": 0.939,
+   "mp": 0.977
+  },
+  {
+   "mac": "05302",
+   "state": "MO",
+   "locality": "01",
+   "name": "METROPOLITAN ST. LOUIS",
+   "work": 1,
+   "pe": 0.952,
+   "mp": 1.002
+  },
+  {
+   "mac": "05302",
+   "state": "MO",
+   "locality": "99",
+   "name": "REST OF MISSOURI",
+   "work": 1,
+   "pe": 0.862,
+   "mp": 0.974
+  },
+  {
+   "mac": "03202",
+   "state": "MT",
+   "locality": "01",
+   "name": "MONTANA",
+   "work": 1,
+   "pe": 1,
+   "mp": 0.998
+  },
+  {
+   "mac": "05402",
+   "state": "NE",
+   "locality": "00",
+   "name": "NEBRASKA",
+   "work": 1,
+   "pe": 0.923,
+   "mp": 0.378
+  },
+  {
+   "mac": "01312",
+   "state": "NV",
+   "locality": "00",
+   "name": "NEVADA",
+   "work": 1,
+   "pe": 1.001,
+   "mp": 0.833
+  },
+  {
+   "mac": "14312",
+   "state": "NH",
+   "locality": "40",
+   "name": "NEW HAMPSHIRE",
+   "work": 1,
+   "pe": 1.041,
+   "mp": 0.875
+  },
+  {
+   "mac": "12402",
+   "state": "NJ",
+   "locality": "01",
+   "name": "NORTHERN NJ",
+   "work": 1.063,
+   "pe": 1.16,
+   "mp": 1.068
+  },
+  {
+   "mac": "12402",
+   "state": "NJ",
+   "locality": "99",
+   "name": "REST OF NEW JERSEY",
+   "work": 1.04,
+   "pe": 1.092,
+   "mp": 1.097
+  },
+  {
+   "mac": "04212",
+   "state": "NM",
+   "locality": "05",
+   "name": "NEW MEXICO",
+   "work": 1,
+   "pe": 0.917,
+   "mp": 1.201
+  },
+  {
+   "mac": "13202",
+   "state": "NY",
+   "locality": "01",
+   "name": "MANHATTAN",
+   "work": 1.064,
+   "pe": 1.162,
+   "mp": 1.586
+  },
+  {
+   "mac": "13202",
+   "state": "NY",
+   "locality": "02",
+   "name": "NYC SUBURBS/LONG ISLAND",
+   "work": 1.064,
+   "pe": 1.189,
+   "mp": 1.857
+  },
+  {
+   "mac": "13202",
+   "state": "NY",
+   "locality": "03",
+   "name": "POUGHKPSIE/N NYC SUBURBS",
+   "work": 1.045,
+   "pe": 1.095,
+   "mp": 1.21
+  },
+  {
+   "mac": "13292",
+   "state": "NY",
+   "locality": "04",
+   "name": "QUEENS",
+   "work": 1.064,
+   "pe": 1.182,
+   "mp": 1.442
+  },
+  {
+   "mac": "13282",
+   "state": "NY",
+   "locality": "99",
+   "name": "REST OF NEW YORK",
+   "work": 1,
+   "pe": 0.95,
+   "mp": 0.703
+  },
+  {
+   "mac": "11502",
+   "state": "NC",
+   "locality": "00",
+   "name": "NORTH CAROLINA",
+   "work": 1,
+   "pe": 0.933,
+   "mp": 0.639
+  },
+  {
+   "mac": "03302",
+   "state": "ND",
+   "locality": "01",
+   "name": "NORTH DAKOTA",
+   "work": 1,
+   "pe": 1,
+   "mp": 0.406
+  },
+  {
+   "mac": "15202",
+   "state": "OH",
+   "locality": "00",
+   "name": "OHIO",
+   "work": 1,
+   "pe": 0.913,
+   "mp": 1.008
+  },
+  {
+   "mac": "04312",
+   "state": "OK",
+   "locality": "00",
+   "name": "OKLAHOMA",
+   "work": 1,
+   "pe": 0.893,
+   "mp": 0.777
+  },
+  {
+   "mac": "02302",
+   "state": "OR",
+   "locality": "01",
+   "name": "PORTLAND",
+   "work": 1.016,
+   "pe": 1.111,
+   "mp": 0.744
+  },
+  {
+   "mac": "02302",
+   "state": "OR",
+   "locality": "99",
+   "name": "REST OF OREGON",
+   "work": 1,
+   "pe": 0.996,
+   "mp": 0.703
+  },
+  {
+   "mac": "12502",
+   "state": "PA",
+   "locality": "01",
+   "name": "METROPOLITAN PHILADELPHIA",
+   "work": 1.018,
+   "pe": 1.041,
+   "mp": 1.193
+  },
+  {
+   "mac": "12502",
+   "state": "PA",
+   "locality": "99",
+   "name": "REST OF PENNSYLVANIA",
+   "work": 1,
+   "pe": 0.918,
+   "mp": 0.945
+  },
+  {
+   "mac": "09202",
+   "state": "PR",
+   "locality": "20",
+   "name": "PUERTO RICO",
+   "work": 1,
+   "pe": 1.011,
+   "mp": 0.985
+  },
+  {
+   "mac": "14412",
+   "state": "RI",
+   "locality": "01",
+   "name": "RHODE ISLAND",
+   "work": 1.019,
+   "pe": 1.033,
+   "mp": 0.892
+  },
+  {
+   "mac": "11202",
+   "state": "SC",
+   "locality": "01",
+   "name": "SOUTH CAROLINA",
+   "work": 1,
+   "pe": 0.924,
+   "mp": 0.85
+  },
+  {
+   "mac": "03402",
+   "state": "SD",
+   "locality": "02",
+   "name": "SOUTH DAKOTA",
+   "work": 1,
+   "pe": 1,
+   "mp": 0.336
+  },
+  {
+   "mac": "10312",
+   "state": "TN",
+   "locality": "35",
+   "name": "TENNESSEE",
+   "work": 1,
+   "pe": 0.909,
+   "mp": 0.537
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "31",
+   "name": "AUSTIN",
+   "work": 1.002,
+   "pe": 1.058,
+   "mp": 0.886
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "20",
+   "name": "BEAUMONT",
+   "work": 1,
+   "pe": 0.91,
+   "mp": 0.929
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "09",
+   "name": "BRAZORIA",
+   "work": 1.008,
+   "pe": 0.991,
+   "mp": 0.78
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "11",
+   "name": "DALLAS",
+   "work": 1.009,
+   "pe": 0.996,
+   "mp": 0.858
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "28",
+   "name": "FORT WORTH",
+   "work": 1.009,
+   "pe": 0.986,
+   "mp": 0.871
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "15",
+   "name": "GALVESTON",
+   "work": 1.008,
+   "pe": 0.993,
+   "mp": 0.828
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "18",
+   "name": "HOUSTON",
+   "work": 1.008,
+   "pe": 0.993,
+   "mp": 1.376
+  },
+  {
+   "mac": "04412",
+   "state": "TX",
+   "locality": "99",
+   "name": "REST OF TEXAS",
+   "work": 1,
+   "pe": 0.949,
+   "mp": 0.903
+  },
+  {
+   "mac": "03502",
+   "state": "UT",
+   "locality": "09",
+   "name": "UTAH",
+   "work": 1,
+   "pe": 0.94,
+   "mp": 0.898
+  },
+  {
+   "mac": "14512",
+   "state": "VT",
+   "locality": "50",
+   "name": "VERMONT",
+   "work": 1,
+   "pe": 0.99,
+   "mp": 0.506
+  },
+  {
+   "mac": "11302",
+   "state": "VA",
+   "locality": "00",
+   "name": "VIRGINIA",
+   "work": 1,
+   "pe": 0.983,
+   "mp": 0.706
+  },
+  {
+   "mac": "09202",
+   "state": "VI",
+   "locality": "50",
+   "name": "VIRGIN ISLANDS",
+   "work": 1,
+   "pe": 1.011,
+   "mp": 0.985
+  },
+  {
+   "mac": "02402",
+   "state": "WA",
+   "locality": "02",
+   "name": "SEATTLE (KING CNTY)",
+   "work": 1.05,
+   "pe": 1.227,
+   "mp": 0.817
+  },
+  {
+   "mac": "02402",
+   "state": "WA",
+   "locality": "99",
+   "name": "REST OF WASHINGTON",
+   "work": 1.013,
+   "pe": 1.053,
+   "mp": 0.761
+  },
+  {
+   "mac": "11402",
+   "state": "WV",
+   "locality": "16",
+   "name": "WEST VIRGINIA",
+   "work": 1,
+   "pe": 0.869,
+   "mp": 1.431
+  },
+  {
+   "mac": "06302",
+   "state": "WI",
+   "locality": "00",
+   "name": "WISCONSIN",
+   "work": 1,
+   "pe": 0.958,
+   "mp": 0.308
+  },
+  {
+   "mac": "03602",
+   "state": "WY",
+   "locality": "21",
+   "name": "WYOMING",
+   "work": 1,
+   "pe": 1,
+   "mp": 0.74
+  }
+ ]
+}

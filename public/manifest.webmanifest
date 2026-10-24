@@ -1,0 +1,21 @@
+{
+ "name": "Out of Pocket 65",
+ "short_name": "Out of Pocket 65",
+ "description": "Does Medicare cover it, and what will you pay? Service-by-service costs from CMS fee schedules: approved amount, deductible, 20% coinsurance, Medigap.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#1E5B8C",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

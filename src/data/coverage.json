@@ -1,0 +1,174 @@
+{
+ "retrieved_at": "2026-10-24",
+ "note": "Règles écrites par nous à partir des pages medicare.gov/coverage lues le 2026-10-24 (œuvres du gouvernement fédéral, 17 U.S.C. § 105). Chaque règle cite sa page.",
+ "rules": {
+  "hearing-aids": {
+   "covered": "no",
+   "part": null,
+   "rule": "Original Medicare pays for neither hearing aids nor the exams to fit them; you pay all costs. Some Medicare Advantage plans add a hearing benefit.",
+   "src": "https://www.medicare.gov/coverage/hearing-aids"
+  },
+  "hearing-exam": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Diagnostic hearing and balance exams ordered by a provider: 20% after the Part B deductible, plus a hospital copayment in a hospital outpatient department. Once every 12 months you may see an audiologist without an order for gradual hearing loss.",
+   "src": "https://www.medicare.gov/coverage/hearing-balance-exams"
+  },
+  "dental": {
+   "covered": "no",
+   "part": null,
+   "rule": "Routine cleanings, fillings, extractions, dentures and implants are not covered. Exceptions: dental care tied to a covered treatment (before a heart valve replacement or transplant, before cancer treatment, for dialysis patients) or during a hospital stay.",
+   "src": "https://www.medicare.gov/coverage/dental-services"
+  },
+  "cataract-surgery": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Surgery with a conventional intraocular lens: 20% of the approved amount to both the facility and the surgeon after the Part B deductible. Premium lenses cost extra.",
+   "src": "https://www.medicare.gov/coverage/cataract-surgery"
+  },
+  "eyeglasses": {
+   "covered": "conditional",
+   "part": "B",
+   "rule": "Glasses and contact lenses are not covered, except one pair of glasses with standard frames (or one set of contacts) after each cataract surgery with a lens implant: 20% after the deductible, from a supplier enrolled in Medicare. Upgraded frames cost extra.",
+   "src": "https://www.medicare.gov/coverage/eyeglasses-contact-lenses"
+  },
+  "ambulance": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Ground ambulance when any other vehicle could endanger your health, to the nearest appropriate facility: 20% after the Part B deductible. Non-emergency trips need a written order and may need prior authorization after repeated trips.",
+   "src": "https://www.medicare.gov/coverage/ambulance-services"
+  },
+  "home-health": {
+   "covered": "yes",
+   "part": "A/B",
+   "rule": "Covered home health services cost nothing; medical equipment the agency supplies costs 20% after the Part B deductible. Part-time or intermittent care, generally up to 8 hours a day and 28 hours a week.",
+   "src": "https://www.medicare.gov/coverage/home-health-services"
+  },
+  "physical-therapy": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Medically necessary outpatient physical therapy certified by your provider: 20% after the Part B deductible, with no yearly dollar limit (above the 2026 KX threshold of $2,480 the therapist must document medical necessity).",
+   "src": "https://www.medicare.gov/coverage/physical-therapy-services"
+  },
+  "chiropractic": {
+   "covered": "conditional",
+   "part": "B",
+   "rule": "Only manual spinal adjustments to correct a subluxation: 20% after the Part B deductible. X-rays, massage and other services a chiropractor orders are not covered.",
+   "src": "https://www.medicare.gov/coverage/chiropractic-services"
+  },
+  "colonoscopy": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Screening colonoscopy: $0 if the provider accepts assignment; once every 120 months at average risk, 24 months at high risk. If a polyp is removed you pay 15% (2026) of the approved amount to the doctor and the facility, with no deductible; 10% from 2027 to 2029. A colonoscopy for symptoms is diagnostic: 20% after the deductible.",
+   "src": "https://www.medicare.gov/coverage/colonoscopies"
+  },
+  "shingles-vaccine": {
+   "covered": "yes",
+   "part": "D",
+   "rule": "Covered by Part D drug plans at no cost: no deductible and no copayment for vaccines recommended by ACIP. Without Part D, Original Medicare does not pay for it.",
+   "src": "https://www.medicare.gov/coverage/shingles-vaccines"
+  },
+  "cpap": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "12-week trial for diagnosed obstructive sleep apnea, then continued coverage if your provider documents that it helps. Machine rented for 13 continuous months, then it is yours; 20% of the rental and supplies after the Part B deductible.",
+   "src": "https://www.medicare.gov/coverage/continuous-positive-airway-pressure-devices"
+  },
+  "wheelchairs": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Manual and power wheelchairs and scooters when medically necessary for use in the home; power chairs and scooters need a face-to-face exam and written order, some power chairs need prior authorization. 20% after the Part B deductible.",
+   "src": "https://www.medicare.gov/coverage/wheelchairs-scooters"
+  },
+  "knee-replacement": {
+   "covered": "yes",
+   "part": "A/B",
+   "rule": "As an inpatient: the Part A deductible per benefit period, plus 20% of the surgeon's fee under Part B. As a hospital outpatient: 20% of the surgeon's fee and the hospital copayment, which cannot exceed the Part A deductible for one service.",
+   "src": "https://www.medicare.gov/coverage/surgery"
+  },
+  "mri": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Diagnostic MRI ordered by a provider: 20% after the Part B deductible at an accredited office or imaging center; at a hospital outpatient department a copayment that usually cannot exceed the Part A deductible.",
+   "src": "https://www.medicare.gov/coverage/diagnostic-non-laboratory-tests"
+  },
+  "dialysis": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Outpatient dialysis at a facility: 20% of the approved amount after the Part B deductible, usually 3 treatments a week. Inpatient dialysis falls under Part A.",
+   "src": "https://www.medicare.gov/coverage/dialysis-services-supplies"
+  },
+  "snf": {
+   "covered": "conditional",
+   "part": "A",
+   "rule": "After a qualifying hospital stay: days 1-20 $0 (after the Part A deductible, unless already paid in the same benefit period), days 21-100 $217 a day in 2026, day 101 on all costs.",
+   "src": "https://www.medicare.gov/coverage/skilled-nursing-facility-snf-care"
+  },
+  "hospital": {
+   "covered": "yes",
+   "part": "A",
+   "rule": "Each benefit period in 2026: the $1,736 deductible covers days 1-60, $434 a day for days 61-90, $868 a day for days 91-150 while using the 60 lifetime reserve days, all costs after that.",
+   "src": "https://www.medicare.gov/coverage/inpatient-hospital-care"
+  },
+  "hospice": {
+   "covered": "yes",
+   "part": "A",
+   "rule": "Nothing for hospice care from a Medicare-approved provider, except up to $5 per outpatient prescription for symptom control and 5% of the approved amount for inpatient respite care; room and board in a nursing home is not covered.",
+   "src": "https://www.medicare.gov/coverage/hospice-care"
+  },
+  "covid-test": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "A COVID-19 lab test ordered by your provider usually costs nothing at a laboratory, pharmacy, clinic or hospital that takes Medicare.",
+   "src": "https://www.medicare.gov/coverage/covid-19-diagnostic-laboratory-tests"
+  },
+  "acupuncture": {
+   "covered": "conditional",
+   "part": "B",
+   "rule": "Only for chronic low back pain (12 weeks or more, no known cause): up to 12 sessions in 90 days, 8 more if you improve, 20 a year at most; 20% after the deductible. Licensed acupuncturists cannot bill Medicare directly.",
+   "src": "https://www.medicare.gov/coverage/acupuncture"
+  },
+  "mammogram": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Screening mammogram once every 12 months from age 40: $0 if the provider accepts assignment. Diagnostic mammogram: 20% after the deductible.",
+   "src": "https://www.medicare.gov/coverage/mammograms"
+  },
+  "eye-exam-routine": {
+   "covered": "no",
+   "part": null,
+   "rule": "Routine eye exams (refractions) for glasses or contact lenses are not covered; you pay all costs.",
+   "src": "https://www.medicare.gov/coverage/eye-exams-routine"
+  },
+  "eye-exam-medical": {
+   "covered": "conditional",
+   "part": "B",
+   "rule": "A yearly diabetic retinopathy exam for people with diabetes, glaucoma tests for people at high risk, and exams to diagnose or treat an eye disease: 20% after the deductible, plus a hospital copayment in an outpatient department.",
+   "src": "https://www.medicare.gov/coverage/eye-exams-for-diabetes"
+  },
+  "podiatry": {
+   "covered": "conditional",
+   "part": "B",
+   "rule": "Medically necessary foot exams and treatment (injuries, hammer toe, bunions, heel spurs): 20% after the deductible. Routine foot care such as nail trimming is covered only in limited circumstances.",
+   "src": "https://www.medicare.gov/coverage/foot-care"
+  },
+  "office-visit": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Doctor services: 20% of the approved amount after the Part B deductible; a doctor who does not accept assignment can charge up to 15% more than the non-participating approved amount.",
+   "src": "https://www.medicare.gov/coverage/surgery"
+  },
+  "wellness-visit": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "Yearly wellness visit: $0 if the provider accepts assignment; other tests done the same day may cost 20%.",
+   "src": "https://www.medicare.gov/coverage/yearly-wellness-visits"
+  },
+  "er-visit": {
+   "covered": "yes",
+   "part": "B",
+   "rule": "A hospital copayment for the visit and for each hospital service, plus 20% of the doctor's fee after the Part B deductible; no copayment if you are admitted to the same hospital for a related condition within 3 days.",
+   "src": "https://www.medicare.gov/coverage/emergency-department-services"
+  }
+ }
+}

@@ -1,0 +1,3388 @@
+{
+ "source": "CMS, Ambulance Fee Schedule public use file CY 2026",
+ "source_url": "https://www.cms.gov/files/zip/cy-2026-file.zip",
+ "retrieved_at": "2026-10-24",
+ "valid_from": "2026-01-01",
+ "valid_to": "2026-12-31",
+ "localities": {
+  "01112-05": {
+   "mac": "01112",
+   "locality": "05",
+   "gpci": 1.41,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 709.75,
+     "rural": 716.71,
+     "superRural": 878.69,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 373.55,
+     "rural": 377.22,
+     "superRural": 462.47,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 597.68,
+     "rural": 603.54,
+     "superRural": 739.94,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-09": {
+   "mac": "01112",
+   "locality": "09",
+   "gpci": 1.442,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 722.1,
+     "rural": 729.18,
+     "superRural": 893.97,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 380.05,
+     "rural": 383.78,
+     "superRural": 470.51,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 608.09,
+     "rural": 614.05,
+     "superRural": 752.83,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-51": {
+   "mac": "01112",
+   "locality": "51",
+   "gpci": 1.318,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 674.24,
+     "rural": 680.85,
+     "superRural": 834.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 354.86,
+     "rural": 358.34,
+     "superRural": 439.32,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 567.78,
+     "rural": 573.34,
+     "superRural": 702.91,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-52": {
+   "mac": "01112",
+   "locality": "52",
+   "gpci": 1.41,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 709.75,
+     "rural": 716.71,
+     "superRural": 878.69,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 373.55,
+     "rural": 377.22,
+     "superRural": 462.47,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 597.68,
+     "rural": 603.54,
+     "superRural": 739.94,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-53": {
+   "mac": "01112",
+   "locality": "53",
+   "gpci": 1.318,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 674.24,
+     "rural": 680.85,
+     "superRural": 834.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 354.86,
+     "rural": 358.34,
+     "superRural": 439.32,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 567.78,
+     "rural": 573.34,
+     "superRural": 702.91,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-54": {
+   "mac": "01112",
+   "locality": "54",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-55": {
+   "mac": "01112",
+   "locality": "55",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-56": {
+   "mac": "01112",
+   "locality": "56",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-57": {
+   "mac": "01112",
+   "locality": "57",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-58": {
+   "mac": "01112",
+   "locality": "58",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-59": {
+   "mac": "01112",
+   "locality": "59",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-60": {
+   "mac": "01112",
+   "locality": "60",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-61": {
+   "mac": "01112",
+   "locality": "61",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-62": {
+   "mac": "01112",
+   "locality": "62",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-63": {
+   "mac": "01112",
+   "locality": "63",
+   "gpci": 1.163,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 614.4,
+     "rural": 620.42,
+     "superRural": 760.63,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 323.37,
+     "rural": 326.54,
+     "superRural": 400.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 517.39,
+     "rural": 522.46,
+     "superRural": 640.54,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-64": {
+   "mac": "01112",
+   "locality": "64",
+   "gpci": 1.159,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 612.86,
+     "rural": 618.86,
+     "superRural": 758.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 322.56,
+     "rural": 325.72,
+     "superRural": 399.33,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 516.09,
+     "rural": 521.15,
+     "superRural": 638.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-65": {
+   "mac": "01112",
+   "locality": "65",
+   "gpci": 1.442,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 722.1,
+     "rural": 729.18,
+     "superRural": 893.97,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 380.05,
+     "rural": 383.78,
+     "superRural": 470.51,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 608.09,
+     "rural": 614.05,
+     "superRural": 752.83,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-66": {
+   "mac": "01112",
+   "locality": "66",
+   "gpci": 1.215,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 634.47,
+     "rural": 640.69,
+     "superRural": 785.49,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 333.93,
+     "rural": 337.21,
+     "superRural": 413.42,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 534.29,
+     "rural": 539.53,
+     "superRural": 661.46,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-67": {
+   "mac": "01112",
+   "locality": "67",
+   "gpci": 1.228,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 639.49,
+     "rural": 645.76,
+     "superRural": 791.7,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 336.57,
+     "rural": 339.87,
+     "superRural": 416.68,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 538.52,
+     "rural": 543.8,
+     "superRural": 666.7,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-68": {
+   "mac": "01112",
+   "locality": "68",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-69": {
+   "mac": "01112",
+   "locality": "69",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-70": {
+   "mac": "01112",
+   "locality": "70",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01112-75": {
+   "mac": "01112",
+   "locality": "75",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-17": {
+   "mac": "01182",
+   "locality": "17",
+   "gpci": 1.182,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 621.73,
+     "rural": 627.83,
+     "superRural": 769.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 327.23,
+     "rural": 330.44,
+     "superRural": 405.12,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 523.57,
+     "rural": 528.7,
+     "superRural": 648.19,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-18": {
+   "mac": "01182",
+   "locality": "18",
+   "gpci": 1.183,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 622.12,
+     "rural": 628.22,
+     "superRural": 770.2,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 327.43,
+     "rural": 330.64,
+     "superRural": 405.36,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 523.89,
+     "rural": 529.03,
+     "superRural": 648.59,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-71": {
+   "mac": "01182",
+   "locality": "71",
+   "gpci": 1.096,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.54,
+     "rural": 594.31,
+     "superRural": 728.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.76,
+     "rural": 312.79,
+     "superRural": 383.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.61,
+     "rural": 500.47,
+     "superRural": 613.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-72": {
+   "mac": "01182",
+   "locality": "72",
+   "gpci": 1.196,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 627.14,
+     "rural": 633.29,
+     "superRural": 776.41,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 330.07,
+     "rural": 333.31,
+     "superRural": 408.64,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 528.12,
+     "rural": 533.29,
+     "superRural": 653.81,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-73": {
+   "mac": "01182",
+   "locality": "73",
+   "gpci": 1.139,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 605.14,
+     "rural": 611.07,
+     "superRural": 749.17,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 318.49,
+     "rural": 321.61,
+     "superRural": 394.29,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 509.59,
+     "rural": 514.58,
+     "superRural": 630.88,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01182-74": {
+   "mac": "01182",
+   "locality": "74",
+   "gpci": 1.166,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 615.56,
+     "rural": 621.59,
+     "superRural": 762.07,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 323.98,
+     "rural": 327.15,
+     "superRural": 401.09,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 518.36,
+     "rural": 523.45,
+     "superRural": 641.75,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01212-01": {
+   "mac": "01212",
+   "locality": "01",
+   "gpci": 1.137,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 604.36,
+     "rural": 610.29,
+     "superRural": 748.22,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 318.09,
+     "rural": 321.2,
+     "superRural": 393.79,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 508.94,
+     "rural": 513.93,
+     "superRural": 630.08,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "01312-00": {
+   "mac": "01312",
+   "locality": "00",
+   "gpci": 1.001,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 551.86,
+     "rural": 557.27,
+     "superRural": 683.21,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 290.45,
+     "rural": 293.3,
+     "superRural": 359.59,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 464.73,
+     "rural": 469.28,
+     "superRural": 575.34,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02102-01": {
+   "mac": "02102",
+   "locality": "01",
+   "gpci": 1.065,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 576.57,
+     "rural": 582.22,
+     "superRural": 713.8,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 303.46,
+     "rural": 306.43,
+     "superRural": 375.68,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 485.53,
+     "rural": 490.29,
+     "superRural": 601.1,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02202-00": {
+   "mac": "02202",
+   "locality": "00",
+   "gpci": 0.92,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 520.59,
+     "rural": 525.7,
+     "superRural": 644.51,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 274,
+     "rural": 276.68,
+     "superRural": 339.21,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 438.39,
+     "rural": 442.69,
+     "superRural": 542.74,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02302-01": {
+   "mac": "02302",
+   "locality": "01",
+   "gpci": 1.111,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 594.33,
+     "rural": 600.15,
+     "superRural": 735.78,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 312.8,
+     "rural": 315.87,
+     "superRural": 387.26,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 500.49,
+     "rural": 505.39,
+     "superRural": 619.61,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02302-99": {
+   "mac": "02302",
+   "locality": "99",
+   "gpci": 0.996,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 549.93,
+     "rural": 555.32,
+     "superRural": 680.82,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 289.44,
+     "rural": 292.28,
+     "superRural": 358.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 463.1,
+     "rural": 467.64,
+     "superRural": 573.33,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02402-02": {
+   "mac": "02402",
+   "locality": "02",
+   "gpci": 1.227,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 639.11,
+     "rural": 645.37,
+     "superRural": 791.22,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 336.37,
+     "rural": 339.67,
+     "superRural": 416.44,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 538.19,
+     "rural": 543.47,
+     "superRural": 666.29,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "02402-99": {
+   "mac": "02402",
+   "locality": "99",
+   "gpci": 1.053,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 571.94,
+     "rural": 577.54,
+     "superRural": 708.06,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 301.02,
+     "rural": 303.97,
+     "superRural": 372.67,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 481.63,
+     "rural": 486.35,
+     "superRural": 596.27,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03102-00": {
+   "mac": "03102",
+   "locality": "00",
+   "gpci": 0.969,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 539.51,
+     "rural": 544.8,
+     "superRural": 667.92,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 283.95,
+     "rural": 286.74,
+     "superRural": 351.54,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 454.32,
+     "rural": 458.78,
+     "superRural": 562.46,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03202-01": {
+   "mac": "03202",
+   "locality": "01",
+   "gpci": 1,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 551.48,
+     "rural": 556.88,
+     "superRural": 682.73,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 290.25,
+     "rural": 293.1,
+     "superRural": 359.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 464.4,
+     "rural": 468.95,
+     "superRural": 574.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03302-01": {
+   "mac": "03302",
+   "locality": "01",
+   "gpci": 1,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 551.48,
+     "rural": 556.88,
+     "superRural": 682.73,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 290.25,
+     "rural": 293.1,
+     "superRural": 359.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 464.4,
+     "rural": 468.95,
+     "superRural": 574.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03402-02": {
+   "mac": "03402",
+   "locality": "02",
+   "gpci": 1,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 551.48,
+     "rural": 556.88,
+     "superRural": 682.73,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 290.25,
+     "rural": 293.1,
+     "superRural": 359.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 464.4,
+     "rural": 468.95,
+     "superRural": 574.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03502-09": {
+   "mac": "03502",
+   "locality": "09",
+   "gpci": 0.94,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 528.31,
+     "rural": 533.49,
+     "superRural": 654.06,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 278.06,
+     "rural": 280.79,
+     "superRural": 344.25,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 444.9,
+     "rural": 449.26,
+     "superRural": 550.79,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "03602-21": {
+   "mac": "03602",
+   "locality": "21",
+   "gpci": 1,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 551.48,
+     "rural": 556.88,
+     "superRural": 682.73,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 290.25,
+     "rural": 293.1,
+     "superRural": 359.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 464.4,
+     "rural": 468.95,
+     "superRural": 574.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04112-01": {
+   "mac": "04112",
+   "locality": "01",
+   "gpci": 1.064,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 576.18,
+     "rural": 581.83,
+     "superRural": 713.32,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 303.25,
+     "rural": 306.23,
+     "superRural": 375.44,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 485.21,
+     "rural": 489.96,
+     "superRural": 600.69,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04212-05": {
+   "mac": "04212",
+   "locality": "05",
+   "gpci": 0.917,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 519.44,
+     "rural": 524.53,
+     "superRural": 643.07,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 273.39,
+     "rural": 276.07,
+     "superRural": 338.46,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 437.42,
+     "rural": 441.71,
+     "superRural": 541.54,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04312-00": {
+   "mac": "04312",
+   "locality": "00",
+   "gpci": 0.893,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 510.17,
+     "rural": 515.17,
+     "superRural": 631.6,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 268.51,
+     "rural": 271.14,
+     "superRural": 332.42,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 429.62,
+     "rural": 433.83,
+     "superRural": 531.88,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-09": {
+   "mac": "04412",
+   "locality": "09",
+   "gpci": 0.991,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 548,
+     "rural": 553.37,
+     "superRural": 678.43,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 288.42,
+     "rural": 291.25,
+     "superRural": 357.07,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 461.48,
+     "rural": 466,
+     "superRural": 571.32,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-11": {
+   "mac": "04412",
+   "locality": "11",
+   "gpci": 0.996,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 549.93,
+     "rural": 555.32,
+     "superRural": 680.82,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 289.44,
+     "rural": 292.28,
+     "superRural": 358.34,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 463.1,
+     "rural": 467.64,
+     "superRural": 573.33,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-15": {
+   "mac": "04412",
+   "locality": "15",
+   "gpci": 0.993,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 548.77,
+     "rural": 554.15,
+     "superRural": 679.39,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 288.83,
+     "rural": 291.66,
+     "superRural": 357.58,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 462.13,
+     "rural": 466.66,
+     "superRural": 572.13,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-18": {
+   "mac": "04412",
+   "locality": "18",
+   "gpci": 0.993,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 548.77,
+     "rural": 554.15,
+     "superRural": 679.39,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 288.83,
+     "rural": 291.66,
+     "superRural": 357.58,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 462.13,
+     "rural": 466.66,
+     "superRural": 572.13,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-20": {
+   "mac": "04412",
+   "locality": "20",
+   "gpci": 0.91,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 516.73,
+     "rural": 521.8,
+     "superRural": 639.73,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 271.96,
+     "rural": 274.63,
+     "superRural": 336.7,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 435.14,
+     "rural": 439.41,
+     "superRural": 538.72,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-28": {
+   "mac": "04412",
+   "locality": "28",
+   "gpci": 0.986,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 546.07,
+     "rural": 551.43,
+     "superRural": 676.05,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 287.41,
+     "rural": 290.22,
+     "superRural": 355.81,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 459.85,
+     "rural": 464.36,
+     "superRural": 569.31,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-31": {
+   "mac": "04412",
+   "locality": "31",
+   "gpci": 1.058,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 573.87,
+     "rural": 579.49,
+     "superRural": 710.45,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 302.03,
+     "rural": 305,
+     "superRural": 373.93,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 483.26,
+     "rural": 487.99,
+     "superRural": 598.28,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "04412-99": {
+   "mac": "04412",
+   "locality": "99",
+   "gpci": 0.949,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 531.79,
+     "rural": 537,
+     "superRural": 658.36,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 279.89,
+     "rural": 282.63,
+     "superRural": 346.5,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 447.82,
+     "rural": 452.21,
+     "superRural": 554.41,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05102-00": {
+   "mac": "05102",
+   "locality": "00",
+   "gpci": 0.915,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 518.66,
+     "rural": 523.75,
+     "superRural": 642.12,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 272.98,
+     "rural": 275.66,
+     "superRural": 337.96,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 436.77,
+     "rural": 441.05,
+     "superRural": 540.73,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05202-00": {
+   "mac": "05202",
+   "locality": "00",
+   "gpci": 0.904,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 514.42,
+     "rural": 519.46,
+     "superRural": 636.86,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 270.75,
+     "rural": 273.4,
+     "superRural": 335.19,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 433.19,
+     "rural": 437.44,
+     "superRural": 536.3,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05302-01": {
+   "mac": "05302",
+   "locality": "01",
+   "gpci": 0.952,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 532.95,
+     "rural": 538.17,
+     "superRural": 659.8,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 280.5,
+     "rural": 283.25,
+     "superRural": 347.26,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 448.8,
+     "rural": 453.2,
+     "superRural": 555.62,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05302-02": {
+   "mac": "05302",
+   "locality": "02",
+   "gpci": 0.939,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 527.93,
+     "rural": 533.1,
+     "superRural": 653.58,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 277.86,
+     "rural": 280.58,
+     "superRural": 343.99,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 444.57,
+     "rural": 448.93,
+     "superRural": 550.39,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05302-99": {
+   "mac": "05302",
+   "locality": "99",
+   "gpci": 0.862,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 498.2,
+     "rural": 503.09,
+     "superRural": 616.79,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 262.21,
+     "rural": 264.78,
+     "superRural": 324.62,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 419.54,
+     "rural": 423.65,
+     "superRural": 519.39,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "05402-00": {
+   "mac": "05402",
+   "locality": "00",
+   "gpci": 0.923,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 521.75,
+     "rural": 526.87,
+     "superRural": 645.94,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 274.61,
+     "rural": 277.3,
+     "superRural": 339.97,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 439.37,
+     "rural": 443.68,
+     "superRural": 543.95,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06102-12": {
+   "mac": "06102",
+   "locality": "12",
+   "gpci": 0.92,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 520.59,
+     "rural": 525.7,
+     "superRural": 644.51,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 274,
+     "rural": 276.68,
+     "superRural": 339.21,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 438.39,
+     "rural": 442.69,
+     "superRural": 542.74,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06102-15": {
+   "mac": "06102",
+   "locality": "15",
+   "gpci": 1.027,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 561.9,
+     "rural": 567.41,
+     "superRural": 695.64,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 295.74,
+     "rural": 298.64,
+     "superRural": 366.13,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 473.18,
+     "rural": 477.82,
+     "superRural": 585.81,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06102-16": {
+   "mac": "06102",
+   "locality": "16",
+   "gpci": 1.005,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 553.41,
+     "rural": 558.83,
+     "superRural": 685.13,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 291.27,
+     "rural": 294.12,
+     "superRural": 360.59,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 466.03,
+     "rural": 470.6,
+     "superRural": 576.96,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06102-99": {
+   "mac": "06102",
+   "locality": "99",
+   "gpci": 0.913,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 517.89,
+     "rural": 522.97,
+     "superRural": 641.16,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 272.57,
+     "rural": 275.25,
+     "superRural": 337.46,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 436.12,
+     "rural": 440.39,
+     "superRural": 539.92,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06202-00": {
+   "mac": "06202",
+   "locality": "00",
+   "gpci": 1.029,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 562.67,
+     "rural": 568.19,
+     "superRural": 696.6,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 296.14,
+     "rural": 299.05,
+     "superRural": 366.64,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 473.83,
+     "rural": 478.47,
+     "superRural": 586.6,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "06302-00": {
+   "mac": "06302",
+   "locality": "00",
+   "gpci": 0.958,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 535.26,
+     "rural": 540.51,
+     "superRural": 662.67,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 281.72,
+     "rural": 284.48,
+     "superRural": 348.77,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 450.75,
+     "rural": 455.17,
+     "superRural": 558.04,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "07102-13": {
+   "mac": "07102",
+   "locality": "13",
+   "gpci": 0.859,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 497.05,
+     "rural": 501.92,
+     "superRural": 615.35,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 261.6,
+     "rural": 264.17,
+     "superRural": 323.87,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 418.56,
+     "rural": 422.67,
+     "superRural": 518.19,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "07202-01": {
+   "mac": "07202",
+   "locality": "01",
+   "gpci": 0.941,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 528.7,
+     "rural": 533.88,
+     "superRural": 654.54,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 278.26,
+     "rural": 280.99,
+     "superRural": 344.49,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 445.22,
+     "rural": 449.59,
+     "superRural": 551.2,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "07202-99": {
+   "mac": "07202",
+   "locality": "99",
+   "gpci": 0.885,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 507.08,
+     "rural": 512.05,
+     "superRural": 627.77,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 266.89,
+     "rural": 269.5,
+     "superRural": 330.41,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 427.02,
+     "rural": 431.2,
+     "superRural": 528.65,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "07302-00": {
+   "mac": "07302",
+   "locality": "00",
+   "gpci": 0.861,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 497.82,
+     "rural": 502.7,
+     "superRural": 616.31,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 262.01,
+     "rural": 264.58,
+     "superRural": 324.38,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 419.22,
+     "rural": 423.32,
+     "superRural": 518.99,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "08102-00": {
+   "mac": "08102",
+   "locality": "00",
+   "gpci": 0.927,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 523.3,
+     "rural": 528.43,
+     "superRural": 647.86,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 275.42,
+     "rural": 278.12,
+     "superRural": 340.98,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 440.67,
+     "rural": 444.99,
+     "superRural": 545.56,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "08202-01": {
+   "mac": "08202",
+   "locality": "01",
+   "gpci": 0.965,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 537.97,
+     "rural": 543.24,
+     "superRural": 666.01,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 283.14,
+     "rural": 285.92,
+     "superRural": 350.54,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 453.02,
+     "rural": 457.46,
+     "superRural": 560.85,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "08202-99": {
+   "mac": "08202",
+   "locality": "99",
+   "gpci": 0.913,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 517.89,
+     "rural": 522.97,
+     "superRural": 641.16,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 272.57,
+     "rural": 275.25,
+     "superRural": 337.46,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 436.12,
+     "rural": 440.39,
+     "superRural": 539.92,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "09102-03": {
+   "mac": "09102",
+   "locality": "03",
+   "gpci": 1.013,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 556.49,
+     "rural": 561.95,
+     "superRural": 688.95,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 292.89,
+     "rural": 295.76,
+     "superRural": 362.6,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 468.63,
+     "rural": 473.22,
+     "superRural": 580.17,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "09102-04": {
+   "mac": "09102",
+   "locality": "04",
+   "gpci": 1.041,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 567.3,
+     "rural": 572.87,
+     "superRural": 702.34,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 298.58,
+     "rural": 301.51,
+     "superRural": 369.65,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 477.73,
+     "rural": 482.41,
+     "superRural": 591.43,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "09102-99": {
+   "mac": "09102",
+   "locality": "99",
+   "gpci": 0.956,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 534.49,
+     "rural": 539.73,
+     "superRural": 661.71,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 281.31,
+     "rural": 284.07,
+     "superRural": 348.27,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 450.1,
+     "rural": 454.51,
+     "superRural": 557.23,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "09202-20": {
+   "mac": "09202",
+   "locality": "20",
+   "gpci": 1.011,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 555.72,
+     "rural": 561.17,
+     "superRural": 687.99,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 292.49,
+     "rural": 295.35,
+     "superRural": 362.1,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 467.98,
+     "rural": 472.57,
+     "superRural": 579.37,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "09202-50": {
+   "mac": "09202",
+   "locality": "50",
+   "gpci": 1.011,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 555.72,
+     "rural": 561.17,
+     "superRural": 687.99,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 292.49,
+     "rural": 295.35,
+     "superRural": 362.1,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 467.98,
+     "rural": 472.57,
+     "superRural": 579.37,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "10112-00": {
+   "mac": "10112",
+   "locality": "00",
+   "gpci": 0.875,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 503.22,
+     "rural": 508.16,
+     "superRural": 623,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 264.85,
+     "rural": 267.45,
+     "superRural": 327.89,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 423.77,
+     "rural": 427.92,
+     "superRural": 524.63,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "10212-01": {
+   "mac": "10212",
+   "locality": "01",
+   "gpci": 1.016,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 557.65,
+     "rural": 563.12,
+     "superRural": 690.39,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 293.5,
+     "rural": 296.38,
+     "superRural": 363.36,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 469.6,
+     "rural": 474.21,
+     "superRural": 581.38,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "10212-99": {
+   "mac": "10212",
+   "locality": "99",
+   "gpci": 0.892,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 509.78,
+     "rural": 514.78,
+     "superRural": 631.12,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 268.31,
+     "rural": 270.94,
+     "superRural": 332.17,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 429.29,
+     "rural": 433.5,
+     "superRural": 531.47,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "10312-35": {
+   "mac": "10312",
+   "locality": "35",
+   "gpci": 0.909,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 516.35,
+     "rural": 521.41,
+     "superRural": 639.25,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 271.76,
+     "rural": 274.43,
+     "superRural": 336.45,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 434.82,
+     "rural": 439.08,
+     "superRural": 538.31,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "11202-01": {
+   "mac": "11202",
+   "locality": "01",
+   "gpci": 0.924,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 522.14,
+     "rural": 527.26,
+     "superRural": 646.42,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 274.81,
+     "rural": 277.5,
+     "superRural": 340.22,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 439.7,
+     "rural": 444.01,
+     "superRural": 544.36,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "11302-00": {
+   "mac": "11302",
+   "locality": "00",
+   "gpci": 0.983,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 544.91,
+     "rural": 550.26,
+     "superRural": 674.62,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 286.8,
+     "rural": 289.61,
+     "superRural": 355.06,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 458.87,
+     "rural": 463.37,
+     "superRural": 568.09,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "11402-16": {
+   "mac": "11402",
+   "locality": "16",
+   "gpci": 0.869,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 500.91,
+     "rural": 505.82,
+     "superRural": 620.14,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 263.63,
+     "rural": 266.22,
+     "superRural": 326.39,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 421.82,
+     "rural": 425.95,
+     "superRural": 522.21,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "11502-00": {
+   "mac": "11502",
+   "locality": "00",
+   "gpci": 0.933,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 525.61,
+     "rural": 530.77,
+     "superRural": 650.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 276.64,
+     "rural": 279.35,
+     "superRural": 342.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 442.62,
+     "rural": 446.96,
+     "superRural": 547.97,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12102-01": {
+   "mac": "12102",
+   "locality": "01",
+   "gpci": 0.988,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 546.84,
+     "rural": 552.21,
+     "superRural": 677.01,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 287.81,
+     "rural": 290.63,
+     "superRural": 356.31,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 460.5,
+     "rural": 465.02,
+     "superRural": 570.11,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12202-01": {
+   "mac": "12202",
+   "locality": "01",
+   "gpci": 1.178,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 620.19,
+     "rural": 626.27,
+     "superRural": 767.81,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 326.42,
+     "rural": 329.62,
+     "superRural": 404.11,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 522.27,
+     "rural": 527.39,
+     "superRural": 646.58,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12302-01": {
+   "mac": "12302",
+   "locality": "01",
+   "gpci": 1.073,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 579.66,
+     "rural": 585.34,
+     "superRural": 717.63,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 305.08,
+     "rural": 308.07,
+     "superRural": 377.69,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 488.13,
+     "rural": 492.92,
+     "superRural": 604.32,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12302-99": {
+   "mac": "12302",
+   "locality": "99",
+   "gpci": 1.012,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 556.11,
+     "rural": 561.56,
+     "superRural": 688.47,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 292.69,
+     "rural": 295.56,
+     "superRural": 362.36,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 468.3,
+     "rural": 472.89,
+     "superRural": 579.76,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12402-01": {
+   "mac": "12402",
+   "locality": "01",
+   "gpci": 1.16,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 613.24,
+     "rural": 619.25,
+     "superRural": 759.2,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 322.76,
+     "rural": 325.92,
+     "superRural": 399.58,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 516.41,
+     "rural": 521.48,
+     "superRural": 639.33,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12402-99": {
+   "mac": "12402",
+   "locality": "99",
+   "gpci": 1.092,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 586.99,
+     "rural": 592.75,
+     "superRural": 726.71,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 308.94,
+     "rural": 311.97,
+     "superRural": 382.48,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 494.31,
+     "rural": 499.15,
+     "superRural": 611.96,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12502-01": {
+   "mac": "12502",
+   "locality": "01",
+   "gpci": 1.041,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 567.3,
+     "rural": 572.87,
+     "superRural": 702.34,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 298.58,
+     "rural": 301.51,
+     "superRural": 369.65,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 477.73,
+     "rural": 482.41,
+     "superRural": 591.43,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "12502-99": {
+   "mac": "12502",
+   "locality": "99",
+   "gpci": 0.918,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 519.82,
+     "rural": 524.92,
+     "superRural": 643.55,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 273.59,
+     "rural": 276.27,
+     "superRural": 338.71,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 437.74,
+     "rural": 442.04,
+     "superRural": 541.94,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13102-00": {
+   "mac": "13102",
+   "locality": "00",
+   "gpci": 1.077,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 581.2,
+     "rural": 586.9,
+     "superRural": 719.54,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 305.9,
+     "rural": 308.89,
+     "superRural": 378.7,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 489.43,
+     "rural": 494.23,
+     "superRural": 605.93,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13202-01": {
+   "mac": "13202",
+   "locality": "01",
+   "gpci": 1.162,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 614.01,
+     "rural": 620.03,
+     "superRural": 760.16,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 323.17,
+     "rural": 326.33,
+     "superRural": 400.08,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 517.06,
+     "rural": 522.13,
+     "superRural": 640.13,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13202-02": {
+   "mac": "13202",
+   "locality": "02",
+   "gpci": 1.189,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 624.44,
+     "rural": 630.56,
+     "superRural": 773.07,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 328.65,
+     "rural": 331.87,
+     "superRural": 406.87,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 525.84,
+     "rural": 531,
+     "superRural": 651.01,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13202-03": {
+   "mac": "13202",
+   "locality": "03",
+   "gpci": 1.095,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 588.15,
+     "rural": 593.92,
+     "superRural": 728.15,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 309.55,
+     "rural": 312.59,
+     "superRural": 383.24,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 495.28,
+     "rural": 500.14,
+     "superRural": 613.17,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13282-99": {
+   "mac": "13282",
+   "locality": "99",
+   "gpci": 0.95,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 532.17,
+     "rural": 537.39,
+     "superRural": 658.84,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 280.09,
+     "rural": 282.84,
+     "superRural": 346.76,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 448.15,
+     "rural": 452.54,
+     "superRural": 554.81,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "13292-04": {
+   "mac": "13292",
+   "locality": "04",
+   "gpci": 1.182,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 621.73,
+     "rural": 627.83,
+     "superRural": 769.72,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 327.23,
+     "rural": 330.44,
+     "superRural": 405.12,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 523.57,
+     "rural": 528.7,
+     "superRural": 648.19,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14112-03": {
+   "mac": "14112",
+   "locality": "03",
+   "gpci": 0.991,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 548,
+     "rural": 553.37,
+     "superRural": 678.43,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 288.42,
+     "rural": 291.25,
+     "superRural": 357.07,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 461.48,
+     "rural": 466,
+     "superRural": 571.32,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14112-99": {
+   "mac": "14112",
+   "locality": "99",
+   "gpci": 0.92,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 520.59,
+     "rural": 525.7,
+     "superRural": 644.51,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 274,
+     "rural": 276.68,
+     "superRural": 339.21,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 438.39,
+     "rural": 442.69,
+     "superRural": 542.74,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14212-01": {
+   "mac": "14212",
+   "locality": "01",
+   "gpci": 1.194,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 626.37,
+     "rural": 632.51,
+     "superRural": 775.46,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 329.67,
+     "rural": 332.9,
+     "superRural": 408.14,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 527.47,
+     "rural": 532.64,
+     "superRural": 653.02,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14212-99": {
+   "mac": "14212",
+   "locality": "99",
+   "gpci": 1.053,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 571.94,
+     "rural": 577.54,
+     "superRural": 708.06,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 301.02,
+     "rural": 303.97,
+     "superRural": 372.67,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 481.63,
+     "rural": 486.35,
+     "superRural": 596.27,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14312-40": {
+   "mac": "14312",
+   "locality": "40",
+   "gpci": 1.041,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 567.3,
+     "rural": 572.87,
+     "superRural": 702.34,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 298.58,
+     "rural": 301.51,
+     "superRural": 369.65,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 477.73,
+     "rural": 482.41,
+     "superRural": 591.43,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14412-01": {
+   "mac": "14412",
+   "locality": "01",
+   "gpci": 1.033,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 564.22,
+     "rural": 569.75,
+     "superRural": 698.51,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 296.96,
+     "rural": 299.87,
+     "superRural": 367.64,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 475.13,
+     "rural": 479.79,
+     "superRural": 588.22,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "14512-50": {
+   "mac": "14512",
+   "locality": "50",
+   "gpci": 0.99,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 547.62,
+     "rural": 552.98,
+     "superRural": 677.95,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 288.22,
+     "rural": 291.04,
+     "superRural": 356.82,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 461.15,
+     "rural": 465.67,
+     "superRural": 570.91,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "15102-00": {
+   "mac": "15102",
+   "locality": "00",
+   "gpci": 0.889,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 508.63,
+     "rural": 513.61,
+     "superRural": 629.69,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 267.7,
+     "rural": 270.32,
+     "superRural": 331.41,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 428.32,
+     "rural": 432.52,
+     "superRural": 530.27,
+     "ruralMiles1to17": null
+    }
+   }
+  },
+  "15202-00": {
+   "mac": "15202",
+   "locality": "00",
+   "gpci": 0.913,
+   "rates": {
+    "A0425": {
+     "urban": 9.33,
+     "rural": 9.42,
+     "superRural": null,
+     "ruralMiles1to17": 14.13
+    },
+    "A0427": {
+     "urban": 517.89,
+     "rural": 522.97,
+     "superRural": 641.16,
+     "ruralMiles1to17": null
+    },
+    "A0428": {
+     "urban": 272.57,
+     "rural": 275.25,
+     "superRural": 337.46,
+     "ruralMiles1to17": null
+    },
+    "A0429": {
+     "urban": 436.12,
+     "rural": 440.39,
+     "superRural": 539.92,
+     "ruralMiles1to17": null
+    }
+   }
+  }
+ }
+}

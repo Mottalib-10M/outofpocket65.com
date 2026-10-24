@@ -1,0 +1,6 @@
+node_modules
+dist
+raw/
+scripts/cpt-map.local.mjs
+.astro
+scripts/__pycache__

@@ -1,0 +1,211 @@
+---
+/**
+ * Home of one language: the cost estimator on the first screen, then the reference page on how a
+ * Medicare bill splits (RECETTE §5, §21). Every amount is computed by the engine from the CMS files.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Tool from './Tool.astro';
+import Clamp from './Clamp.astro';
+import { route, hasRoute, type Locale } from '../i18n/routes';
+import { PAGES } from '../lib/guides';
+import { groupLabel, GROUPS_ORDER } from '../i18n/nav';
+import { helpers } from '../lib/helpers';
+import { ACTS, MEDIGAP_LETTERS, medigapPlan } from '../lib/estimate';
+import { LAST_UPDATED, AUTHOR_NAME } from '../data/site-config';
+import { displayDate } from '../lib/format';
+import { faqSchema, webApplicationSchema, websiteSchema, organizationSchema } from '../lib/seo';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const h = helpers(lang, true);
+const { E, m, mx, pc, num, PA, PB, P } = h;
+const lk = (id: string, text: string) => (hasRoute(id, lang) ? h.a(id, text) : text);
+const locName = (k: string) => h.LOCALITIES.find((l) => l.key === k)?.name ?? '';
+
+// --- amounts used in the text (national rates, deductible already met unless said) ---
+const ov = E('office-visit');
+const manK = h.loc(/^Manhattan$/); const alK = h.defaultLocality('AL');
+const ovMan = E('office-visit', { locality: manK }); const ovAl = E('office-visit', { locality: alK });
+const ovNp = E('office-visit', { assignment: false });
+const mriO = E('mri-lumbar', { setting: 'office' }); const mriH = E('mri-lumbar', { setting: 'hopd' });
+const mriDed = E('mri-lumbar', { setting: 'office', deductibleRemaining: PB.deductible });
+const catA = E('cataract-surgery', { setting: 'asc' }); const catH = E('cataract-surgery', { setting: 'hopd' });
+const colS = E('colonoscopy-screening', { setting: 'asc' });
+const colP = E('colonoscopy-polyp', { setting: 'asc' }); const colP27 = E('colonoscopy-polyp', { setting: 'asc', crcYear: 2027 });
+const kneeH = E('knee-replacement', { setting: 'hopd' }); const kneeI = E('knee-replacement', { setting: 'inpatient' });
+const kneeG = E('knee-replacement', { setting: 'hopd', coverage: 'medigap', medigap: 'G', deductibleRemaining: PB.deductible });
+const amb = E('ambulance-emergency', { miles: 10 });
+const cpap13 = E('cpap', { count: 13 });
+const dial = E('dialysis', { count: 12 });
+const ptS = E('physical-therapy-session');
+const hosp5 = E('hospital-stay', { count: 5 }); const hosp75 = E('hospital-stay', { count: 75 });
+const snf30 = E('skilled-nursing', { count: 30 });
+const ovN = E('office-visit', { coverage: 'medigap', medigap: 'N' });
+const premiumYear = P.partB.premiumStandard * 12;
+const crc27 = h.P27.crcScreeningConversion.patientShare;
+
+// --- coverage at a glance ---
+type Row = { act: string; page: string; o?: Record<string, unknown>; note?: { en: string; es: string } };
+const glance: Row[] = [
+  { act: 'office-visit', page: 'part-b' },
+  { act: 'cataract-surgery', page: 'cataract', o: { setting: 'asc' }, note: { en: 'surgery center', es: 'centro de cirugía' } },
+  { act: 'colonoscopy-screening', page: 'colonoscopy', o: { setting: 'asc' } },
+  { act: 'colonoscopy-polyp', page: 'colonoscopy', o: { setting: 'asc' } },
+  { act: 'mri-lumbar', page: 'mri', o: { setting: 'office' }, note: { en: 'imaging center', es: 'centro de imágenes' } },
+  { act: 'mri-lumbar', page: 'mri', o: { setting: 'hopd' }, note: { en: 'hospital outpatient', es: 'hospital ambulatorio' } },
+  { act: 'knee-replacement', page: 'knee', o: { setting: 'hopd' }, note: { en: 'outpatient', es: 'ambulatorio' } },
+  { act: 'physical-therapy-session', page: 'pt' },
+  { act: 'chiropractic-adjustment', page: 'chiropractic' },
+  { act: 'acupuncture', page: 'acupuncture' },
+  { act: 'ambulance-emergency', page: 'ambulance', o: { miles: 10 }, note: { en: '10 miles, rest of Florida', es: '10 millas, resto de Florida' } },
+  { act: 'cpap', page: 'cpap', o: { count: 13 }, note: { en: '13 rental months, Florida', es: '13 meses de alquiler, Florida' } },
+  { act: 'dialysis', page: 'dialysis', o: { count: 12 }, note: { en: '12 treatments', es: '12 sesiones' } },
+  { act: 'mammogram-screening', page: 'mammograms' },
+  { act: 'hearing-exam', page: 'hearing-aids', o: { setting: 'office' } },
+  { act: 'hearing-aids', page: 'hearing-aids' },
+  { act: 'dental', page: 'dental' },
+  { act: 'eye-exam-routine', page: 'eye-exams' },
+];
+const covWord = (c: string) => (c === 'yes' ? (es ? 'Sí' : 'Yes') : c === 'no' ? 'No' : es ? 'Con condiciones' : 'With conditions');
+const full = es ? 'precio completo' : 'full price';
+const glanceRows = glance.map((r) => {
+  const e = E(r.act, r.o as never); const g = E(r.act, { ...(r.o as object), coverage: 'medigap', medigap: 'G' } as never);
+  const nc = e.rule === 'notCovered';
+  const name = lk(r.page, h.label(r.act)) + (r.note ? ` <span class="text-navy-600">(${r.note[lang]})</span>` : '');
+  return [name, covWord(e.status), nc ? '–' : m(e.approvedTotal), nc ? full : m(e.youPay), nc ? full : m(g.youPay)];
+});
+const medigapRows = MEDIGAP_LETTERS.map((l) => { const p = medigapPlan(l); const f = (x: number) => (x === 1 ? '100 %' : x === 0 ? (es ? 'No' : 'No') : pc(x)); return [l, f(p.partBCoins), f(p.partBDeductible), f(p.excess), f(p.partADeductible), f(p.snfCoins)]; });
+const nActs = ACTS.length;
+const nLoc = h.LOCALITIES.length;
+
+const L = es ? {
+  title: 'Costos de Medicare 2026: lo que usted paga por cada servicio',
+  description: 'Lo que paga con Medicare por un servicio, en dólares: monto aprobado, deducible de la Parte B, su 20 % o copago, Medigap y su zona. Baremos CMS de octubre.',
+  h1: 'Lo que usted paga con Medicare, servicio por servicio',
+  intro: 'Elija el servicio, el lugar donde se hace, su estado y su cobertura: verá el monto que aprueba Medicare, lo que paga Medicare y lo que queda a su cargo, en dólares.',
+} : {
+  title: 'Medicare Out of Pocket Costs 2026: What You Pay per Service',
+  description: 'Medicare out of pocket costs for one service, in dollars: approved amount, Part B deductible, your 20 % or copay, Medigap and your area. CMS rates, October.',
+  h1: 'Medicare out of pocket costs, service by service',
+  intro: 'Pick the service, where it is done, your state and your coverage: you see the amount Medicare approves, what Medicare pays and what is left for you, in dollars.',
+};
+
+const resume = es
+  ? `Con Medicare Original, lo que usted paga por un servicio de la Parte B es el deducible anual, ${m(PB.deductible)} en 2026, y después el 20 % del monto aprobado por Medicare, sin tope anual. Ese monto aprobado no es una cifra nacional única: el baremo de los médicos se ajusta en ${nLoc} zonas de precios, y un mismo servicio cuesta más en un hospital ambulatorio que en un consultorio o un centro de cirugía, porque el hospital cobra su propio copago. Una consulta de seguimiento con un médico tiene un monto aprobado de ${m(ov.approvedTotal)} a nivel nacional y le deja ${m(ov.youPay)}; una resonancia lumbar le deja ${m(mriO.youPay)} en un centro de imágenes y ${m(mriH.youPay)} en un hospital ambulatorio. Los servicios preventivos, como la mamografía de detección, cuestan 0 $ si el médico acepta la asignación. Medicare Original no paga los audífonos, la atención dental de rutina ni los anteojos comunes. Una póliza Medigap paga casi todo el 20 %; un plan Medicare Advantage lo reemplaza por sus propios copagos. La calculadora hace la cuenta con los archivos de CMS de octubre de 2026.`
+  : `With Original Medicare, what you pay for a Part B service is the yearly deductible, ${m(PB.deductible)} in 2026, then 20 % of the Medicare-approved amount, with no yearly cap. That approved amount is not one national figure: the physician fee schedule is adjusted in ${nLoc} local price areas, and the same service costs more in a hospital outpatient department than in an office or a surgery center, because the hospital charges its own copayment. A follow-up visit with a doctor has a national approved amount of ${m(ov.approvedTotal)} and leaves you ${m(ov.youPay)}; a lower back MRI leaves you ${m(mriO.youPay)} at an imaging center and ${m(mriH.youPay)} at a hospital outpatient department. Preventive services such as a screening mammogram cost $0 when the provider accepts assignment. Original Medicare does not pay for hearing aids, routine dental care or ordinary glasses. A Medigap policy pays most of the 20 %; a Medicare Advantage plan replaces it with its own copays. The estimator does the arithmetic with the CMS files of October 2026.`;
+
+const bodyA = es ? `
+<h2>Cómo se reparte una factura de Medicare</h2>
+<p>Cada servicio cubierto tiene un <strong>monto aprobado por Medicare</strong>: la tarifa que CMS fija para ese servicio en su zona, y no el precio que figura en la factura del médico. El médico que acepta la asignación se compromete a no cobrarle más que el deducible y el coseguro sobre ese monto. A partir de ahí, la cuenta tiene siempre las mismas piezas:</p>
+<ol>
+<li><strong>El deducible de la Parte B</strong>, ${m(PB.deductible)} en 2026, una vez por año calendario. Mientras no lo haya completado, usted paga el monto aprobado entero hasta llegar a esa cifra. Una resonancia lumbar en un centro de imágenes a principios de enero le cuesta ${m(mriDed.youPay)}, de los cuales ${m(mriDed.deductiblePart)} son deducible; la misma resonancia en junio, con el deducible ya pagado, le cuesta ${m(mriO.youPay)}.</li>
+<li><strong>El coseguro del 20 %</strong> del monto aprobado, para casi todos los servicios de la Parte B: visitas, cirugías ambulatorias, fisioterapia, equipo médico, ambulancia. Medicare Original no le pone un tope anual.</li>
+<li><strong>El copago del hospital</strong>, cuando el servicio se hace en un departamento ambulatorio de un hospital. CMS publica el copago de cada servicio en el addendum B del sistema de pago ambulatorio, y un servicio no puede costarle más que el deducible de la Parte A del año (${m(PA.inpatientDeductible)} en 2026). Se suma al 20 % de los honorarios del médico.</li>
+<li><strong>El cargo adicional</strong>, solo si el médico no acepta la asignación. En ese caso Medicare aprueba el 95 % de la tarifa y el médico puede cobrarle hasta un 15 % por encima de ese monto, el «cargo límite». Para una consulta de seguimiento eso representa hasta ${m(ovNp.excessPart)} más, que solo algunas pólizas Medigap pagan.</li>
+</ol>
+<p>Medicare paga el resto directamente al médico, al hospital o al proveedor. En el Resumen de Medicare (Medicare Summary Notice) que recibe por correo verá estas mismas líneas: monto aprobado, lo que pagó Medicare y lo máximo que le pueden facturar.</p>
+<h2>Lo que paga por los servicios más buscados</h2>
+<p>La tabla da, para un servicio típico, el monto aprobado a nivel nacional, lo que le queda con Medicare Original una vez pagado el deducible y lo que le queda con una póliza Medigap del plan G. Los montos de su zona salen en la calculadora, que usa la localidad de precios de su estado.</p>
+` : `
+<h2>How a Medicare bill splits</h2>
+<p>Every covered service has a <strong>Medicare-approved amount</strong>: the rate CMS sets for that service in your area, not the price printed on the doctor's bill. A provider who accepts assignment agrees to charge you nothing beyond the deductible and the coinsurance on that amount. From there the bill always has the same pieces:</p>
+<ol>
+<li><strong>The Part B deductible</strong>, ${m(PB.deductible)} in 2026, once per calendar year. Until you have met it, you pay the whole approved amount up to that figure. A lower back MRI at an imaging center in early January costs you ${m(mriDed.youPay)}, ${m(mriDed.deductiblePart)} of it deductible; the same scan in June, with the deductible already met, costs you ${m(mriO.youPay)}.</li>
+<li><strong>The 20 % coinsurance</strong> of the approved amount, for almost every Part B service: visits, outpatient surgery, physical therapy, medical equipment, ambulance rides. Original Medicare puts no yearly cap on it.</li>
+<li><strong>The hospital copayment</strong>, when the service is done in a hospital outpatient department. CMS publishes the copayment of each service in Addendum B of the outpatient payment system, and one service cannot cost you more than the year's Part A deductible (${m(PA.inpatientDeductible)} in 2026). It comes on top of 20 % of the doctor's fee.</li>
+<li><strong>The excess charge</strong>, only when the doctor does not accept assignment. Medicare then approves 95 % of the fee, and the doctor may bill you up to 15 % above that amount, the "limiting charge". For a follow-up office visit that means up to ${m(ovNp.excessPart)} more, which only some Medigap policies pay.</li>
+</ol>
+<p>Medicare pays the rest directly to the doctor, hospital or supplier. The Medicare Summary Notice you get by mail shows these same lines: approved amount, what Medicare paid and the most you may be billed.</p>
+<h2>What you pay for the most searched services</h2>
+<p>The table gives, for a typical service, the national approved amount, what is left for you with Original Medicare once the deductible is met, and what is left with a Medigap Plan G policy. The amounts for your own area come out of the estimator, which uses your state's price locality.</p>
+`;
+
+const bodyB = es ? `
+<p>Tres cosas saltan a la vista. Primero, el lugar cambia la cuenta más que el servicio: la misma cirugía de cataratas le deja ${m(catA.youPay)} en un centro de cirugía ambulatoria y ${m(catH.youPay)} en un hospital ambulatorio. Segundo, una detección preventiva puede volverse un tratamiento: la colonoscopia de detección no cuesta nada (${m(colS.youPay)}), pero si el médico extirpa un pólipo, usted paga el ${pc(P.crcScreeningConversion.patientShare)} del monto aprobado en 2026, es decir ${m(colP.youPay)}, sin deducible. Tercero, lo que no cubre Medicare Original lo paga usted entero, y Medigap no cambia nada: audífonos, atención dental de rutina, examen de la vista para anteojos.</p>
+<h2>Su zona cambia el precio</h2>
+<p>El baremo de los médicos (Physician Fee Schedule) multiplica unidades de valor relativo por un factor de conversión, ${mx(h.CF)} dólares en 2026, y ajusta cada componente con tres índices geográficos: el trabajo del médico, los gastos del consultorio y el seguro de responsabilidad. CMS publica esos índices para ${nLoc} localidades: algunos estados forman una sola zona, otros se dividen por condado o por área metropolitana. Por eso, la misma consulta de seguimiento tiene un monto aprobado de ${m(ovMan.approvedTotal)} en ${locName(manK)} y de ${m(ovAl.approvedTotal)} en ${locName(alK)}, y su 20 % pasa de ${m(ovMan.youPay)} a ${m(ovAl.youPay)}. Las tarifas de hospital ambulatorio y de centro de cirugía que usamos son las nacionales sin ajustar; el hospital de su zona puede tener un monto un poco distinto. El equipo médico se paga según el baremo de su estado, con una tarifa rural y otra no rural, y la ambulancia según su localidad y las millas recorridas.</p>
+<h2>Hospital y centro de enfermería: la Parte A</h2>
+<p>Una hospitalización con ingreso formal, por orden de un médico, se paga por <strong>período de beneficios</strong>. En 2026, el deducible de la Parte A es de ${m(PA.inpatientDeductible)} por período y cubre los días 1 a 60. Del día 61 al 90 paga ${m(PA.hospitalDaily61to90)} por día; después puede usar sus ${PA.lifetimeReserveDays} días de reserva de por vida, a ${m(PA.lifetimeReserveDaily)} por día. Una estancia de 5 días le cuesta ${m(hosp5.youPay)}; una de 75 días, ${m(hosp75.youPay)}. Los honorarios de los médicos durante la estancia siguen en la Parte B, con su 20 %.</p>
+<p>Tras una hospitalización con ingreso de al menos tres días seguidos, el centro de enfermería especializada no cuesta nada los primeros 20 días y ${m(PA.snfDaily21to100)} por día del 21 al 100; a partir del día 101 lo paga todo usted. Un mes de 30 días le cuesta ${m(snf30.youPay)}. La ${lk('snf', 'página sobre los centros de enfermería')} da el detalle día por día.</p>
+<h2>Medigap: lo que cada letra paga</h2>
+<p>Las pólizas Medigap son seguros privados que pagan una parte de lo que Medicare Original le deja. Sus beneficios están estandarizados por ley: un plan G es el mismo plan G en cualquier aseguradora, solo cambia el precio. La tabla resume el cuadro de medicare.gov para las partidas que entran en nuestros cálculos.</p>
+` : `
+<p>Three things stand out. First, the place changes the bill more than the service does: the same cataract surgery leaves you ${m(catA.youPay)} at an ambulatory surgery center and ${m(catH.youPay)} at a hospital outpatient department. Second, a preventive screening can turn into treatment: a screening colonoscopy costs nothing (${m(colS.youPay)}), but when the doctor removes a polyp you pay ${pc(P.crcScreeningConversion.patientShare)} of the approved amount in 2026, ${m(colP.youPay)}, with no deductible. Third, what Original Medicare does not cover you pay in full, and Medigap changes nothing: hearing aids, routine dental care, an eye exam for glasses.</p>
+<h2>Your area changes the price</h2>
+<p>The physician fee schedule multiplies relative value units by a conversion factor, ${mx(h.CF)} dollars in 2026, and adjusts each part with three geographic indexes: the doctor's work, the cost of running a practice and malpractice insurance. CMS publishes those indexes for ${nLoc} localities: some states are one area, others are split by county or metro area. That is why the same follow-up visit has an approved amount of ${m(ovMan.approvedTotal)} in ${locName(manK)} and ${m(ovAl.approvedTotal)} in ${locName(alK)}, and your 20 % goes from ${m(ovMan.youPay)} to ${m(ovAl.youPay)}. The hospital outpatient and surgery center rates we use are national, unadjusted; the hospital near you may have a slightly different amount. Medical equipment is paid at your state's fee schedule, with a rural and a non-rural rate, and an ambulance at your locality's rate plus the miles driven.</p>
+<h2>Hospital and skilled nursing: Part A</h2>
+<p>A stay as an inpatient, admitted on a doctor's order, is paid per <strong>benefit period</strong>. In 2026 the Part A deductible is ${m(PA.inpatientDeductible)} per benefit period and covers days 1 to 60. Days 61 to 90 cost ${m(PA.hospitalDaily61to90)} each; after that you may use your ${PA.lifetimeReserveDays} lifetime reserve days at ${m(PA.lifetimeReserveDaily)} a day. A 5-day stay costs you ${m(hosp5.youPay)}; a 75-day stay, ${m(hosp75.youPay)}. Doctors' fees during the stay remain under Part B, with their 20 %.</p>
+<p>After an inpatient stay of at least three days in a row, a skilled nursing facility costs nothing for the first 20 days and ${m(PA.snfDaily21to100)} a day for days 21 to 100; from day 101 you pay everything. A 30-day month costs you ${m(snf30.youPay)}. The ${lk('snf', 'skilled nursing page')} gives the day-by-day detail.</p>
+<h2>Medigap: what each letter pays</h2>
+<p>Medigap policies are private insurance that pays part of what Original Medicare leaves to you. Their benefits are standardized by law: a Plan G is the same Plan G at any insurer, only the price differs. The table sums up the medicare.gov chart for the items that enter our calculations.</p>
+`;
+
+const bodyC = es ? `
+<p>Con un plan G, una prótesis de rodilla ambulatoria hecha en enero le cuesta ${m(kneeG.youPay)}: el deducible de la Parte B y nada más; con Medicare Original solo, la misma operación le deja ${m(E('knee-replacement', { setting: 'hopd', deductibleRemaining: PB.deductible }).youPay)}. El plan N paga el 20 %, salvo un copago de hasta ${m(P.medigap.planNCopayOfficeMax)} en algunas consultas (${m(ovN.youPay)} en nuestro ejemplo) y de hasta ${m(P.medigap.planNCopayErMax)} en urgencias sin ingreso. Los planes K y L pagan la mitad y tres cuartas partes, con un límite anual de gastos de ${m(P.medigap.planKOutOfPocketLimit)} y ${m(P.medigap.planLOutOfPocketLimit)} en 2026. Los planes C y F solo están al alcance de quien tuvo derecho a Medicare antes del 1 de enero de 2020. Las versiones de deducible alto de F y G exigen pagar hasta ${m(P.medigap.highDeductibleFG)} en 2026 antes de que la póliza pague nada. Ninguna póliza Medigap paga lo que Medicare no cubre.</p>
+<h2>Medicare Advantage: sus copagos, no el 20 %</h2>
+<p>Un plan Medicare Advantage (Parte C) sustituye a Medicare Original: debe cubrir al menos lo mismo, pero fija sus propios copagos y coseguros, su red de médicos y su límite anual de gastos de bolsillo, que figuran en su Resumen de beneficios (Summary of Benefits). Muchos planes añaden beneficios de visión, audición o dental que Medicare Original no tiene. Como cada plan es distinto, la calculadora no lista planes: con la opción «Medicare Advantage», usted escribe el copago o el coseguro de su plan para ese servicio y lo que le queda antes del límite anual, y la cuenta se hace con sus cifras.</p>
+<h2>Servicios que Medicare Original no paga</h2>
+<p>La ${lk('not-covered', 'lista de lo que no cubre Medicare')} es más corta de lo que parece, pero incluye gastos grandes: los audífonos y los exámenes para adaptarlos, la atención dental de rutina (limpiezas, empastes, extracciones, dentaduras), los exámenes de la vista para anteojos y los anteojos comunes, la mayoría de los cuidados de los pies de rutina, la acupuntura fuera del dolor lumbar crónico y el cuidado de largo plazo no médico. Para estos servicios, la calculadora le deja escribir el precio que le dieron: le muestra que usted paga todo y, con un plan Advantage, lo que su beneficio adicional descontaría.</p>
+<h2>2027: lo que ya se sabe</h2>
+<p>Los montos de 2027 del deducible de la Parte B, de la prima estándar y de la Parte A <strong>aún no se han publicado</strong>: CMS los anuncia cada año en una hoja informativa, que se espera para mediados de noviembre de 2026. No los proyectamos. Lo único fijado ya por la normativa es la parte que usted paga cuando una colonoscopia de detección se convierte en extirpación de pólipos: según el ${h.src('cfr410_152', '42 CFR 410.152')}, baja del ${pc(P.crcScreeningConversion.patientShare)} en 2026 al ${pc(crc27)} de 2027 a 2029, y a cero en 2030. Para el mismo procedimiento de nuestro ejemplo, eso le deja ${m(colP27.youPay)} en lugar de ${m(colP.youPay)}. En cuanto CMS publique la hoja de 2027, la calculadora ofrecerá el año 2027.</p>
+<h2>De dónde salen las cifras</h2>
+<p>Las tarifas vienen de cinco archivos públicos de CMS, todos de octubre de 2026: el ${h.src('pfs', 'archivo de valores relativos del baremo de médicos (RVU26D)')}, el ${h.src('opps', 'addendum B del sistema de pago ambulatorio de hospitales')}, el ${h.src('asc', 'addendum AA de los centros de cirugía ambulatoria')}, el ${h.src('dmepos', 'baremo de equipo médico duradero DME26-D')} y el ${h.src('afs', 'baremo de ambulancias 2026')}. El deducible, la prima y los montos de la Parte A salen de la ${h.src('cms_fs2026', 'hoja informativa de CMS de 2026')}; las reglas de cobertura, de las páginas de medicare.gov de cada servicio. Seleccionamos ${nActs} servicios y escribimos sus nombres nosotros mismos; los códigos de procedimiento de la AMA no se muestran. La ${h.a('method', 'página de método')} detalla cada fórmula y sus límites. Este sitio da precios, no consejos médicos, y no está afiliado a CMS ni a Medicare.gov.</p>
+` : `
+<p>With Plan G, an outpatient knee replacement done in January costs you ${m(kneeG.youPay)}: the Part B deductible and nothing more; with Original Medicare alone the same operation leaves you ${m(E('knee-replacement', { setting: 'hopd', deductibleRemaining: PB.deductible }).youPay)}. Plan N pays the 20 % except for a copayment of up to ${m(P.medigap.planNCopayOfficeMax)} for some office visits (${m(ovN.youPay)} in our example) and up to ${m(P.medigap.planNCopayErMax)} for an emergency room visit without admission. Plans K and L pay half and three quarters, with a yearly out-of-pocket limit of ${m(P.medigap.planKOutOfPocketLimit)} and ${m(P.medigap.planLOutOfPocketLimit)} in 2026. Plans C and F are open only to people who became eligible for Medicare before January 1, 2020. The high-deductible versions of F and G make you pay up to ${m(P.medigap.highDeductibleFG)} in 2026 before the policy pays anything. No Medigap policy pays for what Medicare does not cover.</p>
+<h2>Medicare Advantage: your copays, not the 20 %</h2>
+<p>A Medicare Advantage plan (Part C) replaces Original Medicare: it must cover at least the same services, but it sets its own copays and coinsurance, its network of doctors and its yearly out-of-pocket limit, all listed in its Summary of Benefits. Many plans add vision, hearing or dental benefits that Original Medicare lacks. Since every plan differs, the estimator lists no plan: with the "Medicare Advantage" option you type your plan's copay or coinsurance for the service and what is left before your yearly limit, and the arithmetic runs on your own figures.</p>
+<h2>Services Original Medicare does not pay for</h2>
+<p>The ${lk('not-covered', 'list of what Medicare does not cover')} is shorter than it looks, but it holds large expenses: hearing aids and the exams to fit them, routine dental care (cleanings, fillings, extractions, dentures), eye exams for glasses and ordinary glasses, most routine foot care, acupuncture outside chronic low back pain, and non-medical long-term care. For these services the estimator lets you type the price you were quoted: it shows that you pay all of it and, with an Advantage plan, what its extra benefit would take off.</p>
+<h2>2027: what is already known</h2>
+<p>The 2027 Part B deductible, standard premium and Part A amounts <strong>are not published yet</strong>: CMS announces them every year in a fact sheet, expected in mid-November 2026. We do not project them. The only figure already fixed by regulation is your share when a screening colonoscopy turns into polyp removal: under ${h.src('cfr410_152', '42 CFR 410.152')} it falls from ${pc(P.crcScreeningConversion.patientShare)} in 2026 to ${pc(crc27)} from 2027 through 2029, and to zero in 2030. For the procedure in our example, that leaves you ${m(colP27.youPay)} instead of ${m(colP.youPay)}. As soon as CMS publishes the 2027 fact sheet, the estimator will offer the 2027 year.</p>
+<h2>Where the figures come from</h2>
+<p>The rates come from five public CMS files, all from October 2026: the ${h.src('pfs', 'physician fee schedule relative value file (RVU26D)')}, the ${h.src('opps', 'hospital outpatient payment system Addendum B')}, the ${h.src('asc', 'ambulatory surgical center Addendum AA')}, the ${h.src('dmepos', 'durable medical equipment fee schedule DME26-D')} and the ${h.src('afs', '2026 ambulance fee schedule')}. The deductible, premium and Part A amounts come from the ${h.src('cms_fs2026', 'CMS 2026 fact sheet')}; the coverage rules from the medicare.gov page of each service. We selected ${nActs} services and wrote their names ourselves; the AMA's procedure codes are not shown. The ${h.a('method', 'method page')} gives every formula and its limits. This site gives prices, not medical advice, and is not affiliated with CMS or Medicare.gov.</p>
+`;
+
+const faqs = es ? [
+  { q: '¿Cuánto paga una persona con Medicare por una consulta médica?', a: `Con Medicare Original y el deducible ya pagado, el 20 % del monto aprobado. Para una consulta de seguimiento típica el monto nacional es de ${m(ov.approvedTotal)}, así que usted paga ${m(ov.youPay)}. Varía según su zona: ${m(ovMan.youPay)} en ${locName(manK)}, ${m(ovAl.youPay)} en ${locName(alK)}. Si el médico no acepta la asignación, puede cobrarle hasta ${m(ovNp.excessPart)} más.` },
+  { q: '¿Hay un límite anual de gastos con Medicare Original?', a: 'No. Medicare Original no tiene límite anual para el 20 % de la Parte B ni para los copagos de hospital: cuantos más servicios recibe, más paga. Los planes Medicare Advantage sí tienen un límite anual de gastos de bolsillo dentro de la red, que figura en su Resumen de beneficios, y los planes Medigap K y L tienen el suyo. Las demás pólizas Medigap pagan casi todo el 20 %.' },
+  { q: '¿Por qué el hospital ambulatorio cuesta más que el consultorio?', a: `Porque en un departamento ambulatorio de hospital hay dos facturas: el 20 % de los honorarios del médico y el copago del hospital que fija CMS para ese servicio. Una resonancia lumbar le deja ${m(mriO.youPay)} en un centro de imágenes y ${m(mriH.youPay)} en un hospital ambulatorio. El copago del hospital por un servicio no puede superar el deducible de la Parte A, ${m(PA.inpatientDeductible)} en 2026.` },
+  { q: '¿Qué es el monto aprobado por Medicare?', a: `Es la tarifa que Medicare acepta para un servicio en su zona, calculada por CMS con sus baremos, y no el precio que muestra la factura. Su 20 % se calcula sobre ese monto. Un médico que acepta la asignación no puede cobrarle más que el deducible y el coseguro. Para la consulta de nuestro ejemplo, el monto aprobado nacional es de ${m(ov.approvedTotal)}.` },
+  { q: '¿Cuándo se conocerán los costos de Medicare para 2027?', a: `CMS publica el deducible de la Parte B, la prima estándar y los montos de la Parte A de 2027 en una hoja informativa que se espera a mediados de noviembre de 2026. Hasta entonces no damos cifras de 2027, salvo una ya fijada por la normativa: la parte del paciente en una colonoscopia de detección con extirpación de pólipos baja al ${pc(crc27)}.` },
+  { q: '¿Esta calculadora sirve con un plan Medicare Advantage?', a: 'Sí, con sus propias cifras. Cada plan Advantage fija sus copagos, coseguros y límite anual, así que la calculadora no los inventa: elija la opción Medicare Advantage, escriba el copago o el coseguro de su plan para ese servicio, que figura en su Resumen de beneficios, y lo que le queda antes del límite anual. El resultado respeta ese límite.' },
+] : [
+  { q: 'How much does a person on Medicare pay for a doctor visit?', a: `With Original Medicare and the deductible met, 20 % of the approved amount. For a typical follow-up visit the national amount is ${m(ov.approvedTotal)}, so you pay ${m(ov.youPay)}. It varies with your area: ${m(ovMan.youPay)} in ${locName(manK)}, ${m(ovAl.youPay)} in ${locName(alK)}. If the doctor does not accept assignment, you may be billed up to ${m(ovNp.excessPart)} more.` },
+  { q: 'Is there a yearly out-of-pocket limit with Original Medicare?', a: 'No. Original Medicare has no yearly limit on the Part B 20 % or on hospital copayments: the more care you get, the more you pay. Medicare Advantage plans do have a yearly in-network out-of-pocket limit, stated in their Summary of Benefits, and Medigap Plans K and L have their own. The other Medigap policies pay nearly all of the 20 %.' },
+  { q: 'Why does a hospital outpatient department cost more than an office?', a: `Because a hospital outpatient department sends two bills: 20 % of the doctor's fee and the hospital copayment CMS sets for the service. A lower back MRI leaves you ${m(mriO.youPay)} at an imaging center and ${m(mriH.youPay)} at a hospital outpatient department. The hospital copayment for one service cannot exceed the Part A deductible, ${m(PA.inpatientDeductible)} in 2026.` },
+  { q: 'What is the Medicare-approved amount?', a: `It is the rate Medicare accepts for a service in your area, computed by CMS from its fee schedules, not the price on the bill. Your 20 % is figured on that amount. A provider who accepts assignment cannot charge you more than the deductible and the coinsurance. For the visit in our example, the national approved amount is ${m(ov.approvedTotal)}.` },
+  { q: 'When will Medicare costs for 2027 be known?', a: `CMS publishes the 2027 Part B deductible, standard premium and Part A amounts in a fact sheet expected in mid-November 2026. Until then we give no 2027 figure, except one already fixed by regulation: the patient's share of a screening colonoscopy with polyp removal falls to ${pc(crc27)}.` },
+  { q: 'Does this estimator work with a Medicare Advantage plan?', a: 'Yes, with your own figures. Each Advantage plan sets its copays, coinsurance and yearly limit, so the estimator does not make them up: choose the Medicare Advantage option, type your plan\'s copay or coinsurance for the service, found in its Summary of Benefits, and what is left before your yearly limit. The result respects that limit.' },
+];
+const jsonLd = [webApplicationSchema({ name: L.h1, description: L.description, path: route('home', lang), lang }), websiteSchema(lang), organizationSchema(lang), faqSchema(faqs, lang)];
+const groups = GROUPS_ORDER.map((g) => ({ g, pages: PAGES.filter((p) => p.group === g && hasRoute(p.id, lang)).sort((a, b) => a.order - b.order) })).filter((x) => x.pages.length);
+const T = (p: (typeof PAGES)[number]) => (es ? p.es! : p.en);
+const homeActs = ['office-visit', 'cataract-surgery', 'colonoscopy-screening', 'colonoscopy-polyp', 'mri-lumbar', 'mri-brain', 'knee-replacement', 'physical-therapy-session', 'chiropractic-adjustment', 'ambulance-emergency', 'cpap', 'wheelchair-manual', 'dialysis', 'hospital-stay', 'skilled-nursing', 'mammogram-screening', 'hearing-exam', 'hearing-aids', 'dental', 'eye-exam-routine', 'er-visit'].filter((a) => ACTS.some((x) => x.id === a));
+---
+<PageLayout title={L.title} description={L.description} lang={lang} jsonLd={jsonLd} faqs={faqs}>
+  <header class="mb-3">
+    <h1 class="text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{L.h1}</h1>
+    <p class="mt-2 text-base text-navy-700 sm:text-lg">{L.intro}</p>
+  </header>
+  <div data-outil class="mb-4"><Tool tool={{ kind: 'est', props: { act: 'office-visit', acts: homeActs } }} lang={lang} primary={true} /></div>
+  <Clamp text={resume} id="clamp-home" lang={lang} class="mb-3" />
+  <p class="mb-8 text-sm text-navy-600">{es ? 'Actualizado el' : 'Last updated'} <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, es ? 'es-US' : 'en-US')}</time>{es ? ', baremos de CMS de octubre de 2026' : ', CMS fee schedules of October 2026'} · {AUTHOR_NAME} · <a href={route('method', lang)} class="underline hover:text-navy-900">{es ? 'Cómo se calculan los costos' : 'How the costs are calculated'}</a> · <a href={route('about', lang)} class="underline hover:text-navy-900">{es ? 'Quiénes somos' : 'About this site'}</a></p>
+
+  <div class="prose prose-slate max-w-none" set:html={bodyA} />
+  <Fragment set:html={h.table(es ? ['Servicio', '¿Cubierto?', 'Monto aprobado', 'Usted paga', 'Con Medigap G'] : ['Service', 'Covered?', 'Approved amount', 'You pay', 'With Medigap G'], glanceRows, es ? 'Montos nacionales de 2026 (archivos de CMS de octubre de 2026), deducible de la Parte B ya pagado, médico que acepta la asignación.' : '2026 national amounts (CMS files of October 2026), Part B deductible already met, provider accepting assignment.', ['l', 'l', 'r', 'r', 'r'])} />
+  <div class="prose prose-slate max-w-none" set:html={bodyB} />
+  <Fragment set:html={h.table(es ? ['Plan', 'Coseguro Parte B', 'Deducible Parte B', 'Cargo adicional', 'Deducible Parte A', 'Coseguro centro de enfermería'] : ['Plan', 'Part B coinsurance', 'Part B deductible', 'Excess charge', 'Part A deductible', 'Skilled nursing coinsurance'], medigapRows, es ? `Parte pagada por cada plan Medigap estandarizado (${h.src('medigap', 'cuadro de medicare.gov')}).` : `Share paid by each standardized Medigap plan (${h.src('medigap', 'medicare.gov chart')}).`, ['l', 'r', 'r', 'r', 'r', 'r'])} />
+  <div class="prose prose-slate max-w-none" set:html={bodyC} />
+
+  <section class="mt-12" aria-labelledby="guides-title">
+    <h2 id="guides-title" class="text-2xl font-bold text-navy-900">{es ? 'Servicio por servicio' : 'Service by service'}</h2>
+    <div class="mt-4 grid gap-x-10 gap-y-6 md:grid-cols-2">
+      {groups.map(({ g, pages }) => (
+        <div>
+          <h3 class="border-b border-navy-200 pb-1 text-sm font-semibold uppercase tracking-wide text-navy-600">{groupLabel(g, lang)}</h3>
+          <ul class="mt-2 space-y-2">{pages.map((p) => <li><a href={route(p.id, lang)} class="font-medium text-accent-700 underline-offset-2 hover:underline">{T(p).nav}</a><span class="block text-sm text-navy-600">{T(p).card}</span></li>)}</ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</PageLayout>

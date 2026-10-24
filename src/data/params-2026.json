@@ -1,0 +1,288 @@
+{
+ "year": 2026,
+ "valid_from": "2026-01-01",
+ "valid_to": "2026-12-31",
+ "retrieved_at": "2026-10-24",
+ "partB": {
+  "deductible": 283,
+  "premiumStandard": 202.9,
+  "coinsurance": 0.2,
+  "source": "CMS fact sheet, 2026 Medicare Parts A & B Premiums and Deductibles (November 14, 2025)",
+  "source_url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+  "insulinMonthMax": 35,
+  "insulinSource": "medicare.gov, What Part B covers (read 2026-10-24): Part B-covered insulin for a pump, at most $35 for a month's supply, deductible does not apply"
+ },
+ "partA": {
+  "inpatientDeductible": 1736,
+  "hospitalDaily61to90": 434,
+  "lifetimeReserveDaily": 868,
+  "lifetimeReserveDays": 60,
+  "snfDaily21to100": 217,
+  "snfMaxDays": 100,
+  "source": "CMS fact sheet, 2026 Medicare Parts A & B Premiums and Deductibles (November 14, 2025)",
+  "source_url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles"
+ },
+ "limitingCharge": {
+  "nonParticipatingFactor": 0.95,
+  "limitingChargeFactorOfFee": 1.0925,
+  "source": "CMS, RVU26D file documentation (RVU26D.pdf): 95% of the fee schedule amount for non-participating physicians, limiting charge 115% of that, i.e. 109.25% of the fee schedule amount",
+  "source_url": "https://www.cms.gov/medicare/payment/fee-schedules/physician/pfs-relative-value-files/rvu26d"
+ },
+ "crcScreeningConversion": {
+  "patientShare": 0.15,
+  "deductibleApplies": false,
+  "schedule": {
+   "2022": 0.2,
+   "2023-2026": 0.15,
+   "2027-2029": 0.1,
+   "2030+": 0
+  },
+  "source": "42 CFR 410.152(l)(5)(i): Part B pays 85 percent for CY 2023 through 2026, 90 percent for 2027 through 2029, 100 percent beginning January 1, 2030; medicare.gov/coverage/colonoscopies (15%, deductible does not apply)",
+  "source_url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-410/subpart-B/section-410.152"
+ },
+ "therapyKxThreshold": {
+  "ptSlpCombined": 2480,
+  "ot": 2480,
+  "isACap": false,
+  "source": "CMS, MLN MM14315 / Transmittal 13437, CY 2026 KX modifier threshold amounts",
+  "source_url": "https://www.cms.gov/files/document/mm14315-medicare-physician-fee-schedule-final-rule-summary-cy-2026.pdf"
+ },
+ "esrd": {
+  "basePerTreatment": 281.71,
+  "typicalTreatmentsPerWeek": 3,
+  "source": "CMS fact sheet, CY 2026 ESRD PPS final rule (November 20, 2025): base rate $281.71",
+  "source_url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2026-end-stage-renal-disease-esrd-prospective-payment-system-final-rule"
+ },
+ "hospice": {
+  "drugCopayMax": 5,
+  "respiteCoinsurance": 0.05,
+  "source": "medicare.gov/coverage/hospice-care",
+  "source_url": "https://www.medicare.gov/coverage/hospice-care"
+ },
+ "dmeRental": {
+  "cappedMonths": 13,
+  "months4to13FactorStandard": 0.75,
+  "months4to13FactorPowerWheelchair": 0.4,
+  "source": "42 CFR 414.229(b)(2)-(3): 10% of purchase price for each of the first 3 months then 7.5% (power wheelchairs 15% then 6%); title transfers after 13 continuous rental months; medicare.gov/coverage/continuous-positive-airway-pressure-devices",
+  "source_url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-414/subpart-D/section-414.229"
+ },
+ "medigap": {
+  "source": "medicare.gov, Compare Medigap plan benefits (chart read 2026-10-24)",
+  "source_url": "https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits",
+  "highDeductibleFG": 2950,
+  "planKOutOfPocketLimit": 8000,
+  "planLOutOfPocketLimit": 4000,
+  "planNCopayOfficeMax": 20,
+  "planNCopayErMax": 50,
+  "plans": {
+   "A": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 0,
+    "snfCoins": 0,
+    "hospiceCoins": 1
+   },
+   "B": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 1,
+    "snfCoins": 0,
+    "hospiceCoins": 1
+   },
+   "C": {
+    "partBCoins": 1,
+    "partBDeductible": 1,
+    "excess": 0,
+    "partADeductible": 1,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   },
+   "D": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 1,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   },
+   "F": {
+    "partBCoins": 1,
+    "partBDeductible": 1,
+    "excess": 1,
+    "partADeductible": 1,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   },
+   "G": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 1,
+    "partADeductible": 1,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   },
+   "K": {
+    "partBCoins": 0.5,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 0.5,
+    "snfCoins": 0.5,
+    "hospiceCoins": 0.5
+   },
+   "L": {
+    "partBCoins": 0.75,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 0.75,
+    "snfCoins": 0.75,
+    "hospiceCoins": 0.75
+   },
+   "M": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 0.5,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   },
+   "N": {
+    "partBCoins": 1,
+    "partBDeductible": 0,
+    "excess": 0,
+    "partADeductible": 1,
+    "snfCoins": 1,
+    "hospiceCoins": 1
+   }
+  },
+  "note": "Plans C and F only for people first eligible for Medicare before January 1, 2020 (medicare.gov)."
+ },
+ "medicareAdvantage": {
+  "moopInNetworkMax": null,
+  "status": "à vérifier sur le mémo CMS CY 2026 (non lu en phase 1) ; ne pas publier avant lecture",
+  "note": "Le simulateur demande la quote-part et le plafond du plan de l'utilisateur (Summary of Benefits) ; aucun plan n'est listé (frontière plans65.com)."
+ },
+ "_lisezmoi": "Paramètres officiels 2026 (montants Part A/B, Medigap, règles datées) et sources fédérales du site. Les barèmes CMS trimestriels sont dans src/data/cms/ (scripts/update-data.mjs), les règles de couverture dans src/data/coverage.json.",
+ "sources": {
+  "cms_fs2026": {
+   "url": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+   "label": {
+    "en": "CMS fact sheet: 2026 Medicare Parts A & B premiums and deductibles (November 14, 2025)",
+    "es": "Hoja informativa de CMS: primas y deducibles de las Partes A y B de Medicare 2026 (14 de noviembre de 2025)"
+   }
+  },
+  "pfs": {
+   "url": "https://www.cms.gov/medicare/payment/fee-schedules/physician/pfs-relative-value-files",
+   "label": {
+    "en": "CMS, Physician Fee Schedule relative value files (RVU26D, October 2026)",
+    "es": "CMS, archivos de valores relativos del baremo de médicos (RVU26D, octubre de 2026)"
+   }
+  },
+  "opps": {
+   "url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/hospital-outpatient-pps/quarterly-addenda-updates",
+   "label": {
+    "en": "CMS, hospital outpatient (OPPS) quarterly addenda, Addendum B October 2026",
+    "es": "CMS, anexos trimestrales del pago a hospitales ambulatorios (OPPS), Anexo B de octubre de 2026"
+   }
+  },
+  "asc": {
+   "url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc/asc-payment-rates-addenda",
+   "label": {
+    "en": "CMS, ambulatory surgical center payment rates, Addendum AA October 2026",
+    "es": "CMS, tarifas de los centros de cirugía ambulatoria, Anexo AA de octubre de 2026"
+   }
+  },
+  "dmepos": {
+   "url": "https://www.cms.gov/medicare/payment/fee-schedules/dmepos/dmepos-fee-schedule",
+   "label": {
+    "en": "CMS, DMEPOS fee schedule by state (DME26-D, October 2026)",
+    "es": "CMS, baremo de equipo médico por estado (DME26-D, octubre de 2026)"
+   }
+  },
+  "afs": {
+   "url": "https://www.cms.gov/medicare/payment/fee-schedules/ambulance/ambulance-fee-schedule-public-use-files",
+   "label": {
+    "en": "CMS, Ambulance Fee Schedule public use files (CY 2026)",
+    "es": "CMS, archivos públicos del baremo de ambulancias (año 2026)"
+   }
+  },
+  "cfr410_152": {
+   "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-410/subpart-B/section-410.152",
+   "label": {
+    "en": "42 CFR 410.152, amounts of payment under Part B (colorectal screening share)",
+    "es": "42 CFR 410.152, montos de pago de la Parte B (detección colorrectal)"
+   }
+  },
+  "cfr414_229": {
+   "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-B/part-414/subpart-D/section-414.229",
+   "label": {
+    "en": "42 CFR 414.229, capped rental items (13-month rule)",
+    "es": "42 CFR 414.229, artículos de alquiler con tope (regla de 13 meses)"
+   }
+  },
+  "clm104c04": {
+   "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c04.pdf",
+   "label": {
+    "en": "CMS, Medicare Claims Processing Manual, chapter 4 (hospital outpatient coinsurance, § 30.2)",
+    "es": "CMS, Manual de procesamiento de reclamaciones de Medicare, capítulo 4 (coseguro ambulatorio, § 30.2)"
+   }
+  },
+  "medigap": {
+   "url": "https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits",
+   "label": {
+    "en": "Medicare.gov, compare Medigap plan benefits",
+    "es": "Medicare.gov, comparar los beneficios de los planes Medigap"
+   }
+  },
+  "esrd": {
+   "url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2026-end-stage-renal-disease-esrd-prospective-payment-system-final-rule",
+   "label": {
+    "en": "CMS fact sheet: CY 2026 ESRD prospective payment system final rule",
+    "es": "Hoja informativa de CMS: regla final del pago de la enfermedad renal terminal (ESRD) 2026"
+   }
+  },
+  "kx": {
+   "url": "https://www.cms.gov/medicare/coding-billing/therapy-services",
+   "label": {
+    "en": "CMS, therapy services and the KX modifier threshold",
+    "es": "CMS, servicios de terapia y umbral del modificador KX"
+   }
+  },
+  "whatcovered": {
+   "url": "https://www.medicare.gov/coverage",
+   "label": {
+    "en": "Medicare.gov, Is my test, item or service covered?",
+    "es": "Medicare.gov, ¿Mi prueba, artículo o servicio está cubierto?"
+   }
+  },
+  "partb": {
+   "url": "https://www.medicare.gov/what-medicare-covers/what-part-b-covers",
+   "label": {
+    "en": "Medicare.gov, What Part B covers",
+    "es": "Medicare.gov, Qué cubre la Parte B"
+   }
+  },
+  "notcovered": {
+   "url": "https://www.medicare.gov/providers-services/original-medicare/not-covered",
+   "label": {
+    "en": "Medicare.gov, What's not covered by Part A and Part B",
+    "es": "Medicare.gov, Lo que no cubren las Partes A y B"
+   }
+  },
+  "assignment": {
+   "url": "https://www.medicare.gov/basics/costs/medicare-costs/provider-accept-Medicare",
+   "label": {
+    "en": "Medicare.gov, Does your provider accept Medicare as full payment?",
+    "es": "Medicare.gov, ¿Acepta su proveedor Medicare como pago total?"
+   }
+  },
+  "ppl": {
+   "url": "https://www.medicare.gov/procedure-price-lookup/",
+   "label": {
+    "en": "Medicare.gov, Procedure Price Lookup",
+    "es": "Medicare.gov, Búsqueda de precios de procedimientos"
+   }
+  }
+ }
+}

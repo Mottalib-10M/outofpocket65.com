@@ -1,0 +1,30 @@
+{
+ "source": "CMS, ASC Addendum AA, October 2026",
+ "source_url": "https://www.cms.gov/files/zip/october-2026-asc-approved-hcpcs-code-payment-rates.zip",
+ "retrieved_at": "2026-10-24",
+ "valid_from": "2026-10-01",
+ "valid_to": "2026-12-31",
+ "note": "National unadjusted ASC rates.",
+ "acts": {
+  "cataract-surgery": {
+   "pi": "A2",
+   "payment": 1255.73
+  },
+  "colonoscopy-screening": {
+   "pi": "A2",
+   "payment": 510.49
+  },
+  "colonoscopy-polyp": {
+   "pi": "A2",
+   "payment": 656.75
+  },
+  "colonoscopy-diagnostic": {
+   "pi": "A2",
+   "payment": 510.49
+  },
+  "knee-replacement": {
+   "pi": "J8",
+   "payment": 9393.16
+  }
+ }
+}

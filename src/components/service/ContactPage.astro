@@ -1,0 +1,36 @@
+---
+/** Contact page (both languages, noindex). */
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../LegalIdentity.astro';
+import { CONTACT_EMAIL, LAST_UPDATED, SITE_NAMES } from '../../data/site-config';
+import { route, type Locale } from '../../i18n/routes';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const es = lang === 'es';
+const title = es ? `Contacto de ${SITE_NAMES[lang]}: una cifra, una regla, el widget` : `Contact ${SITE_NAMES[lang]}: a figure, a rule, the widget`;
+const description = es ? 'Escríbanos si una tarifa o una regla de cobertura le parece desactualizada, o para insertar la calculadora de costos de Medicare en el sitio de una asociación o biblioteca.' : 'Write to us when a rate or a coverage rule looks out of date, or to embed the free Medicare cost estimator on the website of an association, a library or a senior center.';
+---
+<PageLayout title={title} description={description} lang={lang} noindex={true} breadcrumbs={[{ label: es ? 'Contacto' : 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>{es ? 'Contacto' : 'Contact'}</h1>
+    <p>{es ? 'Correo' : 'Email'}: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. {es ? 'Una persona lee cada mensaje.' : 'A person reads every message.'}</p>
+    {es ? (<Fragment>
+      <h2>Una cifra le parece errónea</h2>
+      <p>Indíquenos el servicio, el estado, el lugar (consultorio, centro de cirugía, hospital) y, si la tiene, la cifra de su Resumen de Medicare o de su factura. Volvemos a leer el archivo de CMS, corregimos el dato y fechamos el cambio. Tenga en cuenta que las tarifas de hospital y de centro de cirugía que usamos son nacionales, sin el ajuste local.</p>
+      <h2>Lo que no podemos hacer</h2>
+      <p>No somos Medicare ni una aseguradora. No podemos ver su expediente, presentar una reclamación, responder por un plan ni recomendarle una cobertura. No nos envíe su número de Medicare, su fecha de nacimiento ni datos médicos. Para su caso personal, consulte el programa estatal de asistencia sobre seguros de salud (SHIP) de su estado.</p>
+      <h2>Usar la calculadora en su sitio</h2>
+      <p>Asociaciones, bibliotecas y centros para mayores pueden mostrar la calculadora en un iframe sin costo. El código está en la <a href={route('widget', lang)}>página para insertarla</a>.</p>
+    </Fragment>) : (<Fragment>
+      <h2>A figure looks wrong</h2>
+      <p>Tell us the service, the state, the place (office, surgery center, hospital) and, if you have it, the figure on your Medicare Summary Notice or bill. We read the CMS file again, correct the data and date the change. Note that the hospital and surgery center rates we use are national, without the local adjustment.</p>
+      <h2>What we cannot do</h2>
+      <p>We are not Medicare or an insurer. We cannot see your record, file a claim, answer for a plan or recommend a coverage. Please do not send your Medicare number, date of birth or medical details. For your own case, contact your State Health Insurance Assistance Program (SHIP).</p>
+      <h2>Using the estimator on your site</h2>
+      <p>Associations, libraries and senior centers can show the estimator in an iframe at no cost. The code is on the <a href={route('widget', lang)}>embed page</a>.</p>
+    </Fragment>)}
+    <h2>{es ? 'Editor' : 'Publisher'}</h2>
+    <LegalIdentity lang={lang} />
+    <p>{es ? 'Actualizado' : 'Updated'}: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

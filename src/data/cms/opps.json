@@ -1,0 +1,164 @@
+{
+ "source": "CMS, OPPS Addendum B, October 2026 (file dated 10/14/2026)",
+ "source_url": "https://www.cms.gov/files/zip/October-2026-OPPS-Addendum-B.zip",
+ "retrieved_at": "2026-10-24",
+ "valid_from": "2026-10-01",
+ "valid_to": "2026-12-31",
+ "note": "National unadjusted rates (before the hospital wage index).",
+ "acts": {
+  "hearing-exam": {
+   "si": "Q1",
+   "apc": "5721",
+   "payment": 131.46,
+   "copay": 26.3,
+   "cappedAtInpatientDeductible": false
+  },
+  "cataract-surgery": {
+   "si": "J1",
+   "apc": "5491",
+   "payment": 2357.81,
+   "copay": 471.57,
+   "cappedAtInpatientDeductible": false
+  },
+  "physical-therapy-eval": {
+   "si": "A",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "physical-therapy-session": {
+   "si": "A",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "chiropractic-adjustment": {
+   "si": "Q1",
+   "apc": "5811",
+   "payment": 22.06,
+   "copay": 4.42,
+   "cappedAtInpatientDeductible": false
+  },
+  "colonoscopy-screening": {
+   "si": "T",
+   "apc": "5311",
+   "payment": 950.1,
+   "copay": 0,
+   "cappedAtInpatientDeductible": false
+  },
+  "colonoscopy-polyp": {
+   "si": "T",
+   "apc": "5312",
+   "payment": 1222.56,
+   "copay": 244.52,
+   "cappedAtInpatientDeductible": false
+  },
+  "colonoscopy-diagnostic": {
+   "si": "T",
+   "apc": "5311",
+   "payment": 950.1,
+   "copay": 190.02,
+   "cappedAtInpatientDeductible": false
+  },
+  "knee-replacement": {
+   "si": "J1",
+   "apc": "5115",
+   "payment": 13116.76,
+   "copay": 2623.36,
+   "cappedAtInpatientDeductible": true
+  },
+  "mri-brain": {
+   "si": "Q3",
+   "apc": "5523",
+   "payment": 243.77,
+   "copay": 48.76,
+   "cappedAtInpatientDeductible": false
+  },
+  "mri-lumbar": {
+   "si": "Q3",
+   "apc": "5523",
+   "payment": 243.77,
+   "copay": 48.76,
+   "cappedAtInpatientDeductible": false
+  },
+  "mri-knee": {
+   "si": "Q3",
+   "apc": "5523",
+   "payment": 243.77,
+   "copay": 48.76,
+   "cappedAtInpatientDeductible": false
+  },
+  "acupuncture": {
+   "si": "S",
+   "apc": "5731",
+   "payment": 29.55,
+   "copay": 5.91,
+   "cappedAtInpatientDeductible": false
+  },
+  "mammogram-screening": {
+   "si": "A",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "mammogram-diagnostic": {
+   "si": "A",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "eye-exam-medical": {
+   "si": "V",
+   "apc": "5012",
+   "payment": 136.02,
+   "copay": 27.21,
+   "cappedAtInpatientDeductible": false
+  },
+  "glaucoma-screening": {
+   "si": "S",
+   "apc": "5731",
+   "payment": 29.55,
+   "copay": 5.91,
+   "cappedAtInpatientDeductible": false
+  },
+  "podiatry-nail-care": {
+   "si": "Q1",
+   "apc": "5733",
+   "payment": 60.27,
+   "copay": 12.06,
+   "cappedAtInpatientDeductible": false
+  },
+  "podiatry-visit": {
+   "si": "B",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "office-visit": {
+   "si": "B",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "wellness-visit": {
+   "si": "A",
+   "apc": "",
+   "payment": null,
+   "copay": null,
+   "cappedAtInpatientDeductible": false
+  },
+  "er-visit": {
+   "si": "J2",
+   "apc": "5024",
+   "payment": 426.3,
+   "copay": 85.26,
+   "cappedAtInpatientDeductible": false
+  }
+ }
+}

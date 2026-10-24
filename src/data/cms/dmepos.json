@@ -1,0 +1,1989 @@
+{
+ "source": "CMS, DMEPOS fee schedule DME26-D (October 2026)",
+ "source_url": "https://www.cms.gov/files/zip/dme26-d.zip",
+ "retrieved_at": "2026-10-24",
+ "valid_from": "2026-10-01",
+ "valid_to": "2026-12-31",
+ "codes": {
+  "A7030|NU": {
+   "code": "A7030",
+   "mod": "NU",
+   "category": "IN",
+   "cmsShortDescriptor": "Cpap full face mask",
+   "states": {
+    "AL": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "AR": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "AZ": {
+     "nonRural": 109.65,
+     "rural": 177.85
+    },
+    "CA": {
+     "nonRural": 109.52,
+     "rural": 177.85
+    },
+    "CO": {
+     "nonRural": 112.97,
+     "rural": 177.85
+    },
+    "CT": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "DC": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "DE": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "FL": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "GA": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "IA": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "ID": {
+     "nonRural": 112.97,
+     "rural": 177.85
+    },
+    "IL": {
+     "nonRural": 110.81,
+     "rural": 177.85
+    },
+    "IN": {
+     "nonRural": 110.81,
+     "rural": 177.85
+    },
+    "KS": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "KY": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "LA": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "MA": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "MD": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "ME": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "MI": {
+     "nonRural": 110.81,
+     "rural": 177.85
+    },
+    "MN": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "MO": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "MS": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "MT": {
+     "nonRural": 112.97,
+     "rural": 177.85
+    },
+    "NC": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "ND": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "NE": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "NH": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "NJ": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "NM": {
+     "nonRural": 109.65,
+     "rural": 177.85
+    },
+    "NV": {
+     "nonRural": 109.52,
+     "rural": 177.85
+    },
+    "NY": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "OH": {
+     "nonRural": 110.81,
+     "rural": 177.85
+    },
+    "OK": {
+     "nonRural": 109.65,
+     "rural": 177.85
+    },
+    "OR": {
+     "nonRural": 109.52,
+     "rural": 177.85
+    },
+    "PA": {
+     "nonRural": 111.88,
+     "rural": 177.85
+    },
+    "RI": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "SC": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "SD": {
+     "nonRural": 111.31,
+     "rural": 177.85
+    },
+    "TN": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "TX": {
+     "nonRural": 109.65,
+     "rural": 177.85
+    },
+    "UT": {
+     "nonRural": 112.97,
+     "rural": 177.85
+    },
+    "VA": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "VT": {
+     "nonRural": 118.14,
+     "rural": 177.85
+    },
+    "WA": {
+     "nonRural": 109.52,
+     "rural": 177.85
+    },
+    "WI": {
+     "nonRural": 110.81,
+     "rural": 177.85
+    },
+    "WV": {
+     "nonRural": 110.55,
+     "rural": 177.85
+    },
+    "WY": {
+     "nonRural": 112.97,
+     "rural": 177.85
+    },
+    "AK": {
+     "nonRural": 177.39,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 177.39,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 200.55,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 177.39,
+     "rural": null
+    }
+   }
+  },
+  "A7037|NU": {
+   "code": "A7037",
+   "mod": "NU",
+   "category": "IN",
+   "cmsShortDescriptor": "Pos airway pressure tubing",
+   "states": {
+    "AL": {
+     "nonRural": 14.77,
+     "rural": 33.51
+    },
+    "AR": {
+     "nonRural": 14.77,
+     "rural": 33.27
+    },
+    "AZ": {
+     "nonRural": 14.74,
+     "rural": 33.51
+    },
+    "CA": {
+     "nonRural": 15.64,
+     "rural": 33.51
+    },
+    "CO": {
+     "nonRural": 15.58,
+     "rural": 33.4
+    },
+    "CT": {
+     "nonRural": 15.46,
+     "rural": 33.51
+    },
+    "DC": {
+     "nonRural": 14.93,
+     "rural": 33.43
+    },
+    "DE": {
+     "nonRural": 14.93,
+     "rural": 32.4
+    },
+    "FL": {
+     "nonRural": 14.77,
+     "rural": 31.86
+    },
+    "GA": {
+     "nonRural": 14.77,
+     "rural": 32.82
+    },
+    "IA": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "ID": {
+     "nonRural": 15.58,
+     "rural": 33.51
+    },
+    "IL": {
+     "nonRural": 14.9,
+     "rural": 33.43
+    },
+    "IN": {
+     "nonRural": 14.9,
+     "rural": 33.51
+    },
+    "KS": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "KY": {
+     "nonRural": 14.77,
+     "rural": 33.05
+    },
+    "LA": {
+     "nonRural": 14.77,
+     "rural": 33.51
+    },
+    "MA": {
+     "nonRural": 15.46,
+     "rural": 33.51
+    },
+    "MD": {
+     "nonRural": 14.93,
+     "rural": 33.43
+    },
+    "ME": {
+     "nonRural": 15.46,
+     "rural": 33.51
+    },
+    "MI": {
+     "nonRural": 14.9,
+     "rural": 33.51
+    },
+    "MN": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "MO": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "MS": {
+     "nonRural": 14.77,
+     "rural": 33.27
+    },
+    "MT": {
+     "nonRural": 15.58,
+     "rural": 33.51
+    },
+    "NC": {
+     "nonRural": 14.77,
+     "rural": 32.57
+    },
+    "ND": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "NE": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "NH": {
+     "nonRural": 15.46,
+     "rural": 32.4
+    },
+    "NJ": {
+     "nonRural": 14.93,
+     "rural": 32.4
+    },
+    "NM": {
+     "nonRural": 14.74,
+     "rural": 33.16
+    },
+    "NV": {
+     "nonRural": 15.64,
+     "rural": 33.51
+    },
+    "NY": {
+     "nonRural": 14.93,
+     "rural": 32.4
+    },
+    "OH": {
+     "nonRural": 14.9,
+     "rural": 33.43
+    },
+    "OK": {
+     "nonRural": 14.74,
+     "rural": 33.11
+    },
+    "OR": {
+     "nonRural": 15.64,
+     "rural": 33.51
+    },
+    "PA": {
+     "nonRural": 14.93,
+     "rural": 32.4
+    },
+    "RI": {
+     "nonRural": 15.46,
+     "rural": 32.4
+    },
+    "SC": {
+     "nonRural": 14.77,
+     "rural": 33.05
+    },
+    "SD": {
+     "nonRural": 14.19,
+     "rural": 33.51
+    },
+    "TN": {
+     "nonRural": 14.77,
+     "rural": 33.51
+    },
+    "TX": {
+     "nonRural": 14.74,
+     "rural": 31.86
+    },
+    "UT": {
+     "nonRural": 15.58,
+     "rural": 33.51
+    },
+    "VA": {
+     "nonRural": 14.77,
+     "rural": 33.43
+    },
+    "VT": {
+     "nonRural": 15.46,
+     "rural": 33.36
+    },
+    "WA": {
+     "nonRural": 15.64,
+     "rural": 33.51
+    },
+    "WI": {
+     "nonRural": 14.9,
+     "rural": 33.51
+    },
+    "WV": {
+     "nonRural": 14.77,
+     "rural": 33.43
+    },
+    "WY": {
+     "nonRural": 15.58,
+     "rural": 33.51
+    },
+    "AK": {
+     "nonRural": 30.43,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 31.97,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 36.48,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 32.31,
+     "rural": null
+    }
+   }
+  },
+  "E0601|RR": {
+   "code": "E0601",
+   "mod": "RR",
+   "category": "CR",
+   "cmsShortDescriptor": "Cont airway pressure device",
+   "states": {
+    "AL": {
+     "nonRural": 51.94,
+     "rural": 97.02
+    },
+    "AR": {
+     "nonRural": 51.94,
+     "rural": 86.69
+    },
+    "AZ": {
+     "nonRural": 50.91,
+     "rural": 97.02
+    },
+    "CA": {
+     "nonRural": 50.44,
+     "rural": 93.04
+    },
+    "CO": {
+     "nonRural": 50.9,
+     "rural": 88.53
+    },
+    "CT": {
+     "nonRural": 50.89,
+     "rural": 91.19
+    },
+    "DC": {
+     "nonRural": 50.04,
+     "rural": 94.64
+    },
+    "DE": {
+     "nonRural": 50.04,
+     "rural": 92.32
+    },
+    "FL": {
+     "nonRural": 51.94,
+     "rural": 86.69
+    },
+    "GA": {
+     "nonRural": 51.94,
+     "rural": 97.02
+    },
+    "IA": {
+     "nonRural": 50.7,
+     "rural": 97.02
+    },
+    "ID": {
+     "nonRural": 50.9,
+     "rural": 97.02
+    },
+    "IL": {
+     "nonRural": 52.65,
+     "rural": 97.02
+    },
+    "IN": {
+     "nonRural": 52.65,
+     "rural": 97.02
+    },
+    "KS": {
+     "nonRural": 50.7,
+     "rural": 97.02
+    },
+    "KY": {
+     "nonRural": 51.94,
+     "rural": 96.84
+    },
+    "LA": {
+     "nonRural": 51.94,
+     "rural": 86.69
+    },
+    "MA": {
+     "nonRural": 50.89,
+     "rural": 87.95
+    },
+    "MD": {
+     "nonRural": 50.04,
+     "rural": 97.02
+    },
+    "ME": {
+     "nonRural": 50.89,
+     "rural": 89.69
+    },
+    "MI": {
+     "nonRural": 52.65,
+     "rural": 89.77
+    },
+    "MN": {
+     "nonRural": 50.7,
+     "rural": 87.9
+    },
+    "MO": {
+     "nonRural": 50.7,
+     "rural": 97.02
+    },
+    "MS": {
+     "nonRural": 51.94,
+     "rural": 90.04
+    },
+    "MT": {
+     "nonRural": 50.9,
+     "rural": 86.69
+    },
+    "NC": {
+     "nonRural": 51.94,
+     "rural": 97.02
+    },
+    "ND": {
+     "nonRural": 50.7,
+     "rural": 95.8
+    },
+    "NE": {
+     "nonRural": 50.7,
+     "rural": 97.02
+    },
+    "NH": {
+     "nonRural": 50.89,
+     "rural": 87.44
+    },
+    "NJ": {
+     "nonRural": 50.04,
+     "rural": 89.86
+    },
+    "NM": {
+     "nonRural": 50.91,
+     "rural": 97.02
+    },
+    "NV": {
+     "nonRural": 50.44,
+     "rural": 97.02
+    },
+    "NY": {
+     "nonRural": 50.04,
+     "rural": 97.02
+    },
+    "OH": {
+     "nonRural": 52.65,
+     "rural": 97.02
+    },
+    "OK": {
+     "nonRural": 50.91,
+     "rural": 97.02
+    },
+    "OR": {
+     "nonRural": 50.44,
+     "rural": 97.02
+    },
+    "PA": {
+     "nonRural": 50.04,
+     "rural": 91.18
+    },
+    "RI": {
+     "nonRural": 50.89,
+     "rural": 97.02
+    },
+    "SC": {
+     "nonRural": 51.94,
+     "rural": 97.02
+    },
+    "SD": {
+     "nonRural": 50.7,
+     "rural": 97.02
+    },
+    "TN": {
+     "nonRural": 51.94,
+     "rural": 97.02
+    },
+    "TX": {
+     "nonRural": 50.91,
+     "rural": 91.52
+    },
+    "UT": {
+     "nonRural": 50.9,
+     "rural": 97.02
+    },
+    "VA": {
+     "nonRural": 51.94,
+     "rural": 91.49
+    },
+    "VT": {
+     "nonRural": 50.89,
+     "rural": 87.74
+    },
+    "WA": {
+     "nonRural": 50.44,
+     "rural": 97.02
+    },
+    "WI": {
+     "nonRural": 52.65,
+     "rural": 94.05
+    },
+    "WV": {
+     "nonRural": 51.94,
+     "rural": 95.02
+    },
+    "WY": {
+     "nonRural": 50.9,
+     "rural": 97.02
+    },
+    "AK": {
+     "nonRural": 93.44,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 97.97,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 100.22,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 96.75,
+     "rural": null
+    }
+   }
+  },
+  "K0001|RR": {
+   "code": "K0001",
+   "mod": "RR",
+   "category": "CR",
+   "cmsShortDescriptor": "Standard wheelchair",
+   "states": {
+    "AL": {
+     "nonRural": 31.07,
+     "rural": 48.77
+    },
+    "AR": {
+     "nonRural": 31.07,
+     "rural": 53.64
+    },
+    "AZ": {
+     "nonRural": 28.52,
+     "rural": 53.22
+    },
+    "CA": {
+     "nonRural": 27.96,
+     "rural": 53.64
+    },
+    "CO": {
+     "nonRural": 27.78,
+     "rural": 53.64
+    },
+    "CT": {
+     "nonRural": 25.23,
+     "rural": 50.13
+    },
+    "DC": {
+     "nonRural": 26.42,
+     "rural": 53.64
+    },
+    "DE": {
+     "nonRural": 26.42,
+     "rural": 53.64
+    },
+    "FL": {
+     "nonRural": 31.07,
+     "rural": 48.77
+    },
+    "GA": {
+     "nonRural": 31.07,
+     "rural": 49.19
+    },
+    "IA": {
+     "nonRural": 28.87,
+     "rural": 53.64
+    },
+    "ID": {
+     "nonRural": 27.78,
+     "rural": 50.18
+    },
+    "IL": {
+     "nonRural": 29.59,
+     "rural": 53.64
+    },
+    "IN": {
+     "nonRural": 29.59,
+     "rural": 53.64
+    },
+    "KS": {
+     "nonRural": 28.87,
+     "rural": 53.64
+    },
+    "KY": {
+     "nonRural": 31.07,
+     "rural": 51.21
+    },
+    "LA": {
+     "nonRural": 31.07,
+     "rural": 53.63
+    },
+    "MA": {
+     "nonRural": 25.23,
+     "rural": 53.64
+    },
+    "MD": {
+     "nonRural": 26.42,
+     "rural": 53.64
+    },
+    "ME": {
+     "nonRural": 25.23,
+     "rural": 53.64
+    },
+    "MI": {
+     "nonRural": 29.59,
+     "rural": 53.64
+    },
+    "MN": {
+     "nonRural": 28.87,
+     "rural": 51.66
+    },
+    "MO": {
+     "nonRural": 28.87,
+     "rural": 53.64
+    },
+    "MS": {
+     "nonRural": 31.07,
+     "rural": 48.77
+    },
+    "MT": {
+     "nonRural": 27.78,
+     "rural": 52.56
+    },
+    "NC": {
+     "nonRural": 31.07,
+     "rural": 48.77
+    },
+    "ND": {
+     "nonRural": 28.87,
+     "rural": 48.77
+    },
+    "NE": {
+     "nonRural": 28.87,
+     "rural": 53.64
+    },
+    "NH": {
+     "nonRural": 25.23,
+     "rural": 52.23
+    },
+    "NJ": {
+     "nonRural": 26.42,
+     "rural": 53.08
+    },
+    "NM": {
+     "nonRural": 28.52,
+     "rural": 49.92
+    },
+    "NV": {
+     "nonRural": 27.96,
+     "rural": 53.54
+    },
+    "NY": {
+     "nonRural": 26.42,
+     "rural": 52.43
+    },
+    "OH": {
+     "nonRural": 29.59,
+     "rural": 53.64
+    },
+    "OK": {
+     "nonRural": 28.52,
+     "rural": 53.64
+    },
+    "OR": {
+     "nonRural": 27.96,
+     "rural": 53.64
+    },
+    "PA": {
+     "nonRural": 26.42,
+     "rural": 53.64
+    },
+    "RI": {
+     "nonRural": 25.23,
+     "rural": 53.64
+    },
+    "SC": {
+     "nonRural": 31.07,
+     "rural": 52.23
+    },
+    "SD": {
+     "nonRural": 28.87,
+     "rural": 53.64
+    },
+    "TN": {
+     "nonRural": 31.07,
+     "rural": 48.77
+    },
+    "TX": {
+     "nonRural": 28.52,
+     "rural": 53.64
+    },
+    "UT": {
+     "nonRural": 27.78,
+     "rural": 53.64
+    },
+    "VA": {
+     "nonRural": 31.07,
+     "rural": 53.64
+    },
+    "VT": {
+     "nonRural": 25.23,
+     "rural": 48.77
+    },
+    "WA": {
+     "nonRural": 27.96,
+     "rural": 53.64
+    },
+    "WI": {
+     "nonRural": 29.59,
+     "rural": 53.51
+    },
+    "WV": {
+     "nonRural": 31.07,
+     "rural": 53.64
+    },
+    "WY": {
+     "nonRural": 27.78,
+     "rural": 48.77
+    },
+    "AK": {
+     "nonRural": 53.63,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 53.63,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 53.63,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 52.43,
+     "rural": null
+    }
+   }
+  },
+  "K0003|RR": {
+   "code": "K0003",
+   "mod": "RR",
+   "category": "CR",
+   "cmsShortDescriptor": "Lightweight wheelchair",
+   "states": {
+    "AL": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "AR": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "AZ": {
+     "nonRural": 44.42,
+     "rural": 79.43
+    },
+    "CA": {
+     "nonRural": 41.97,
+     "rural": 79.56
+    },
+    "CO": {
+     "nonRural": 41.47,
+     "rural": 87.36
+    },
+    "CT": {
+     "nonRural": 37.55,
+     "rural": 87.36
+    },
+    "DC": {
+     "nonRural": 36.91,
+     "rural": 86.67
+    },
+    "DE": {
+     "nonRural": 36.91,
+     "rural": 77.78
+    },
+    "FL": {
+     "nonRural": 46.99,
+     "rural": 77.78
+    },
+    "GA": {
+     "nonRural": 46.99,
+     "rural": 86.55
+    },
+    "IA": {
+     "nonRural": 44.9,
+     "rural": 87.36
+    },
+    "ID": {
+     "nonRural": 41.47,
+     "rural": 77.78
+    },
+    "IL": {
+     "nonRural": 43.47,
+     "rural": 87.36
+    },
+    "IN": {
+     "nonRural": 43.47,
+     "rural": 85.87
+    },
+    "KS": {
+     "nonRural": 44.9,
+     "rural": 87.36
+    },
+    "KY": {
+     "nonRural": 46.99,
+     "rural": 77.78
+    },
+    "LA": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "MA": {
+     "nonRural": 37.55,
+     "rural": 87.36
+    },
+    "MD": {
+     "nonRural": 36.91,
+     "rural": 80.99
+    },
+    "ME": {
+     "nonRural": 37.55,
+     "rural": 87.36
+    },
+    "MI": {
+     "nonRural": 43.47,
+     "rural": 78.78
+    },
+    "MN": {
+     "nonRural": 44.9,
+     "rural": 86.17
+    },
+    "MO": {
+     "nonRural": 44.9,
+     "rural": 86.65
+    },
+    "MS": {
+     "nonRural": 46.99,
+     "rural": 77.78
+    },
+    "MT": {
+     "nonRural": 41.47,
+     "rural": 87.36
+    },
+    "NC": {
+     "nonRural": 46.99,
+     "rural": 77.78
+    },
+    "ND": {
+     "nonRural": 44.9,
+     "rural": 82.14
+    },
+    "NE": {
+     "nonRural": 44.9,
+     "rural": 87.36
+    },
+    "NH": {
+     "nonRural": 37.55,
+     "rural": 86.77
+    },
+    "NJ": {
+     "nonRural": 36.91,
+     "rural": 87.36
+    },
+    "NM": {
+     "nonRural": 44.42,
+     "rural": 87.36
+    },
+    "NV": {
+     "nonRural": 41.97,
+     "rural": 80.36
+    },
+    "NY": {
+     "nonRural": 36.91,
+     "rural": 80.69
+    },
+    "OH": {
+     "nonRural": 43.47,
+     "rural": 87.36
+    },
+    "OK": {
+     "nonRural": 44.42,
+     "rural": 85.55
+    },
+    "OR": {
+     "nonRural": 41.97,
+     "rural": 85.19
+    },
+    "PA": {
+     "nonRural": 36.91,
+     "rural": 87.36
+    },
+    "RI": {
+     "nonRural": 37.55,
+     "rural": 77.78
+    },
+    "SC": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "SD": {
+     "nonRural": 44.9,
+     "rural": 87.36
+    },
+    "TN": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "TX": {
+     "nonRural": 44.42,
+     "rural": 87.36
+    },
+    "UT": {
+     "nonRural": 41.47,
+     "rural": 87.36
+    },
+    "VA": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "VT": {
+     "nonRural": 37.55,
+     "rural": 87.36
+    },
+    "WA": {
+     "nonRural": 41.97,
+     "rural": 87.36
+    },
+    "WI": {
+     "nonRural": 43.47,
+     "rural": 79.04
+    },
+    "WV": {
+     "nonRural": 46.99,
+     "rural": 87.36
+    },
+    "WY": {
+     "nonRural": 41.47,
+     "rural": 87.17
+    },
+    "AK": {
+     "nonRural": 115.29,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 84.62,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 88.22,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 80.69,
+     "rural": null
+    }
+   }
+  },
+  "K0800|NU": {
+   "code": "K0800",
+   "mod": "NU",
+   "category": "IN",
+   "cmsShortDescriptor": "Pov group 1 std up to 300lbs",
+   "states": {
+    "AL": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "AR": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "AZ": {
+     "nonRural": 1018.31,
+     "rural": 1359.25
+    },
+    "CA": {
+     "nonRural": 1016.45,
+     "rural": 1359.25
+    },
+    "CO": {
+     "nonRural": 1017.21,
+     "rural": 1359.25
+    },
+    "CT": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "DC": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "DE": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "FL": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "GA": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "IA": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "ID": {
+     "nonRural": 1017.21,
+     "rural": 1359.25
+    },
+    "IL": {
+     "nonRural": 1021.32,
+     "rural": 1359.25
+    },
+    "IN": {
+     "nonRural": 1021.32,
+     "rural": 1359.25
+    },
+    "KS": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "KY": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "LA": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "MA": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "MD": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "ME": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "MI": {
+     "nonRural": 1021.32,
+     "rural": 1359.25
+    },
+    "MN": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "MO": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "MS": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "MT": {
+     "nonRural": 1017.21,
+     "rural": 1359.25
+    },
+    "NC": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "ND": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "NE": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "NH": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "NJ": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "NM": {
+     "nonRural": 1018.31,
+     "rural": 1359.25
+    },
+    "NV": {
+     "nonRural": 1016.45,
+     "rural": 1359.25
+    },
+    "NY": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "OH": {
+     "nonRural": 1021.32,
+     "rural": 1359.25
+    },
+    "OK": {
+     "nonRural": 1018.31,
+     "rural": 1359.25
+    },
+    "OR": {
+     "nonRural": 1016.45,
+     "rural": 1359.25
+    },
+    "PA": {
+     "nonRural": 1000.74,
+     "rural": 1359.25
+    },
+    "RI": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "SC": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "SD": {
+     "nonRural": 1018.46,
+     "rural": 1359.25
+    },
+    "TN": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "TX": {
+     "nonRural": 1018.31,
+     "rural": 1359.25
+    },
+    "UT": {
+     "nonRural": 1017.21,
+     "rural": 1359.25
+    },
+    "VA": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "VT": {
+     "nonRural": 1032.84,
+     "rural": 1359.25
+    },
+    "WA": {
+     "nonRural": 1016.45,
+     "rural": 1359.25
+    },
+    "WI": {
+     "nonRural": 1021.32,
+     "rural": 1359.25
+    },
+    "WV": {
+     "nonRural": 1058.25,
+     "rural": 1359.25
+    },
+    "WY": {
+     "nonRural": 1017.21,
+     "rural": 1359.25
+    },
+    "AK": {
+     "nonRural": 1359.25,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 1359.25,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 1438.64,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 1359.25,
+     "rural": null
+    }
+   }
+  },
+  "K0823|RR": {
+   "code": "K0823",
+   "mod": "RR",
+   "category": "CR",
+   "cmsShortDescriptor": "Pwc gp 2 std cap chair",
+   "states": {
+    "AL": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "AR": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "AZ": {
+     "nonRural": 346.05,
+     "rural": 559.39
+    },
+    "CA": {
+     "nonRural": 344.95,
+     "rural": 559.39
+    },
+    "CO": {
+     "nonRural": 342.07,
+     "rural": 559.39
+    },
+    "CT": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "DC": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "DE": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "FL": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "GA": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "IA": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "ID": {
+     "nonRural": 342.07,
+     "rural": 559.39
+    },
+    "IL": {
+     "nonRural": 343.79,
+     "rural": 559.39
+    },
+    "IN": {
+     "nonRural": 343.79,
+     "rural": 559.39
+    },
+    "KS": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "KY": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "LA": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "MA": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "MD": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "ME": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "MI": {
+     "nonRural": 343.79,
+     "rural": 559.39
+    },
+    "MN": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "MO": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "MS": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "MT": {
+     "nonRural": 342.07,
+     "rural": 559.39
+    },
+    "NC": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "ND": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "NE": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "NH": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "NJ": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "NM": {
+     "nonRural": 346.05,
+     "rural": 559.39
+    },
+    "NV": {
+     "nonRural": 344.95,
+     "rural": 559.39
+    },
+    "NY": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "OH": {
+     "nonRural": 343.79,
+     "rural": 559.39
+    },
+    "OK": {
+     "nonRural": 346.05,
+     "rural": 559.39
+    },
+    "OR": {
+     "nonRural": 344.95,
+     "rural": 559.39
+    },
+    "PA": {
+     "nonRural": 328.1,
+     "rural": 559.39
+    },
+    "RI": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "SC": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "SD": {
+     "nonRural": 353.74,
+     "rural": 559.39
+    },
+    "TN": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "TX": {
+     "nonRural": 346.05,
+     "rural": 559.39
+    },
+    "UT": {
+     "nonRural": 342.07,
+     "rural": 559.39
+    },
+    "VA": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "VT": {
+     "nonRural": 328.22,
+     "rural": 559.39
+    },
+    "WA": {
+     "nonRural": 344.95,
+     "rural": 559.39
+    },
+    "WI": {
+     "nonRural": 343.79,
+     "rural": 559.39
+    },
+    "WV": {
+     "nonRural": 350.31,
+     "rural": 559.39
+    },
+    "WY": {
+     "nonRural": 342.07,
+     "rural": 559.39
+    },
+    "AK": {
+     "nonRural": 559.39,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 559.39,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 596.48,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 559.39,
+     "rural": null
+    }
+   }
+  },
+  "V2020|": {
+   "code": "V2020",
+   "mod": "",
+   "category": "PO",
+   "cmsShortDescriptor": "Vision svcs frames purchases",
+   "states": {
+    "AL": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "AR": {
+     "nonRural": 82.43,
+     "rural": null
+    },
+    "AZ": {
+     "nonRural": 102.35,
+     "rural": null
+    },
+    "CA": {
+     "nonRural": 102.35,
+     "rural": null
+    },
+    "CO": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "CT": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "DC": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "DE": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "FL": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "GA": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "IA": {
+     "nonRural": 80.87,
+     "rural": null
+    },
+    "ID": {
+     "nonRural": 86.8,
+     "rural": null
+    },
+    "IL": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "IN": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "KS": {
+     "nonRural": 80.87,
+     "rural": null
+    },
+    "KY": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "LA": {
+     "nonRural": 82.43,
+     "rural": null
+    },
+    "MA": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "MD": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "ME": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "MI": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "MN": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "MO": {
+     "nonRural": 80.87,
+     "rural": null
+    },
+    "MS": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "MT": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "NC": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "ND": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "NE": {
+     "nonRural": 80.87,
+     "rural": null
+    },
+    "NH": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "NJ": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "NM": {
+     "nonRural": 82.43,
+     "rural": null
+    },
+    "NV": {
+     "nonRural": 102.35,
+     "rural": null
+    },
+    "NY": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "OH": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "OK": {
+     "nonRural": 82.43,
+     "rural": null
+    },
+    "OR": {
+     "nonRural": 86.8,
+     "rural": null
+    },
+    "PA": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "RI": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "SC": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "SD": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "TN": {
+     "nonRural": 98.67,
+     "rural": null
+    },
+    "TX": {
+     "nonRural": 82.43,
+     "rural": null
+    },
+    "UT": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "VA": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "VT": {
+     "nonRural": 86.75,
+     "rural": null
+    },
+    "WA": {
+     "nonRural": 86.8,
+     "rural": null
+    },
+    "WI": {
+     "nonRural": 92.1,
+     "rural": null
+    },
+    "WV": {
+     "nonRural": 76.76,
+     "rural": null
+    },
+    "WY": {
+     "nonRural": 89.94,
+     "rural": null
+    },
+    "AK": {
+     "nonRural": 113.05,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 120.89,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 58.09,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 76.76,
+     "rural": null
+    }
+   }
+  },
+  "V2100|": {
+   "code": "V2100",
+   "mod": "",
+   "category": "PO",
+   "cmsShortDescriptor": "Lens spher single plano 4.00",
+   "states": {
+    "AL": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "AR": {
+     "nonRural": 58.85,
+     "rural": null
+    },
+    "AZ": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "CA": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "CO": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "CT": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "DC": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "DE": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "FL": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "GA": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "IA": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "ID": {
+     "nonRural": 54.84,
+     "rural": null
+    },
+    "IL": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "IN": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "KS": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "KY": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "LA": {
+     "nonRural": 58.85,
+     "rural": null
+    },
+    "MA": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "MD": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "ME": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "MI": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "MN": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "MO": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "MS": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "MT": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "NC": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "ND": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "NE": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "NH": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "NJ": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "NM": {
+     "nonRural": 58.85,
+     "rural": null
+    },
+    "NV": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "NY": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "OH": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "OK": {
+     "nonRural": 58.85,
+     "rural": null
+    },
+    "OR": {
+     "nonRural": 54.84,
+     "rural": null
+    },
+    "PA": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "RI": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "SC": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "SD": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "TN": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "TX": {
+     "nonRural": 58.85,
+     "rural": null
+    },
+    "UT": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "VA": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "VT": {
+     "nonRural": 47.96,
+     "rural": null
+    },
+    "WA": {
+     "nonRural": 54.84,
+     "rural": null
+    },
+    "WI": {
+     "nonRural": 56.92,
+     "rural": null
+    },
+    "WV": {
+     "nonRural": 58.92,
+     "rural": null
+    },
+    "WY": {
+     "nonRural": 63.95,
+     "rural": null
+    },
+    "AK": {
+     "nonRural": 45.07,
+     "rural": null
+    },
+    "HI": {
+     "nonRural": 48.2,
+     "rural": null
+    },
+    "PR": {
+     "nonRural": 58.09,
+     "rural": null
+    },
+    "VI": {
+     "nonRural": 63.95,
+     "rural": null
+    }
+   }
+  }
+ }
+}
