@@ -1,0 +1,65 @@
+# Out of Pocket 65
+
+> Medicare out-of-pocket cost estimates in dollars for 41 services, in English and Spanish: the Medicare-approved amount, the Part B deductible ($283 in 2026), the 20 % coinsurance or hospital outpatient copayment, the limiting charge, and what a Medigap plan or the user's own Medicare Advantage copays change. Built from the public CMS files of October 2026 (physician fee schedule RVU26D with 109 localities, OPPS Addendum B, ASC Addendum AA, DMEPOS DME26-D by state, ambulance fee schedule CY 2026) and the medicare.gov coverage page of each service. 2027 Part A and B amounts are not published yet and are not projected. Last updated 2026-10-24. Published by Radif Partners, an independent publisher; not affiliated with CMS or Medicare.gov; no plan sold, no lead form, no medical advice.
+
+## Does Medicare cover it? (English)
+- [Medicare out-of-pocket cost estimator](https://outofpocket65.com/en/): one service, your area, your coverage.
+- [What Medicare covers](https://outofpocket65.com/en/what-does-medicare-cover/): Part A, Part B and Part D side by side, with what common services leave you to pay.
+- [What Part B covers](https://outofpocket65.com/en/what-does-medicare-part-b-cover/): Doctors, outpatient care, preventive services and equipment: the 2026 premium, deductible and your 20 %.
+- [What Medicare does not cover](https://outofpocket65.com/en/what-does-medicare-not-cover/): Hearing aids, dental care, eye exams for glasses and the rest, with the covered service next to each.
+- [Part B deductible](https://outofpocket65.com/en/medicare-part-b-deductible/): The 2026 deductible, how your first bills of the year use it, and which services skip it.
+- [Hearing aids](https://outofpocket65.com/en/does-medicare-cover-hearing-aids/): Why the devices and their fitting are yours to pay, and what Part B pays for a diagnostic hearing test.
+- [Dental care](https://outofpocket65.com/en/does-medicare-cover-dental/): Cleanings, fillings and dentures are yours to pay; the few cases tied to heart, transplant, cancer or dialysis care.
+- [Cataract surgery](https://outofpocket65.com/en/does-medicare-cover-cataract-surgery/): Surgeon and facility fees for one eye, surgery center or hospital, and the glasses after.
+- [Ambulance](https://outofpocket65.com/en/does-medicare-cover-ambulance/): Base rate plus loaded miles, emergency or scheduled, and when a ride is refused.
+- [Home health care](https://outofpocket65.com/en/does-medicare-cover-home-health-care/): Nurse, therapist and aide visits at no cost if you are homebound; the 20 % on equipment.
+- [Physical therapy](https://outofpocket65.com/en/does-medicare-cover-physical-therapy/): Evaluation and sessions at 20 %, no yearly cap, and what the KX threshold really means.
+- [Chiropractic care](https://outofpocket65.com/en/does-medicare-cover-chiropractic/): Only the hands-on spinal adjustment for a subluxation is covered; X-rays and massage are not.
+- [Colonoscopy](https://outofpocket65.com/en/does-medicare-cover-colonoscopy/): Screening at $0, the share you owe when a polyp is removed, and diagnostic colonoscopies.
+- [Shingles vaccine](https://outofpocket65.com/en/does-medicare-cover-shingles-vaccine/): Free with a Part D drug plan, not paid by Original Medicare without one.
+- [Glasses and contacts](https://outofpocket65.com/en/does-medicare-cover-glasses/): Not covered, except one pair with standard frames after each cataract surgery.
+- [CPAP machine](https://outofpocket65.com/en/does-medicare-cover-cpap/): The 12-week trial, 13 months of rental until you own it, and the masks and tubing.
+- [Wheelchairs and scooters](https://outofpocket65.com/en/does-medicare-cover-wheelchairs/): Manual chairs, power chairs and scooters: rental, prior authorization and your 20 % by state.
+- [Knee replacement](https://outofpocket65.com/en/does-medicare-cover-knee-replacement/): Inpatient or outpatient, the Part A deductible, the surgeon’s 20 % and the rehab after.
+- [MRI scan](https://outofpocket65.com/en/does-medicare-cover-mri/): Imaging center or hospital, accreditation, and your 20 % for a brain, lower back or knee MRI.
+- [Dialysis](https://outofpocket65.com/en/does-medicare-cover-dialysis/): Outpatient and home dialysis for kidney failure: the base rate per treatment and your 20 % a month.
+- [Skilled nursing facility](https://outofpocket65.com/en/does-medicare-cover-skilled-nursing-facility/): Rehab after a hospital stay: the 3-day rule, $0 for 20 days, then a daily coinsurance up to day 100.
+- [Hospice care](https://outofpocket65.com/en/does-medicare-cover-hospice/): End-of-life care at home or in a facility: what costs nothing, the drug copay, respite care and room and board.
+- [COVID-19 test](https://outofpocket65.com/en/does-medicare-cover-covid-test/): A lab test ordered by your provider costs nothing; the visit, the emergency room and home tests are another story.
+- [Acupuncture](https://outofpocket65.com/en/does-medicare-cover-acupuncture/): Only for chronic low back pain: 12 sessions in 90 days, 8 more if you improve, 20 % of each.
+- [Mammograms](https://outofpocket65.com/en/does-medicare-cover-mammograms/): Yearly screening at $0 from age 40, a baseline between 35 and 39, and 20 % for a diagnostic mammogram.
+- [Eye exams](https://outofpocket65.com/en/does-medicare-cover-eye-exams/): Routine exams for glasses are not covered; the yearly diabetic eye exam and glaucoma tests are, at 20 %.
+- [Podiatrist and foot care](https://outofpocket65.com/en/does-medicare-cover-podiatry/): Treatment of foot injuries and diseases at 20 %; routine nail, corn and callus care only in rare cases.
+
+## En español
+- [Calculadora de costos de Medicare](https://outofpocket65.com/es/)
+- [Audífonos](https://outofpocket65.com/es/medicare-cubre-audifonos/): Por qué los aparatos y su adaptación corren por su cuenta, y lo que paga la Parte B por una prueba de audición.
+- [Qué cubre Medicare](https://outofpocket65.com/es/que-cubre-medicare/): Las Partes A, B y D lado a lado, con lo que le dejan los servicios más comunes.
+- [Atención dental](https://outofpocket65.com/es/medicare-cubre-dental/): Limpiezas, empastes y dentaduras corren por su cuenta; los pocos casos ligados al corazón, trasplantes, cáncer o diálisis.
+- [Qué cubre la Parte B](https://outofpocket65.com/es/que-cubre-medicare-parte-b/): Médicos, atención ambulatoria, prevención y equipo: la prima, el deducible y su 20 % en 2026.
+- [Cirugía de cataratas](https://outofpocket65.com/es/medicare-cubre-cirugia-de-cataratas/): Honorarios del cirujano y del centro por un ojo, centro de cirugía u hospital, y los anteojos después.
+- [Lo que no cubre Medicare](https://outofpocket65.com/es/que-no-cubre-medicare/): Audífonos, dentista, examen de la vista para anteojos y el resto, con el servicio cubierto al lado de cada uno.
+- [Ambulancia](https://outofpocket65.com/es/medicare-cubre-ambulancia/): Tarifa base más millas con el paciente, de emergencia o programada, y cuándo se rechaza un traslado.
+- [Deducible de la Parte B](https://outofpocket65.com/es/deducible-de-la-parte-b/): El deducible de 2026, cómo lo consumen sus primeras facturas y qué servicios no lo usan.
+- [Atención médica en el hogar](https://outofpocket65.com/es/medicare-cubre-atencion-medica-en-el-hogar/): Visitas de enfermería, terapia y auxiliar sin costo si no puede salir de casa; el 20 % del equipo.
+- [Fisioterapia](https://outofpocket65.com/es/medicare-cubre-fisioterapia/): Evaluación y sesiones al 20 %, sin tope anual, y lo que significa de verdad el umbral KX.
+- [Quiropráctico](https://outofpocket65.com/es/medicare-cubre-quiropractico/): Solo el ajuste manual de la columna por una subluxación está cubierto; radiografías y masajes no.
+- [Colonoscopia](https://outofpocket65.com/es/medicare-cubre-colonoscopia/): Detección a $0, lo que paga si le extirpan un pólipo y las colonoscopias diagnósticas.
+- [Vacuna contra la culebrilla](https://outofpocket65.com/es/medicare-cubre-vacuna-culebrilla/): Gratis con un plan de medicamentos de la Parte D; Medicare Original no la paga sin él.
+- [Anteojos y lentes de contacto](https://outofpocket65.com/es/medicare-cubre-anteojos/): No cubiertos, salvo un par con montura estándar después de cada cirugía de cataratas.
+- [Máquina CPAP](https://outofpocket65.com/es/medicare-cubre-cpap/): La prueba de 12 semanas, 13 meses de alquiler hasta que es suya, y las mascarillas y tubos.
+- [Sillas de ruedas y escúteres](https://outofpocket65.com/es/medicare-cubre-sillas-de-ruedas/): Sillas manuales, eléctricas y escúteres: alquiler, autorización previa y su 20 % por estado.
+- [Reemplazo de rodilla](https://outofpocket65.com/es/medicare-cubre-reemplazo-de-rodilla/): Hospitalizado o ambulatorio, el deducible de la Parte A, el 20 % del cirujano y la rehabilitación.
+- [Resonancia magnética](https://outofpocket65.com/es/medicare-cubre-resonancia-magnetica/): Centro de imágenes u hospital, acreditación y su 20 % por una resonancia de cerebro, espalda o rodilla.
+- [Diálisis](https://outofpocket65.com/es/medicare-cubre-dialisis/): Diálisis ambulatoria y en casa por insuficiencia renal: tarifa base por sesión y su 20 % al mes.
+- [Centro de enfermería especializada](https://outofpocket65.com/es/medicare-cubre-centro-de-enfermeria-especializada/): Rehabilitación tras el hospital: la regla de 3 días, 0 $ durante 20 días y un coseguro diario hasta el día 100.
+- [Cuidados paliativos (hospicio)](https://outofpocket65.com/es/medicare-cubre-hospicio/): Cuidados al final de la vida en casa o en un centro: lo que no cuesta nada, el copago de medicamentos, el respiro y el alojamiento.
+- [Prueba de COVID-19](https://outofpocket65.com/es/medicare-cubre-prueba-de-covid/): La prueba de laboratorio indicada por su proveedor no cuesta nada; la consulta, urgencias y las pruebas caseras son otra cosa.
+- [Acupuntura](https://outofpocket65.com/es/medicare-cubre-acupuntura/): Solo para el dolor lumbar crónico: 12 sesiones en 90 días, 8 más si mejora, el 20 % de cada una.
+- [Mamografías](https://outofpocket65.com/es/medicare-cubre-mamografias/): Detección anual a 0 $ desde los 40, una de referencia entre 35 y 39 años, y el 20 % de una diagnóstica.
+- [Exámenes de la vista](https://outofpocket65.com/es/medicare-cubre-examenes-de-la-vista/): El examen de rutina para anteojos no se cubre; el examen anual por diabetes y el de glaucoma sí, al 20 %.
+- [Podólogo y cuidado de los pies](https://outofpocket65.com/es/medicare-cubre-podologo/): El tratamiento de lesiones y enfermedades del pie al 20 %; uñas, callos y durezas de rutina solo en casos raros.
+
+## Method
+- [How the costs are calculated](https://outofpocket65.com/en/method/)
+- [About](https://outofpocket65.com/en/about/)
